@@ -1,0 +1,23 @@
+{
+  "name": "h8-kulioh-client-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h8-kulioh/h8-kulioh-client-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h8-kulioh/h8-kulioh-client-server/issues"
+  },
+  "homepage": "https://github.com/h8-kulioh/h8-kulioh-client-server#readme",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  }
+}
