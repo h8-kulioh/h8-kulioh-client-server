@@ -1,4 +1,8 @@
-const { verifiedPass, createToken } = require("../helpers/jwt&bcrypt");
+const {
+  verifiedPass,
+  createToken,
+  hashPass,
+} = require("../helpers/jwt&bcrypt");
 const { User } = require("../models/index");
 
 class userController {
@@ -85,6 +89,37 @@ class userController {
     }
   }
 
+  static async editProfile(req, res, next) {
+    try {
+      const { id } = req.user;
+      let { email, password, name } = req.body;
+
+      if (!email) {
+        throw { name: "Email is required" };
+      }
+
+      if (!password) {
+        throw { name: "Password is required" };
+      }
+
+      if (!name) {
+        throw { name: "Name is required" };
+      }
+
+      password = hashPass(password);
+      const insertData = { email, password, name };
+
+      const editProfile = await User.update(insertData, {
+        where: {
+          id
+        }
+      })
+
+      res.status(200).json(editProfile);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {

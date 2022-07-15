@@ -9,6 +9,9 @@ router.post("/login", userController.login)
 router.use(authentif)
 
 router.get("/profile", userController.getProfile)
+router.put("/profile", userController.editProfile)
+
+
 
 
 
