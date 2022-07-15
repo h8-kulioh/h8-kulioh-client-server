@@ -74,6 +74,15 @@ class userController {
       console.log(error);
     }
   }
+
+  static async getAllProfile(req, res, next) {
+    try {
+      const allUser = await User.findAll();
+      res.status(200).json(allUser);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {
