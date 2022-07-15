@@ -5,11 +5,11 @@
 List of available endpoints :
 
 > USER:
-- `POST  /register`
-- `POST  /login`
+- `POST  /register` - udah
+- `POST  /login` - udah
 - `POST  /user/handlePayment`
-- `GET    /user/profile`
-- `PUT    /user/profile`
+- `GET    /user/profile` - udah
+- `PUT    /user/profile` - udah
 - `GET    /user/daily`
 - `GET    /user/weekly`
 

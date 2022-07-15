@@ -21,7 +21,8 @@ const authentif = async (req, res, next) => {
     req.user = {
       id: userLogged.id,
       email: userLogged.email,
-      role: userLogged.role,
+      name: userLogged.name,
+      role: userLogged.role
     };
     next();
   } catch (error) {
