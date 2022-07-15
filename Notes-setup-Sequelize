@@ -1,0 +1,207 @@
+
+
+SETUP  :
+
+
+    npm init -y
+
+    npm i express ejs sequelize pg bcryptjs jsonwebtoken cors
+    
+    touch .gitignore
+
+    masukan node_modules
+    
+    npm install --save-dev sequelize-cli
+
+    npm install --save-dev jest supertest
+
+
+    =================================================
+
+    mkdir middleware helps bin
+
+    touch helps/help.js middleware/autentif.js middleware/errorHandler.js app.js
+
+    =================================================
+
+    npx sequelize init
+
+    di development, 
+    ubah username, password dan dialect ke postgres
+
+    npx sequelize db:create
+    npx sequelize db:create --env=test
+
+
+    cek di dbeaver udah masuk belum databasenya!
+
+    =================================================
+    membuat TABLE / MIGRATION
+
+    Membuat MIGRATION :
+        
+        npx sequelize-cli model:generate --name User --attributes username:string,email:string,password:string,role:string,phoneNumber:string,address:string
+
+        npx sequelize-cli model:generate --name Genre --attributes name:string
+
+        npx sequelize-cli model:generate --name Movie --attributes title:string,slug:string,synopsis:text,trailerUrl:string,imgUrl:string,rating:integer,GenreId:string,AuthorId:string
+
+        npx sequelize-cli model:generate --name Cast --attributes MovieId:integer,name:string,profilePict:string
+
+  
+    isi allowNull : false di setiap key
+
+    isi constraint : unique di email
+
+    npx sequelize db:migrate
+    npx sequelize-cli db:migrate
+
+    npx sequelize db:migrate --env=test
+
+
+    =================================================
+   
+
+    APABILA ADA TAMBAHAN COLOM BARU DAN RELASI
+
+    npx sequelize db:migrate:undo:all
+
+    npx sequelize migration:generate --name (namaKolomBaru)
+    npx sequelize migration:generate --name add-status
+    
+    LINK PEMBUATAN KOLOM BARU (addColumn) :
+    https://sequelize.org/api/v6/class/src/dialects/abstract/query-interface.js~queryinterface#instance-method-addColumn
+
+    param1 = nama table
+    param2 = nama kolom
+    param3 = https://sequelize.org/api/v6/class/src/dialects/abstract/query-interface.js~queryinterface#instance-method-createDatabase
+    = attributes nomor 4
+
+    npx sequelize db:migrate
+
+    TAMBAHKAN NAMA KOLOM SECARA MANUAL DI MODEL
+
+    =================================================
+
+    bikin relasi hasMany dan belongsTo di model masing2 SESUAI DI SOAL
+
+    =================================================
+   
+    ke folder helper/help.js
+
+    bikin fungsi kodingan untuk :
+        1. hashpassword
+        2. comparesync password
+        3. token created/string
+        4. token verified
+
+    module exports all
+
+    =================================================
+    seeding
+
+    jalankan!
+    npx sequelize seed:generate --name User
+    npx sequelize seed:generate --name Genre
+    npx sequelize seed:generate --name Movie
+    npx sequelize seed:generate --name Cast
+
+
+    AMBIL DATA DARI DUMMY,
+    LOOPING UNTUK TAMBAHIN :
+        1. createdAt
+        2. updatedAt
+        3. password yg di hash (KHUSUS UNTUK USER)
+
+    queryinterface.bulkInsert
+
+    param1 = nama tables
+    param2 = nama data yang diambil dari JSON
+    param3 = object kosong
+
+    queryinterface.bulkDelete
+
+    param1 = nama tables
+    param2 = null
+    param3 = object kosong
+
+    npx sequelize db:seed:all 
+    
+    atau 
+
+    npx sequelize-cli db:seed:all
+
+    npx sequelize db:seed --seed 20220628080509-User.js
+    npx sequelize db:seed --seed 20220628081056-Genre.js
+    npx sequelize db:seed --seed 20220628081237-Movie.js
+    npx sequelize db:seed --seed 20220628081418-Cast.js
+
+
+    
+
+
+
+
+
+    =================================================
+
+    bikin validasi constraint di model sesuai API docs
+
+    allowNull nya false
+
+    validate dan msg
+
+    =================================================
+
+    buat hooks before di table user untuk nge hash password
+
+    =================================================
+    defined errorHandler
+
+    defined authentif
+
+    defined author
+
+    =================================================
+
+    masuk ke express.js
+
+    buat app.js
+
+    buat routing ini itu
+    https://expressjs.com/en/starter/hello-world.html
+
+    app set engine
+    https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application-id
+
+    app use yang true:
+    https://nkhilv.medium.com/what-does-express-urlencoded-do-anyway-8bdc4e638e1e
+
+    app.cors:
+    pasang const nya paling atas,
+    https://www.npmjs.com/package/cors
+
+    pasang setelah extended:true
+    app.use(express.json())
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
