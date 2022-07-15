@@ -75,14 +75,16 @@ class userController {
     }
   }
 
-  static async getAllProfile(req, res, next) {
+  static async getProfile(req, res, next) {
     try {
-      const allUser = await User.findAll();
+      const { id } = req.user;
+      const allUser = await User.findByPk(id);
       res.status(200).json(allUser);
     } catch (error) {
       console.log(error);
     }
   }
+
 }
 
 module.exports = {
