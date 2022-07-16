@@ -26,6 +26,10 @@ List of available endpoints :
 - `GET      /todos`
 - `PATCH  /todos`
 
+> Universities:
+- `GET      /todos`
+- `PATCH  /todos`
+
 &nbsp;
 
 ## POST /register

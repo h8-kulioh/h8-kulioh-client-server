@@ -10,6 +10,7 @@ router.use(authentif)
 
 router.get("/profile", userController.getProfile)
 router.put("/profile", userController.editProfile)
+
 router.post("/handlepayment", userController.handlepayment)
 router.patch("/premium", userController.changeRole)
 
