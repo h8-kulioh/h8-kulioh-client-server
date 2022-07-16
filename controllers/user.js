@@ -129,12 +129,12 @@ class userController {
       if (role === "Premium") {
         throw { name: "You are already premium" };
       }
+
       const { email, name } = req.body;
 
       const emailUser = req.user.email;
       const nameUser = req.user.name;
 
-      console.log(nameUser);
 
       if (email !== emailUser) {
         throw { name: "Your email can't be different" };
@@ -162,7 +162,7 @@ class userController {
 
       let parameter = {
         transaction_details: {
-          order_id: `${email}- ${name} - ${idPayment}`,
+          order_id: `${email} - ${name} - ${idPayment}`,
           gross_amount: 50000,
           name: name,
           email_user: email,
