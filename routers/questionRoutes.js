@@ -7,5 +7,9 @@ router.use(authentif);
 
 router.use("/daily", questionController.getQuestionDaily);
 router.post("/answers/daily", questionController.postAnswersDaily);
+router.get("/answers/daily/:YYYYMMDD", questionController.getAnswersDailyByDate);
+
 
 module.exports = router;
+
+

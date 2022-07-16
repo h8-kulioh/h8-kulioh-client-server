@@ -43,6 +43,32 @@ class questionController {
       next(err);
     }
   }
+
+  static async getAnswersDailyByDate(req, res, next) {
+    try {
+      const { YYYYMMDD } = req.params;
+      let anwersDate = await Answer.findAll();
+
+      function changeDate(dateInput) {
+        return new Date(dateInput)
+          .toISOString()
+          .split("T")[0]
+          .split("-")
+          .join("");
+      }
+
+      let findByDate = anwersDate.filter(
+        (el) => changeDate(el.createdAt) === YYYYMMDD
+      );
+
+      if(findByDate.length === 0){
+        throw({name: "Answers is not found"})
+      }
+      res.status(200).json(findByDate);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {
