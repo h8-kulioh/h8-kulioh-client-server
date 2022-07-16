@@ -1,4 +1,4 @@
-const { Question, QuestionKey, Answer } = require("../models");
+const { Question, QuestionKey, Answer, User } = require("../models");
 
 class questionController {
   static async getQuestionDaily(req, res, next) {
@@ -47,7 +47,9 @@ class questionController {
   static async getAnswersDailyByDate(req, res, next) {
     try {
       const { YYYYMMDD } = req.params;
-      let anwersDate = await Answer.findAll();
+      let anwersDate = await Answer.findAll({
+        include: [User, Question]
+      });
 
       function changeDate(dateInput) {
         return new Date(dateInput)
