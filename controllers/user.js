@@ -3,12 +3,13 @@ const {
   createToken,
   hashPass,
 } = require("../helpers/jwt&bcrypt");
-const { User } = require("../models/index");
+const { User, UserMajor, sequelize, Major } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
 
 class userController {
   static async register(req, res, next) {
+    const t = await sequelize.transaction();
     try {
       const { email, password, name } = req.body;
       const role = "Regular";
@@ -26,16 +27,24 @@ class userController {
         throw { name: "Name is required" };
       }
 
-      const newUser = await User.create(inputData);
+      const newUser = await User.create(inputData);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+      const usermajor = req.body.major.map(MajorId=>{
+        return {
+          UserId: newUser.id,
+          MajorId
+        }
+      })
+      await UserMajor.bulkCreate(usermajor)
 
       const result = {
         id: newUser.id,
         name: newUser.name,
         role: newUser.role,
       };
-
+      t.commit()
       res.status(201).json(result);
     } catch (error) {
+      t.rollback()
       console.log(error);
     }
   }
@@ -84,7 +93,9 @@ class userController {
   static async getProfile(req, res, next) {
     try {
       const { id } = req.user;
-      const allUser = await User.findByPk(id);
+      const allUser = await User.findByPk(id,{
+        include: [Major]
+      });
       res.status(200).json(allUser);
     } catch (error) {
       console.log(error);
