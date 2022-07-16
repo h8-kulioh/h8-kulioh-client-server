@@ -1,0 +1,94 @@
+{
+    "Sheet1": [
+        {
+            "subject": "PK",
+            "question": "Pada pukul 12.00 setiap harinya, Umar mengukur temperatur di kamarnya. Setelah dilakukan pengukuran dari hari Senin hingga Jumat, rata-rata temperatur di kamarnya adalah 22\\(^{o}\\)C. Temperatur terendah yang didapatkan Umar adalah 20\\(^{o}\\)C.~Berapakah temperatur tertinggi yang mungkin didapatkan Umar?",
+            "releaseDay": "1",
+            "id": "1"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika nilai penjumlahan dari 5 bilangan berturut-turut adalah A,~berapakah nilai penjumlahan dari 5 bilangan berikutnya?",
+            "releaseDay": "2",
+            "id": "2"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika suatu bilangan ratusan dipilih secara acak,~Berapa peluang akan terambil bilangan yang setidaknya mengandung satu angka 7?",
+            "releaseDay": "3",
+            "id": "3"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(z\\) tidak sama dengan 0, dan \\(z=\\sqrt{6zs-9s^{2}}\\), maka berapakah nilai \\(z?\\)",
+            "releaseDay": "4",
+            "id": "4"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika kita memilih orang secara acak, berapa sesedikitnya orang yang perlu kita kumpulkan agar terdapat peluang lebih dari 50% ada setidaknya 1 orang yang lahir di tahun kabisat?",
+            "releaseDay": "5",
+            "id": "5"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu sekolah, terdapat 800 siswa dan 70% diantaranya adalah laki-laki. Terdapat setidaknya 10% perempuan yang mengikuti ekstrakurikuler olahraga. Selain itu, kurang dari 30% laki-laki tidak mengikuti ekstrakurikuler olahraga.~Berapakah jumlah maksimum siswa yang tidak mengikuti ekstrakurikuler olahraga?",
+            "releaseDay": "6",
+            "id": "6"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu restoran, 60% pengunjung memesan makanan dan minuman. Sementara itu, dari semua pengunjung yang memesan makanan, 20% diantaranya tidak memesan minuman.~Jika ada seorang pengunjung yang makan di restoran tersebut, berapa peluang dia tidak akan memesan makanan?",
+            "releaseDay": "7",
+            "id": "7"
+        },
+        {
+            "subject": "PK",
+            "question": "Terdapat suatu himpunan bilangan yang terdiri atas 5 bilangan: 4, 1, 0, 6, dan 9. Jika dua bilangan dari kelima bilangan tersebut diganti dengan dua bilangan asli yang berbeda, nilai rata-rata kelima bilangan tersebut bisa mengalami penurunan.~Berapakah penurunan terbesar yang mungkin?",
+            "releaseDay": "8",
+            "id": "8"
+        },
+        {
+            "subject": "PK",
+            "question": "Terdapat suatu himpunan bilangan yang terdiri atas 4 bilangan: 2, 8, 10, dan 12. Jika bilangan N dan K ditambahkan ke himpunan tersebut, rata-rata dari himpunan bilangan tersebut akan meningkat sebesar 25%.~Berapakah nilai dari \\(N^2+2NK+K^2\\) ?",
+            "releaseDay": "9",
+            "id": "9"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(x>0\\), berapakah nilai terkecil dari \\(x+\\frac{1}{x}\\) ?",
+            "releaseDay": "10",
+            "id": "10"
+        },
+        {
+            "subject": "PK",
+            "question": "Penjumlahan dua bilangan positif \\(x\\) dan \\(y\\) adalah 77.~Berapakah nilai dari \\(xy\\)?~1) \\(x=y+1\\)~2) \\(x\\) dan \\(y\\) punya bilangan puluhan yang sama",
+            "releaseDay": "11",
+            "id": "11"
+        },
+        {
+            "subject": "PK",
+            "question": "Apakah \\(x>y\\)?~1) \\(x^{2}>y\\)~2) \\(\\sqrt{x}\\)\\(<\\)\\(y\\)",
+            "releaseDay": "12",
+            "id": "12"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu sekolah internasional, banyak siswa yang fasih berbahasa Jerman maupun berbahasa Prancis. Diantara semua siswa yang fasih berbahasa Prancis, jumlah siswa yang juga fasih berbahasa Jerman empat kali lipat lebih banyak dibandingkan yang tidak fasih berbahasa Jerman. Selain itu, dari semua siswa yang tidak fasih berbahasa Jerman, \\(1/6\\) diantaranya fasih berbahasa Prancis. Berapa persen siswa yang fasih berbahasa Jerman?~1) Terdapat 60 siswa yang fasih berbahasa Jerman dan juga fasih berbahasa Prancis.~2) Terdapat 75 siswa yang tidak fasih berbahasa Jerman dan juga tidakfasih berbahasa Prancis.",
+            "releaseDay": "13",
+            "id": "13"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu universitas, terdapat mata kuliah bahasa Jepang dan bahasa Prancis. Setidaknya terdapat 100 mahasiswa yang mengambil mata kuliah bahasa Jepang. Selain itu, dari semua siswa yang mengambil mata kuliah bahasa Prancis, 4% diantaranya mengambil mata kuliah bahasa Jepang. Apakah lebih banyak mahasiswa yang mengambil mata kuliah bahasa Prancis dibanding mata kuliah bahasa Jepang?~1) 16 mahasiswa mengambil mata kuliah bahasa Prancis dan juga bahasa Jepang.~2) Diantara semua siswa yang mengambil mata kuliah bahasa Jepang, 10% diantaranya mengambil mata kuliah bahasa Prancis.",
+            "releaseDay": "14",
+            "id": "14"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(y\\) lebih besar dari ((110%) \\((x)\\)), apakah \\(y\\) lebih dari 75?~1) \\(x>75\\)~2) \\(y-x=10\\)",
+            "releaseDay": "15",
+            "id": "15"
+        }
+    ]
+}

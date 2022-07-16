@@ -11,12 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasMany(models.QuestionKey)
     }
   }
   Question.init({
     subject: DataTypes.STRING,
     question: DataTypes.TEXT,
-    releaseDate: DataTypes.DATE
+    releaseDay: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Question',

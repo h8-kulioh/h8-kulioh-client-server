@@ -14,8 +14,8 @@ module.exports = {
       question: {
         type: Sequelize.TEXT
       },
-      releaseDate: {
-        type: Sequelize.DATE
+      releaseDay: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

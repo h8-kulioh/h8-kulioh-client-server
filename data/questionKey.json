@@ -1,0 +1,379 @@
+{
+    "QuestionKeys": [
+        {
+            "QuestionId": "1",
+            "answer": "23",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "1",
+            "answer": "24",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "1",
+            "answer": "25",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "1",
+            "answer": "26",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "1",
+            "answer": "30",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "2",
+            "answer": "\\(A+1\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "2",
+            "answer": "\\(A+5\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "2",
+            "answer": "\\(A+25\\)",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "2",
+            "answer": "\\(2A\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "2",
+            "answer": "\\(5A\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "3",
+            "answer": "\\(271/900\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "3",
+            "answer": "\\(27/100\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "3",
+            "answer": "\\(7/25\\)",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "3",
+            "answer": "\\(1/9\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "3",
+            "answer": "\\(1/10\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "4",
+            "answer": "\\(s\\)",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "4",
+            "answer": "\\(3s\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "4",
+            "answer": "\\(4s\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "4",
+            "answer": "\\(-3s\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "4",
+            "answer": "\\(-4s\\)",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "5",
+            "answer": "1 orang",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "5",
+            "answer": "2 orang",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "5",
+            "answer": "3 orang",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "5",
+            "answer": "4 orang ",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "5",
+            "answer": "5 orang",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "6",
+            "answer": "216",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "6",
+            "answer": "383",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "6",
+            "answer": "384",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "6",
+            "answer": "416",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "6",
+            "answer": "417",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "7",
+            "answer": "20%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "7",
+            "answer": "25%",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "7",
+            "answer": "40%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "7",
+            "answer": "60%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "7",
+            "answer": "75%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "8",
+            "answer": "20%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "8",
+            "answer": "30%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "8",
+            "answer": "50%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "8",
+            "answer": "60%",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "8",
+            "answer": "100%",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "9",
+            "answer": "28",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "9",
+            "answer": "32",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "9",
+            "answer": "64",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "9",
+            "answer": "784",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "9",
+            "answer": "3600",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "10",
+            "answer": "0.5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "10",
+            "answer": "1",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "10",
+            "answer": "1.5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "10",
+            "answer": "2",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "10",
+            "answer": "2.5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "11",
+            "answer": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "11",
+            "answer": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "11",
+            "answer": "Kedua pernyataan (1) dan (2) secara BERSAMA-SAMA dapat menjawab pertanyaan, tetapi satu pernyataan saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "11",
+            "answer": "Pernyataan (1) SAJA ataupun pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "11",
+            "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "12",
+            "answer": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "12",
+            "answer": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "12",
+            "answer": "Kedua pernyataan (1) dan (2) secara BERSAMA-SAMA dapat menjawab pertanyaan, tetapi satu pernyataan saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "12",
+            "answer": "Pernyataan (1) SAJA ataupun pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "12",
+            "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "13",
+            "answer": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "13",
+            "answer": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "13",
+            "answer": "Kedua pernyataan (1) dan (2) secara BERSAMA-SAMA dapat menjawab pertanyaan, tetapi satu pernyataan saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "13",
+            "answer": "Pernyataan (1) SAJA ataupun pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "13",
+            "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "14",
+            "answer": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "14",
+            "answer": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "14",
+            "answer": "Kedua pernyataan (1) dan (2) secara BERSAMA-SAMA dapat menjawab pertanyaan, tetapi satu pernyataan saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "14",
+            "answer": "Pernyataan (1) SAJA ataupun pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "14",
+            "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "15",
+            "answer": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "15",
+            "answer": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "15",
+            "answer": "Kedua pernyataan (1) dan (2) secara BERSAMA-SAMA dapat menjawab pertanyaan, tetapi satu pernyataan saja tidak cukup.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "15",
+            "answer": "Pernyataan (1) SAJA ataupun pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "15",
+            "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
+            "correct": "FALSE"
+        }
+    ]
+}
