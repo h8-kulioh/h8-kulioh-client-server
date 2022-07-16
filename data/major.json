@@ -1,0 +1,783 @@
+{
+    "Universities": [
+        {
+            "id": "1",
+            "name": "UNIVERSITAS GADJAH MADA (UGM)"
+        },
+        {
+            "id": "2",
+            "name": "UNIVERSITAS INDONESIA (UI)"
+        },
+        {
+            "id": "3",
+            "name": "INSTITUT TEKNOLOGI BANDUNG (ITB)"
+        }
+    ],
+    "Majors": [
+        {
+            "id": "1",
+            "name": "BIOLOGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "2",
+            "name": "FARMASI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "3",
+            "name": "GEOGRAFI LINGKUNGAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "4",
+            "name": "KARTOGRAFI DAN PENGINDERAAN JAUH",
+            "UniversityId": "1"
+        },
+        {
+            "id": "5",
+            "name": "PEMBANGUNAN WILAYAH",
+            "UniversityId": "1"
+        },
+        {
+            "id": "6",
+            "name": "KEDOKTERAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "7",
+            "name": "ILMU KEPERAWATAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "8",
+            "name": "GIZI KESEHATAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "9",
+            "name": "KEDOKTERAN GIGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "10",
+            "name": "KEDOKTERAN HEWAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "11",
+            "name": "FISIKA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "12",
+            "name": "KIMIA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "13",
+            "name": "MATEMATIKA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "14",
+            "name": "ILMU KOMPUTER",
+            "UniversityId": "1"
+        },
+        {
+            "id": "15",
+            "name": "STATISTIKA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "16",
+            "name": "GEOFISIKA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "17",
+            "name": "ELEKTRONIKA DAN INSTRUMENTASI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "18",
+            "name": "AGRONOMI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "19",
+            "name": "ILMU TANAH",
+            "UniversityId": "1"
+        },
+        {
+            "id": "20",
+            "name": "EKONOMI PERTANIAN DAN AGRIBISNIS",
+            "UniversityId": "1"
+        },
+        {
+            "id": "21",
+            "name": "PROTEKSI TANAMAN (ILMU HAMA DAN PENYAKIT TUMBUHAN)",
+            "UniversityId": "1"
+        },
+        {
+            "id": "22",
+            "name": "PENYULUHAN DAN KOMUNIKASI PERTANIAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "23",
+            "name": "AKUAKULTUR (BUDIDAYA PERIKANAN)",
+            "UniversityId": "1"
+        },
+        {
+            "id": "24",
+            "name": "TEKNOLOGI HASIL PERIKANAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "25",
+            "name": "MANAJEMEN SUMBERDAYA AKUATIK (MANAJEMEN SUMBER DAYA PERIKANAN)",
+            "UniversityId": "1"
+        },
+        {
+            "id": "26",
+            "name": "MIKROBIOLOGI PERTANIAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "27",
+            "name": "ILMU DAN INDUSTRI PETERNAKAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "28",
+            "name": "ARSITEKTUR",
+            "UniversityId": "1"
+        },
+        {
+            "id": "29",
+            "name": "PERENCANAAN WILAYAH DAN KOTA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "30",
+            "name": "TEKNIK GEODESI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "31",
+            "name": "TEKNIK GEOLOGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "32",
+            "name": "TEKNIK KIMIA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "33",
+            "name": "TEKNIK ELEKTRO",
+            "UniversityId": "1"
+        },
+        {
+            "id": "34",
+            "name": "TEKNIK MESIN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "35",
+            "name": "TEKNIK SIPIL",
+            "UniversityId": "1"
+        },
+        {
+            "id": "36",
+            "name": "TEKNIK NUKLIR",
+            "UniversityId": "1"
+        },
+        {
+            "id": "37",
+            "name": "TEKNIK FISIKA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "38",
+            "name": "TEKNIK INDUSTRI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "39",
+            "name": "TEKNIK PERTANIAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "40",
+            "name": "TEKNOLOGI PANGAN DAN HASIL PERTANIAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "41",
+            "name": "TEKNOLOGI INDUSTRI PERTANIAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "42",
+            "name": "HIGIENE GIGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "43",
+            "name": "KEHUTANAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "44",
+            "name": "TEKNOLOGI INFORMASI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "45",
+            "name": "ILMU AKTUARIA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "46",
+            "name": "TEKNIK BIOMEDIS",
+            "UniversityId": "1"
+        },
+        {
+            "id": "47",
+            "name": "ILMU EKONOMI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "48",
+            "name": "MANAJEMEN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "49",
+            "name": "AKUNTANSI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "50",
+            "name": "FILSAFAT",
+            "UniversityId": "1"
+        },
+        {
+            "id": "51",
+            "name": "HUKUM",
+            "UniversityId": "1"
+        },
+        {
+            "id": "52",
+            "name": "ANTROPOLOGI BUDAYA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "53",
+            "name": "ARKEOLOGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "54",
+            "name": "SEJARAH",
+            "UniversityId": "1"
+        },
+        {
+            "id": "55",
+            "name": "SASTRA ARAB",
+            "UniversityId": "1"
+        },
+        {
+            "id": "56",
+            "name": "BAHASA DAN SASTRA INDONESIA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "57",
+            "name": "SASTRA INGGRIS",
+            "UniversityId": "1"
+        },
+        {
+            "id": "58",
+            "name": "SASTRA JAWA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "59",
+            "name": "SASTRA PRANCIS",
+            "UniversityId": "1"
+        },
+        {
+            "id": "60",
+            "name": "SASTRA JEPANG",
+            "UniversityId": "1"
+        },
+        {
+            "id": "61",
+            "name": "BAHASA DAN KEBUDAYAAN KOREA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "62",
+            "name": "MANAJEMEN DAN KEBIJAKAN PUBLIK",
+            "UniversityId": "1"
+        },
+        {
+            "id": "63",
+            "name": "ILMU HUBUNGAN INTERNASIONAL",
+            "UniversityId": "1"
+        },
+        {
+            "id": "64",
+            "name": "POLITIK DAN PEMERINTAHAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "65",
+            "name": "PEMBANGUNAN SOSIAL DAN KESEJAHTERAAN",
+            "UniversityId": "1"
+        },
+        {
+            "id": "66",
+            "name": "ILMU KOMUNIKASI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "67",
+            "name": "SOSIOLOGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "68",
+            "name": "PSIKOLOGI",
+            "UniversityId": "1"
+        },
+        {
+            "id": "69",
+            "name": "PARIWISATA",
+            "UniversityId": "1"
+        },
+        {
+            "id": "70",
+            "name": "PENDIDIKAN DOKTER",
+            "UniversityId": "2"
+        },
+        {
+            "id": "71",
+            "name": "PENDIDIKAN DOKTER GIGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "72",
+            "name": "MATEMATIKA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "73",
+            "name": "FISIKA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "74",
+            "name": "KIMIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "75",
+            "name": "BIOLOGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "76",
+            "name": "FARMASI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "77",
+            "name": "GEOGRAFI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "78",
+            "name": "TEKNIK SIPIL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "79",
+            "name": "TEKNIK MESIN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "80",
+            "name": "TEKNIK ELEKTRO",
+            "UniversityId": "2"
+        },
+        {
+            "id": "81",
+            "name": "TEKNIK METALURGI & MATERIAL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "82",
+            "name": "ARSITEKTUR",
+            "UniversityId": "2"
+        },
+        {
+            "id": "83",
+            "name": "TEKNIK KIMIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "84",
+            "name": "ILMU KEPERAWATAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "85",
+            "name": "ILMU KOMPUTER",
+            "UniversityId": "2"
+        },
+        {
+            "id": "86",
+            "name": "ILMU KESEHATAN MASYARAKAT",
+            "UniversityId": "2"
+        },
+        {
+            "id": "87",
+            "name": "TEKNIK INDUSTRI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "88",
+            "name": "TEKNIK PERKAPALAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "89",
+            "name": "TEKNIK LINGKUNGAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "90",
+            "name": "TEKNIK KOMPUTER",
+            "UniversityId": "2"
+        },
+        {
+            "id": "91",
+            "name": "SISTEM INFORMASI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "92",
+            "name": "ARSITEKTUR INTERIOR",
+            "UniversityId": "2"
+        },
+        {
+            "id": "93",
+            "name": "TEKNOLOGI BIOPROSES",
+            "UniversityId": "2"
+        },
+        {
+            "id": "94",
+            "name": "GIZI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "95",
+            "name": "KESEHATAN LINGKUNGAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "96",
+            "name": "KESELAMATAN DAN KESEHATAN KERJA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "97",
+            "name": "GEOFISIKA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "98",
+            "name": "GEOLOGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "99",
+            "name": "STATISTIKA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "100",
+            "name": "AKTUARIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "101",
+            "name": "TEKNIK BIOMEDIS",
+            "UniversityId": "2"
+        },
+        {
+            "id": "102",
+            "name": "ILMU HUKUM",
+            "UniversityId": "2"
+        },
+        {
+            "id": "103",
+            "name": "ARKEOLOGI INDONESIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "104",
+            "name": "ILMU SEJARAH",
+            "UniversityId": "2"
+        },
+        {
+            "id": "105",
+            "name": "ILMU PSIKOLOGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "106",
+            "name": "ILMU KOMUNIKASI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "107",
+            "name": "ILMU POLITIK",
+            "UniversityId": "2"
+        },
+        {
+            "id": "108",
+            "name": "ILMU ADMINISTRASI NEGARA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "109",
+            "name": "KRIMINOLOGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "110",
+            "name": "SOSIOLOGI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "111",
+            "name": "ILMU KESEJAHTERAAN SOSIAL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "112",
+            "name": "ANTROPOLOGI SOSIAL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "113",
+            "name": "ILMU EKONOMI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "114",
+            "name": "ILMU ADMINISTRASI NIAGA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "115",
+            "name": "ILMU ADMINISTRASI FISKAL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "116",
+            "name": "MANAJEMEN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "117",
+            "name": "AKUNTANSI",
+            "UniversityId": "2"
+        },
+        {
+            "id": "118",
+            "name": "ILMU HUBUNGAN INTERNASIONAL",
+            "UniversityId": "2"
+        },
+        {
+            "id": "119",
+            "name": "ILMU PERPUSTAKAAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "120",
+            "name": "ILMU FILSAFAT",
+            "UniversityId": "2"
+        },
+        {
+            "id": "121",
+            "name": "SASTRA INDONESIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "122",
+            "name": "SASTRA DAERAH UNTUK SASTRA JAWA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "123",
+            "name": "SASTRA JEPANG",
+            "UniversityId": "2"
+        },
+        {
+            "id": "124",
+            "name": "SASTRA CINA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "125",
+            "name": "SASTRA ARAB",
+            "UniversityId": "2"
+        },
+        {
+            "id": "126",
+            "name": "SASTRA PERANCIS",
+            "UniversityId": "2"
+        },
+        {
+            "id": "127",
+            "name": "SASTRA INGGRIS",
+            "UniversityId": "2"
+        },
+        {
+            "id": "128",
+            "name": "SASTRA JERMAN",
+            "UniversityId": "2"
+        },
+        {
+            "id": "129",
+            "name": "SASTRA BELANDA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "130",
+            "name": "SASTRA RUSIA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "131",
+            "name": "BAHASA DAN KEBUDAYAAN KOREA",
+            "UniversityId": "2"
+        },
+        {
+            "id": "132",
+            "name": "ILMU EKONOMI ISLAM",
+            "UniversityId": "2"
+        },
+        {
+            "id": "133",
+            "name": "BISNIS ISLAM",
+            "UniversityId": "2"
+        },
+        {
+            "id": "134",
+            "name": "FITB Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "135",
+            "name": "FTTM Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "136",
+            "name": "FMIPA",
+            "UniversityId": "3"
+        },
+        {
+            "id": "137",
+            "name": "FTSL Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "138",
+            "name": "SF",
+            "UniversityId": "3"
+        },
+        {
+            "id": "139",
+            "name": "SITH Program Sains",
+            "UniversityId": "3"
+        },
+        {
+            "id": "140",
+            "name": "STEI",
+            "UniversityId": "3"
+        },
+        {
+            "id": "141",
+            "name": "FTI Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "142",
+            "name": "FTMD",
+            "UniversityId": "3"
+        },
+        {
+            "id": "143",
+            "name": "SAPPK Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "144",
+            "name": "SITH Program Rekayasa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "145",
+            "name": "FTSL Kampus Jatinangor",
+            "UniversityId": "3"
+        },
+        {
+            "id": "146",
+            "name": "FTI Kampus Jatinangor",
+            "UniversityId": "3"
+        },
+        {
+            "id": "147",
+            "name": "FTI Kampus Cirebon",
+            "UniversityId": "3"
+        },
+        {
+            "id": "148",
+            "name": "SAPPK Kampus Cirebon",
+            "UniversityId": "3"
+        },
+        {
+            "id": "149",
+            "name": "FTTM Kampus Cirebon",
+            "UniversityId": "3"
+        },
+        {
+            "id": "150",
+            "name": "FITB Kampus Cirebon",
+            "UniversityId": "3"
+        },
+        {
+            "id": "151",
+            "name": "FSRD Kampus Ganesa",
+            "UniversityId": "3"
+        },
+        {
+            "id": "152",
+            "name": "SBM",
+            "UniversityId": "3"
+        },
+        {
+            "id": "153",
+            "name": "FSRD Kampus Cirebon",
+            "UniversityId": "3"
+        }
+    ]
+}

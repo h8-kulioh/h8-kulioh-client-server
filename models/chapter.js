@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Chapter.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    subject: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Chapter',
