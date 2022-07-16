@@ -21,6 +21,22 @@ class UniversityController {
       console.log(error);
     }
   }
+
+  static async getUniversityById(req, res, next) {
+    try {
+      const { id } = req.params;
+
+      const getUniversityById = await University.findByPk(id);
+
+      if(getUniversityById === null){
+        throw({name: "University not found"})
+      }
+
+      res.status(200).json(getUniversityById);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {

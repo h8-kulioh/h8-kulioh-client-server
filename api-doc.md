@@ -27,8 +27,12 @@ List of available endpoints :
 - `PATCH  /todos`
 
 > Universities:
-- `GET      /todos`
-- `PATCH  /todos`
+- `GET      /universityroute/university` udah
+- `GET      /universityroute/university/4` udah
+
+> Majors:
+- `GET      /majorsroute/major` udah
+
 
 &nbsp;
 
