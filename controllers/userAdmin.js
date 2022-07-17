@@ -5,8 +5,10 @@ const {
 } = require("../helpers/jwt&bcrypt");
 const {
   User,
+  Question,
   UserMajor,
   sequelize,
+  QuestionKey,
   Major,
   Task,
   Todo,
@@ -87,7 +89,48 @@ class UserAdminController {
     }
   }
 
-  
+  static async createDailyQuestions(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { subject, question, releaseDay, answer, correct } = req.body;
+      if (!subject) {
+        throw { name: "Subject is required" };
+      }
+      if (!question) {
+        throw { name: "Subject is required" };
+      }
+      if (!releaseDay) {
+        throw { name: "Subject is required" };
+      }
+      if (!answer) {
+        throw { name: "Subject is required" };
+      }
+      if (!correct) {
+        throw { name: "Subject is required" };
+      }
+
+      const insertData = { subject, question, releaseDay };
+
+      const newDailyQuestion = await Question.create(insertData);
+
+      const dataAnswer = await answer.map((el, i) => {
+        return {
+          QuestionId: newDailyQuestion.id,
+          answer: el,
+          correct: correct[i],
+        };
+      });
+
+      const newDailyQuestionKey = await QuestionKey.bulkCreate(dataAnswer);
+      t.commit();
+      res.status(200).json(newDailyQuestion);
+    } catch (error) {
+      t.rollback();
+
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {
