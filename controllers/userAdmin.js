@@ -301,6 +301,10 @@ class UserAdminController {
         },
       });
 
+      if (deleteChapter === 1) {
+        throw { name: "Chapter/Task not found" };
+      }
+
       const deleteTask = await Task.destroy({
         where: {
           ChapterId: id,
@@ -308,11 +312,7 @@ class UserAdminController {
       });
       t.commit();
 
-      if (deleteChapter === 1) {
-        res.status(200).json({ name: "Success delete Chapter and Task" });
-      } else {
-        throw { name: "Chapter/Task not found" };
-      }
+      res.status(200).json({ name: "Success delete Chapter and Task" });
     } catch (error) {
       t.rollback();
       console.log(error);
@@ -341,6 +341,49 @@ class UserAdminController {
       const newMajor = await Major.create(insertDataMajor);
       t.commit();
       res.status(200).json({ name: "Success create new University and Major" });
+    } catch (error) {
+      t.rollback();
+
+      console.log(error);
+    }
+  }
+
+  static async updateUniversity(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+      const { name, majorsName } = req.body;
+      if (!name) {
+        throw { name: "University name is required" };
+      }
+      if (!majorsName) {
+        throw { name: "University major name is required" };
+      }
+
+      const editUniv = await University.update(
+        { name },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+
+      if (editUniv[0] !== 1) {
+        throw { name: "University not found" };
+      }
+
+      const editMajor = await Major.update(
+        { name: majorsName },
+        {
+          where: {
+            UniversityId: id,
+          },
+        }
+      );
+      t.commit();
+      res.status(200).json({ name: "Success update University and Major" });
     } catch (error) {
       t.rollback();
 

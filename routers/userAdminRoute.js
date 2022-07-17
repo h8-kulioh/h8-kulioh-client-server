@@ -17,6 +17,8 @@ router.put("/chapter-task/:id", UserAdminController.updateChaptersTasks);
 router.delete("/chapter-task/:id", UserAdminController.deleteChaptersTasks);
 
 router.post("/university-major", UserAdminController.createUniversity);
+router.put("/university-major/:id", UserAdminController.updateUniversity);
+
 
 
 
