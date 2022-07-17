@@ -184,6 +184,30 @@ class UserAdminController {
       console.log(error);
     }
   }
+
+  static async deleteDailyQuestions(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+      const deleteQustions = await Question.destroy({
+        where: {
+          id,
+        },
+      });
+
+      const deleteQustionsKey = await QuestionKey.destroy({
+        where: {
+          QuestionId: id,
+        },
+      });
+      t.commit();
+      res.status(200).json(deleteQustionsKey);
+    } catch (error) {
+      t.rollback();
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {

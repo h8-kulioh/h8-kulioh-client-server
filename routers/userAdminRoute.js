@@ -10,6 +10,8 @@ router.use(authentif)
 
 router.post("/daily-questions", UserAdminController.createDailyQuestions);
 router.put("/daily-questions/:id", UserAdminController.updateDailyQuestions);
+router.delete("/daily-questions/:id", UserAdminController.deleteDailyQuestions);
+
 
 
 
