@@ -11,6 +11,8 @@ router.use(authentif)
 router.get("/profile", userController.getProfile)
 router.put("/profile", userController.editProfile)
 
+router.get("/stat", userController.getstat)
+
 router.post("/handlepayment", userController.handlepayment)
 router.patch("/premium", userController.changeRole)
 
