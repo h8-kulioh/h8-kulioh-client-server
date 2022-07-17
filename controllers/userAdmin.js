@@ -125,7 +125,7 @@ class UserAdminController {
 
       const newDailyQuestionKey = await QuestionKey.bulkCreate(dataAnswer);
       t.commit();
-      res.status(200).json(newDailyQuestion);
+      res.status(200).json({ name: "Succes create question and answer key" });
     } catch (error) {
       t.rollback();
 
@@ -179,7 +179,7 @@ class UserAdminController {
 
       const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer);
       t.commit();
-      res.status(200).json(newDailyQuestion);
+      res.status(200).json({ name: "Succes update question and answer key" });
     } catch (error) {
       t.rollback();
       console.log(error);
@@ -203,7 +203,7 @@ class UserAdminController {
         },
       });
       t.commit();
-      res.status(200).json(deleteQustionsKey);
+      res.status(200).json({ name: "Succes delete question and answer key" });
     } catch (error) {
       t.rollback();
       console.log(error);
@@ -279,6 +279,35 @@ class UserAdminController {
       );
 
       res.status(200).json({ name: "Success edit Chapter and Task" });
+    } catch (error) {
+      t.rollback();
+      console.log(error);
+    }
+  }
+
+  static async deleteChaptersTasks(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+
+      const deleteChapter = await Chapter.destroy({
+        where: {
+          id,
+        },
+      });
+
+      const deleteTask = await Task.destroy({
+        where: {
+          ChapterId: id,
+        },
+      });
+
+      if (deleteChapter === 1) {
+        res.status(200).json({ name: "Success delete Chapter and Task" });
+      } else {
+        throw { name: "Chapter/Task not found" };
+      }
     } catch (error) {
       t.rollback();
       console.log(error);

@@ -14,6 +14,8 @@ router.delete("/daily-questions/:id", UserAdminController.deleteDailyQuestions);
 
 router.post("/chapter-task", UserAdminController.createChaptersTasks);
 router.put("/chapter-task/:id", UserAdminController.updateChaptersTasks);
+router.delete("/chapter-task/:id", UserAdminController.deleteChaptersTasks);
+
 
 
 
