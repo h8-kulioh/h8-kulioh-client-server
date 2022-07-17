@@ -11,13 +11,13 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     const {Majors} = require('../data/major.json')
-     Majors.forEach(data=>{
+     const {Chapters} = require('../data/ChaptersTask.json')
+     Chapters.forEach(data=>{
        data.createdAt = new Date()
        data.updatedAt = new Date()
        delete data.id
      })
-     await queryInterface.bulkInsert('Majors', Majors)
+     await queryInterface.bulkInsert('Chapters', Chapters)
   },
 
   async down (queryInterface, Sequelize) {
@@ -27,6 +27,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('Majors')
+     await queryInterface.bulkDelete('Chapters', {})
+
   }
 };

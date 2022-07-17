@@ -3,7 +3,14 @@ const {
   createToken,
   hashPass,
 } = require("../helpers/jwt&bcrypt");
-const { User, UserMajor, sequelize, Major } = require("../models/index");
+const {
+  User,
+  UserMajor,
+  sequelize,
+  Major,
+  Task,
+  Todo,
+} = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
 
@@ -27,24 +34,34 @@ class userController {
         throw { name: "Name is required" };
       }
 
-      const newUser = await User.create(inputData);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-      const usermajor = req.body.major.map(MajorId=>{
+      const newUser = await User.create(inputData);
+      const usermajor = req.body.major.map((MajorId) => {
         return {
           UserId: newUser.id,
-          MajorId
-        }
-      })
-      await UserMajor.bulkCreate(usermajor)
+          MajorId,
+        };
+      });
+      await UserMajor.bulkCreate(usermajor);
+
+      const getTask = await Task.findAll();
+      const postTodos = getTask.map((el) => {
+        return {
+          UserId: newUser.id,
+          TaskId: el.id,
+          status: "False",
+        };
+      });
+      await Todo.bulkCreate(postTodos);
 
       const result = {
         id: newUser.id,
         name: newUser.name,
         role: newUser.role,
       };
-      t.commit()
+      t.commit();
       res.status(201).json(result);
     } catch (error) {
-      t.rollback()
+      t.rollback();
       console.log(error);
     }
   }
@@ -93,8 +110,8 @@ class userController {
   static async getProfile(req, res, next) {
     try {
       const { id } = req.user;
-      const allUser = await User.findByPk(id,{
-        include: [Major]
+      const allUser = await User.findByPk(id, {
+        include: [Major],
       });
       res.status(200).json(allUser);
     } catch (error) {
@@ -145,7 +162,6 @@ class userController {
 
       const emailUser = req.user.email;
       const nameUser = req.user.name;
-
 
       if (email !== emailUser) {
         throw { name: "Your email can't be different" };
