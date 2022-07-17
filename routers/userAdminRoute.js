@@ -9,6 +9,8 @@ router.post("/login", UserAdminController.login);
 router.use(authentif)
 
 router.post("/daily-questions", UserAdminController.createDailyQuestions);
+router.put("/daily-questions/:id", UserAdminController.updateDailyQuestions);
+
 
 
 
