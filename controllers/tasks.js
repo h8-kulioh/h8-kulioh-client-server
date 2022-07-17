@@ -12,6 +12,15 @@ class TaskController {
       console.log(error);
     }
   }
+  static async getChapter(req, res, next) {
+    try {
+      const getChapters = await Chapter.findAll({})
+      res.status(200).json(getChapters)
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 module.exports = {

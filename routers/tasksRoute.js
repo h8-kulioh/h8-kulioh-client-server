@@ -5,6 +5,6 @@ const { authentif } = require("../middleware/authentif");
 
 router.use(authentif);
 
-router.get("/tasks", TaskController.getTasks);
-
+router.get("/tasks", TaskController.getTasks)
+router.get("/chapters", TaskController.getChapter)
 module.exports = router;
