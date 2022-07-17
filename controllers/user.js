@@ -10,6 +10,7 @@ const {
   Major,
   Task,
   Todo,
+  University
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -81,6 +82,7 @@ class userController {
         where: {
           email,
         },
+        include: [{model: Major, include: [University]}]
       });
 
       if (!findUser) {
@@ -101,7 +103,7 @@ class userController {
 
       const token = createToken(payload);
 
-      res.status(200).json({ access_token: token });
+      res.status(200).json({ access_token: token, majors: findUser.Majors });
     } catch (error) {
       console.log(error);
     }
