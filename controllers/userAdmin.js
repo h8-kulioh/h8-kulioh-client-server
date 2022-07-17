@@ -131,6 +131,59 @@ class UserAdminController {
       console.log(error);
     }
   }
+
+  static async updateDailyQuestions(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+      const { subject, question, releaseDay, answer, correct } = req.body;
+      if (!subject) {
+        throw { name: "Subject is required" };
+      }
+      if (!question) {
+        throw { name: "Subject is required" };
+      }
+      if (!releaseDay) {
+        throw { name: "Subject is required" };
+      }
+      if (!answer) {
+        throw { name: "Subject is required" };
+      }
+      if (!correct) {
+        throw { name: "Subject is required" };
+      }
+
+      const editData = { subject, question, releaseDay };
+
+      const newDailyQuestion = await Question.update(editData, {
+        where: {
+          id,
+        },
+      });
+
+      const editAnswer = await answer.map((el, i) => {
+        return {
+          QuestionId: id,
+          answer: el,
+          correct: correct[i],
+        };
+      });
+
+      await QuestionKey.destroy({
+        where: {
+          QuestionId: id,
+        },
+      });
+
+      const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer);
+      t.commit();
+      res.status(200).json(newDailyQuestion);
+    } catch (error) {
+      t.rollback();
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {
