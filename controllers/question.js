@@ -20,24 +20,19 @@ class questionController {
 
   static async postAnswersDaily(req, res, next) {
     try {
-      const questions = await Question.findAll({
-        where: {
-          releaseDay: Math.ceil(
-            (new Date().getTime() - new Date(req.user.createdAt).getTime()) /
-              (1000 * 3600 * 24)
-          ),
-        },
-        include: [QuestionKey],
+      const { userAnswer, QuestionId } = req.body;
+
+      let insertData = userAnswer.map((el, i) => {
+        return {
+          userAnswer: el,
+          QuestionId: QuestionId[i],
+          UserId: req.user.id,
+        };
       });
 
-      const QuestionId = questions[0].id;
-      const { userAnswer } = req.body;
-      const UserId = req.user.id;
+      const result = await Answer.bulkCreate(insertData)
+      res.status(200).json(result);
 
-      const insertData = { QuestionId, UserId, userAnswer };
-
-      const postAnswersDaily = await Answer.create(insertData);
-      res.status(200).json(postAnswersDaily);
     } catch (err) {
       console.log(err);
       next(err);
@@ -47,8 +42,12 @@ class questionController {
   static async getAnswersDailyByDate(req, res, next) {
     try {
       const { YYYYMMDD } = req.params;
+      const UserId = req.user.id;
       let anwersDate = await Answer.findAll({
-        include: [User, Question]
+        include: [User, Question],
+        where: {
+          UserId,
+        },
       });
 
       function changeDate(dateInput) {
@@ -63,8 +62,8 @@ class questionController {
         (el) => changeDate(el.createdAt) === YYYYMMDD
       );
 
-      if(findByDate.length === 0){
-        throw({name: "Answers is not found"})
+      if (findByDate.length === 0) {
+        throw { name: "Answers is not found" };
       }
       res.status(200).json(findByDate);
     } catch (error) {
