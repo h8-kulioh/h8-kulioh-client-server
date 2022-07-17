@@ -9,6 +9,7 @@ const {
   UserMajor,
   sequelize,
   QuestionKey,
+  University,
   Chapter,
   Major,
   Task,
@@ -236,6 +237,8 @@ class UserAdminController {
       };
 
       const newTask = await Task.create(insertDataTask);
+      t.commit();
+
       res.status(200).json({ name: "Success create new Chapter and Task" });
     } catch (error) {
       t.rollback();
@@ -277,6 +280,7 @@ class UserAdminController {
           },
         }
       );
+      t.commit();
 
       res.status(200).json({ name: "Success edit Chapter and Task" });
     } catch (error) {
@@ -302,6 +306,7 @@ class UserAdminController {
           ChapterId: id,
         },
       });
+      t.commit();
 
       if (deleteChapter === 1) {
         res.status(200).json({ name: "Success delete Chapter and Task" });
@@ -310,6 +315,35 @@ class UserAdminController {
       }
     } catch (error) {
       t.rollback();
+      console.log(error);
+    }
+  }
+
+  static async createUniversity(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { name, majorsName } = req.body;
+      if (!name) {
+        throw { name: "University name is required" };
+      }
+      if (!majorsName) {
+        throw { name: "University major name is required" };
+      }
+
+      const newUniveristy = await University.create({ name });
+
+      const insertDataMajor = {
+        name: majorsName,
+        UniversityId: newUniveristy.id,
+      };
+
+      const newMajor = await Major.create(insertDataMajor);
+      t.commit();
+      res.status(200).json({ name: "Success create new University and Major" });
+    } catch (error) {
+      t.rollback();
+
       console.log(error);
     }
   }
