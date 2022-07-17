@@ -8,10 +8,12 @@ const universities = require("./universityRoutes");
 const chapters = require("./chapterRoute");
 const tasks = require("./tasksRoute");
 const todos = require("./todoRouter");
+const userAdmin = require("./userAdminRoute");
 
 router.use("/majorsroute", majors);
 router.use("/universityroute", universities);
 router.use("/users", users);
+router.use("/users-admin", userAdmin);
 router.use("/todoroute", todos);
 router.use("/chaptersroute", chapters);
 router.use("/tasksroute", tasks);
