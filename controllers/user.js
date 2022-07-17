@@ -10,7 +10,10 @@ const {
   Major,
   Task,
   Todo,
-  University
+  University,
+  Answer,
+  Question,
+  QuestionKey
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -103,7 +106,7 @@ class userController {
 
       const token = createToken(payload);
 
-      res.status(200).json({ access_token: token, majors: findUser.Majors });
+      res.status(200).json({ access_token: token, majors: findUser.Majors, name: findUser.name });
     } catch (error) {
       console.log(error);
     }
@@ -234,6 +237,70 @@ class userController {
       }
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  static async getstat(req, res, next){
+    try{
+      const useranswers = await Answer.findAll({
+        where: {
+          UserId: req.user.id
+        }
+      })
+      let jumlahBenar = 0
+      let PU = 0
+      let PUbenar = 0
+      let PPU = 0
+      let PPUbenar = 0
+      let PK = 0
+      let PKbenar = 0
+      let PBM = 0
+      let PBMbenar = 0
+      useranswers.forEach(async (element) => {
+        const question = await Question.findOne(element.QuestionId)
+        const answer = await QuestionKey.findOne(+element.userAnswer)
+        switch(question.subject){
+          case "PU":
+            PU++
+            if(answer.correct===true){
+              jumlahBenar++
+              PUbenar++
+            }
+            break;
+          case "PPU":
+            PPU++
+            if(answer.correct===true){
+              jumlahBenar++
+              PPUbenar++
+            }
+            break
+          case "PK":
+            PK++
+            if(answer.correct===true){
+              jumlahBenar++
+              PKbenar++
+            }
+            break
+          case "PBM":
+            PBM++
+            if(answer.correct===true){
+              jumlahBenar++
+              PBMbenar++
+            }
+            break
+        }
+      });
+      res.status(200).json({
+        jumlahBenar,
+        jumlahSoal: useranswers.length(),
+        perPU: PUbenar/PU*100,
+        perPPU: PPUbenar/PPU*100,
+        perPK: PKbenar/PK*100,
+        perPBM: PBMbenar/PBM*100,
+        perAll: jumlahBenar/useranswers.length()*100
+      })
+    }catch(err){
+      next(err)
     }
   }
 }
