@@ -9,6 +9,7 @@ const {
   UserMajor,
   sequelize,
   QuestionKey,
+  Chapter,
   Major,
   Task,
   Todo,
@@ -142,16 +143,16 @@ class UserAdminController {
         throw { name: "Subject is required" };
       }
       if (!question) {
-        throw { name: "Subject is required" };
+        throw { name: "Question is required" };
       }
       if (!releaseDay) {
-        throw { name: "Subject is required" };
+        throw { name: "Release Day is required" };
       }
       if (!answer) {
-        throw { name: "Subject is required" };
+        throw { name: "Answer is required" };
       }
       if (!correct) {
-        throw { name: "Subject is required" };
+        throw { name: "Correct is required" };
       }
 
       const editData = { subject, question, releaseDay };
@@ -208,6 +209,42 @@ class UserAdminController {
       console.log(error);
     }
   }
+
+  static async createChaptersTasks(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { name, subject, description } = req.body;
+
+      if (!name) {
+        throw { name: "Name is required" };
+      }
+      if (!subject) {
+        throw { name: "Subject is required" };
+      }
+      if (!description) {
+        throw { name: "Description is required" };
+      }
+
+      const insertDataCahpter = { name, subject };
+
+      const newCahpter = await Chapter.create(insertDataCahpter);
+
+      const insertDataTask = {
+        description,
+        ChapterId: newCahpter.id,
+      };
+
+      const newTask = await Task.create(insertDataTask);
+      res.status(200).json({ name: "Success create new Chapter and Task" });
+    } catch (error) {
+      t.rollback();
+
+      console.log(error);
+    }
+  }
+
+  
 }
 
 module.exports = {
