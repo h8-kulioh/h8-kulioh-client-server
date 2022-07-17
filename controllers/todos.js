@@ -16,6 +16,7 @@ class TodoController {
         where: {
           UserId,
         },
+        order: [["id", "ASC"]],
       });
 
       res.status(200).json(getTodos);
