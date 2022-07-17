@@ -6,5 +6,10 @@ const { authentif } = require("../middleware/authentif");
 router.post("/register", UserAdminController.register);
 router.post("/login", UserAdminController.login);
 
+router.use(authentif)
+
+router.post("/daily-questions", UserAdminController.createDailyQuestions);
+
+
 
 module.exports = router;
