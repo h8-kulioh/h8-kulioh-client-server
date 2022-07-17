@@ -7,7 +7,7 @@ class questionController {
         where: {
           releaseDay: Math.ceil(
             (new Date().getTime() - new Date(req.user.createdAt).getTime()) /
-              (1000 * 3600 * 24)
+            (1000 * 3600 * 24)
           ),
         },
         include: [QuestionKey],
@@ -67,7 +67,10 @@ class questionController {
       }
       res.status(200).json(findByDate);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      res.status(404).json({
+        statusCode: 404
+      })
     }
   }
 }
