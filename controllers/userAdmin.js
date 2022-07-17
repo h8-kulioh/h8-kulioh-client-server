@@ -301,7 +301,7 @@ class UserAdminController {
         },
       });
 
-      if (deleteChapter === 1) {
+      if (deleteChapter !== 1) {
         throw { name: "Chapter/Task not found" };
       }
 
@@ -384,6 +384,37 @@ class UserAdminController {
       );
       t.commit();
       res.status(200).json({ name: "Success update University and Major" });
+    } catch (error) {
+      t.rollback();
+
+      console.log(error);
+    }
+  }
+
+  static async deleteUniversity(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+
+      const deleteUniv = await University.destroy({
+        where: {
+          id,
+        },
+      });
+
+
+      if (deleteUniv !== 1) {
+        throw { name: "University not found" };
+      }
+
+      const editMajor = await Major.destroy({
+        where: {
+          UniversityId: id,
+        },
+      });
+      t.commit();
+      res.status(200).json({ name: "Success delete University and Major" });
     } catch (error) {
       t.rollback();
 
