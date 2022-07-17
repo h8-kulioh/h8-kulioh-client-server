@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { ChapterController } = require("../controllers/chapters");
+const { TodoController } = require("../controllers/todos");
 const { authentif } = require("../middleware/authentif")
 
 router.use(authentif)
-
-router.get("/chapters", ChapterController.getChapters);
+router.get("/todos", TodoController.getTodos);
 
 module.exports = router;

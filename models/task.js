@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       Task.belongsTo(models.Chapter,{
         foreignKey: "ChapterId"
       })
+
+      Task.hasMany(models.Todo,{
+        foreignKey: "TaskId"
+      })
     }
   }
   Task.init({
