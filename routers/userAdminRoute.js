@@ -13,6 +13,8 @@ router.put("/daily-questions/:id", UserAdminController.updateDailyQuestions);
 router.delete("/daily-questions/:id", UserAdminController.deleteDailyQuestions);
 
 router.post("/chapter-task", UserAdminController.createChaptersTasks);
+router.put("/chapter-task/:id", UserAdminController.updateChaptersTasks);
+
 
 
 
