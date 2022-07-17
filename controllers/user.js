@@ -257,8 +257,8 @@ class userController {
       let PBM = 0
       let PBMbenar = 0
       useranswers.forEach(async (element) => {
-        const question = await Question.findOne(element.QuestionId)
-        const answer = await QuestionKey.findOne(+element.userAnswer)
+        const question = await Question.findByPk(element.QuestionId)
+        const answer = await QuestionKey.findByPk(+element.userAnswer)
         switch(question.subject){
           case "PU":
             PU++
@@ -302,6 +302,10 @@ class userController {
     }catch(err){
       next(err)
     }
+  }
+  
+  static async getTaskStat(req, res, next){
+
   }
 }
 
