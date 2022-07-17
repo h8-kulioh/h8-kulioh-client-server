@@ -244,7 +244,46 @@ class UserAdminController {
     }
   }
 
-  
+  static async updateChaptersTasks(req, res, next) {
+    const t = await sequelize.transaction();
+
+    try {
+      const { id } = req.params;
+      const { name, subject, description } = req.body;
+
+      if (!name) {
+        throw { name: "Name is required" };
+      }
+      if (!subject) {
+        throw { name: "Subject is required" };
+      }
+      if (!description) {
+        throw { name: "Description is required" };
+      }
+
+      const editDataChapter = { name, subject };
+
+      const updateChapter = await Chapter.update(editDataChapter, {
+        where: {
+          id,
+        },
+      });
+
+      const updateTask = await Task.update(
+        { description },
+        {
+          where: {
+            ChapterId: id,
+          },
+        }
+      );
+
+      res.status(200).json({ name: "Success edit Chapter and Task" });
+    } catch (error) {
+      t.rollback();
+      console.log(error);
+    }
+  }
 }
 
 module.exports = {
