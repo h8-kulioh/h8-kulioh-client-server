@@ -6,12 +6,15 @@ const questions = require("./questionRoutes")
 const majors = require("./majorRoutes")
 const universities = require("./universityRoutes")
 const chapters = require("./chapterRoute")
+const tasks = require(".//tasksRoute")
+
 
 
 router.use("/majorsroute", majors)
 router.use("/universityroute", universities)
 router.use("/users", users)
-router.use("/chaptersrouter", chapters)
+router.use("/chaptersroute", chapters)
+router.use("/tasksroute", tasks)
 router.use("/questions", questions)
 
 module.exports = router
