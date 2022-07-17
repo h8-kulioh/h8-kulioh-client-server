@@ -67,6 +67,9 @@ class questionController {
       }
       res.status(200).json(findByDate);
     } catch (error) {
+      res.status(404).json({
+        statusCode: 404
+      })
       console.log(error);
     }
   }

@@ -247,6 +247,7 @@ class userController {
           UserId: req.user.id
         }
       })
+      console.log(useranswers)
       let jumlahBenar = 0
       let PU = 0
       let PUbenar = 0
@@ -292,12 +293,12 @@ class userController {
       });
       res.status(200).json({
         jumlahBenar,
-        jumlahSoal: useranswers.length(),
+        jumlahSoal: useranswers.length,
         perPU: PUbenar/PU*100,
         perPPU: PPUbenar/PPU*100,
         perPK: PKbenar/PK*100,
         perPBM: PBMbenar/PBM*100,
-        perAll: jumlahBenar/useranswers.length()*100
+        perAll: jumlahBenar/useranswers.length*100
       })
     }catch(err){
       next(err)
