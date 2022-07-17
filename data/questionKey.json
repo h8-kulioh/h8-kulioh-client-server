@@ -374,6 +374,381 @@
             "QuestionId": "15",
             "answer": "Pernyataan (1) dan (2) secara bersama-sama TIDAK DAPAT menjawab pertanyaan, dan dibutuhkan data lain yang spesifik untuk menjawab pertanyaan.",
             "correct": "FALSE"
+        },
+        {
+            "QuestionId": "16",
+            "answer": "Asal-usul Terbentuknya RIS",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "16",
+            "answer": "Pemilihan Presiden RIS",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "16",
+            "answer": "Pengangkatan Soekarno sebagai Presiden RIS",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "16",
+            "answer": "Pengembalian Ibu Kota ke Jakarta",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "16",
+            "answer": "Sejarah RIS",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "17",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "17",
+            "answer": "2 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "17",
+            "answer": "3 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "17",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "17",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "18",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "18",
+            "answer": "2 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "18",
+            "answer": "3 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "18",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "18",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "19",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "19",
+            "answer": "2 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "19",
+            "answer": "3 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "19",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "19",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "20",
+            "answer": "Kalimat 3 dan 6",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "20",
+            "answer": "Kalimat 4 dan 5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "20",
+            "answer": "Kalimat 2 dan 5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "20",
+            "answer": "Kalimat 1 dan 7",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "20",
+            "answer": "TIDAK ADA",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "21",
+            "answer": "Kalimat 1",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "21",
+            "answer": "Kalimat 3",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "21",
+            "answer": "Kalimat 4",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "21",
+            "answer": "Kalimat 7",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "21",
+            "answer": "TIDAK ADA",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "22",
+            "answer": "Setelah makannya selesai, ia langsung tidur.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "22",
+            "answer": "Tenangnya ruangan membuat saya nyaman.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "22",
+            "answer": "Sesungguhnya saya sudah bekerja keras.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "22",
+            "answer": "Jangan simpan bajunya di sana!",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "22",
+            "answer": "Sejauh-jauhnya dia pergi, dia akan kembali.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "23",
+            "answer": "Asal-usul Otoritas Jasa Keuangan.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "23",
+            "answer": "Sejarah Bursa Efek di Indonesia",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "23",
+            "answer": "Sejarah Bursa Efek Batavia",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "23",
+            "answer": "Sejarah Pasar Modal Indonesia",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "23",
+            "answer": "Asal-usul Bursa Efek Indonesia",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "24",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "24",
+            "answer": "2 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "24",
+            "answer": "3 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "24",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "24",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "25",
+            "answer": "Kalimat 2",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "25",
+            "answer": "Kalimat 4",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "25",
+            "answer": "Kalimat 5",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "25",
+            "answer": "Kalimat 6",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "25",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "26",
+            "answer": "Semalam, tidurnya sangat larut.",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "26",
+            "answer": "Gelapnya ruangan membuat saya mengantuk.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "26",
+            "answer": "Tidak selamanya kondisi kita akan seperti ini.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "26",
+            "answer": "Tutup pintunya sekarang!",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "26",
+            "answer": "Ia sibuk mencari mainannya.",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "27",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "27",
+            "answer": "2 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "27",
+            "answer": "3 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "27",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "27",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "28",
+            "answer": "Kalimat 7",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "28",
+            "answer": "Kalimat 9",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "28",
+            "answer": "Kalimat 10",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "28",
+            "answer": "Kalimat 11",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "28",
+            "answer": "Kalimat 12",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "29",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "29",
+            "answer": "2 Kalimat",
+            "correct": "TRUE"
+        },
+        {
+            "QuestionId": "29",
+            "answer": "3 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "29",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "29",
+            "answer": "TIDAK ADA",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "30",
+            "answer": "1 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "30",
+            "answer": "2 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "30",
+            "answer": "3 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "30",
+            "answer": "4 Kalimat",
+            "correct": "FALSE"
+        },
+        {
+            "QuestionId": "30",
+            "answer": "TIDAK ADA",
+            "correct": "TRUE"
         }
     ]
 }
