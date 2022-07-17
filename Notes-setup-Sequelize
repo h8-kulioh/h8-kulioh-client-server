@@ -101,10 +101,12 @@ SETUP  :
     seeding
 
     jalankan!
-    npx sequelize seed:generate --name User
+    npx sequelize seed:generate --name Chapters
     npx sequelize seed:generate --name Genre
     npx sequelize seed:generate --name Movie
-    npx sequelize seed:generate --name Cast
+    npx sequelize seed:generate --name seedCahpters
+    npx sequelize seed:generate --name seedTasks
+
 
 
     AMBIL DATA DARI DUMMY,
@@ -133,8 +135,8 @@ SETUP  :
 
     npx sequelize db:seed --seed 20220628080509-User.js
     npx sequelize db:seed --seed 20220628081056-Genre.js
-    npx sequelize db:seed --seed 20220628081237-Movie.js
-    npx sequelize db:seed --seed 20220628081418-Cast.js
+    npx sequelize db:seed --seed 20220717043935-seedTasks.js
+    npx sequelize db:seed --seed 20220717043357-seedCahpters.js
 
 
     

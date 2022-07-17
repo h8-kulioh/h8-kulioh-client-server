@@ -1,0 +1,555 @@
+{
+    "Chapters": [
+        {
+            "id": "1",
+            "name": "Bacaan",
+            "subject": "PPU"
+        },
+        {
+            "id": "2",
+            "name": "Info Spesifik",
+            "subject": "PPU"
+        },
+        {
+            "id": "3",
+            "name": "Paragraf",
+            "subject": "PPU"
+        },
+        {
+            "id": "4",
+            "name": "Makna Kata",
+            "subject": "PPU"
+        },
+        {
+            "id": "5",
+            "name": "Ejaan",
+            "subject": "PBM"
+        },
+        {
+            "id": "6",
+            "name": "Kata",
+            "subject": "PBM"
+        },
+        {
+            "id": "7",
+            "name": "Kalimat",
+            "subject": "PBM"
+        },
+        {
+            "id": "8",
+            "name": "Paragraf",
+            "subject": "PBM"
+        },
+        {
+            "id": "9",
+            "name": "Lain Lain",
+            "subject": "PBM"
+        },
+        {
+            "id": "10",
+            "name": "Penalaran 1",
+            "subject": "PU"
+        },
+        {
+            "id": "11",
+            "name": "Penalaran 2",
+            "subject": "PU"
+        },
+        {
+            "id": "12",
+            "name": "Lain Lain",
+            "subject": "PU"
+        },
+        {
+            "id": "13",
+            "name": "Klaster 1",
+            "subject": "PK"
+        },
+        {
+            "id": "14",
+            "name": "Klaster 2",
+            "subject": "PK"
+        },
+        {
+            "id": "15",
+            "name": "Klaster 3",
+            "subject": "PK"
+        },
+        {
+            "id": "16",
+            "name": "Klaster 4",
+            "subject": "PK"
+        },
+        {
+            "id": "17",
+            "name": "Klaster 5",
+            "subject": "PK"
+        },
+        {
+            "id": "18",
+            "name": "Klaster 6",
+            "subject": "PK"
+        }
+    ],
+    "Tasks": [
+        {
+            "id": "1",
+            "description": "Menentukan judul",
+            "ChapterId": "1"
+        },
+        {
+            "id": "2",
+            "description": "Menentukan tujuan utama atau tujuan paragraf",
+            "ChapterId": "1"
+        },
+        {
+            "id": "3",
+            "description": "Menentukan topik utama bacaan atau topik paragraf",
+            "ChapterId": "1"
+        },
+        {
+            "id": "4",
+            "description": "Menentukan kesimpulan bacaan atau paragraf",
+            "ChapterId": "1"
+        },
+        {
+            "id": "5",
+            "description": "Menentukan sikap penulis",
+            "ChapterId": "1"
+        },
+        {
+            "id": "6",
+            "description": "Menentukan keberpihakan penulis",
+            "ChapterId": "1"
+        },
+        {
+            "id": "7",
+            "description": "Menentukan info atau konsep spesifik di bacaan",
+            "ChapterId": "2"
+        },
+        {
+            "id": "8",
+            "description": "Menentukan pernyataan yang PASTI BENAR",
+            "ChapterId": "2"
+        },
+        {
+            "id": "9",
+            "description": "Menentukan pertanyaan yang TIDAK BENAR",
+            "ChapterId": "2"
+        },
+        {
+            "id": "10",
+            "description": "Menentukan pernyataan yang BELUM TENTU BENAR",
+            "ChapterId": "2"
+        },
+        {
+            "id": "11",
+            "description": "Menentukan pertanyaan yang jawabannya ada (atau tidak) di bacaan",
+            "ChapterId": "2"
+        },
+        {
+            "id": "12",
+            "description": "Menentukan topik apa saja yang dibahas di bacaan",
+            "ChapterId": "2"
+        },
+        {
+            "id": "13",
+            "description": "Menentukan pernyataan yang disetujui penulis",
+            "ChapterId": "2"
+        },
+        {
+            "id": "14",
+            "description": "Menentukan topik paragraf sebelum paragraf pertama",
+            "ChapterId": "3"
+        },
+        {
+            "id": "15",
+            "description": "Menentukan topik paragraf setelah paragraf terakhir",
+            "ChapterId": "2"
+        },
+        {
+            "id": "16",
+            "description": "Menentukan topik paragraf antara paragraf x dan y",
+            "ChapterId": "3"
+        },
+        {
+            "id": "17",
+            "description": "Menentukan hubungan antar paragraf",
+            "ChapterId": "3"
+        },
+        {
+            "id": "18",
+            "description": "Menentukan hubungan antar kalimat",
+            "ChapterId": "3"
+        },
+        {
+            "id": "19",
+            "description": "Menentukan sinonim dari suatu kata",
+            "ChapterId": "4"
+        },
+        {
+            "id": "20",
+            "description": "Menentukan atonim dari suatu kata",
+            "ChapterId": "4"
+        },
+        {
+            "id": "21",
+            "description": "Menentukan kesalahan penggunaan huruf kapital",
+            "ChapterId": "5"
+        },
+        {
+            "id": "22",
+            "description": "Menentukan kesalahan penggunaan huruf miring",
+            "ChapterId": "5"
+        },
+        {
+            "id": "23",
+            "description": "Kesalahan penggunaan tanda baca",
+            "ChapterId": "5"
+        },
+        {
+            "id": "24",
+            "description": "Menentukan kesalahan penggunaan kata atau penulisan kata",
+            "ChapterId": "6"
+        },
+        {
+            "id": "25",
+            "description": "Menentukan kesalahan penggunaan kata hubung",
+            "ChapterId": "6"
+        },
+        {
+            "id": "26",
+            "description": "Menentukan kesalahan penggunaan imbuhan",
+            "ChapterId": "6"
+        },
+        {
+            "id": "27",
+            "description": "Menentukan kata yang makna imbuhannya sama",
+            "ChapterId": "6"
+        },
+        {
+            "id": "28",
+            "description": "Menentukan kata yang makna kata ulangnya sama",
+            "ChapterId": "6"
+        },
+        {
+            "id": "29",
+            "description": "Menentukan kata yang bermakna kiasan",
+            "ChapterId": "6"
+        },
+        {
+            "id": "30",
+            "description": "Menentukan kata yang tidak baku",
+            "ChapterId": "6"
+        },
+        {
+            "id": "31",
+            "description": "Menentukan kalimat yang mengandung kata sifat",
+            "ChapterId": "6"
+        },
+        {
+            "id": "32",
+            "description": "Menentukan sinonim atau yang maknanya paling dekat",
+            "ChapterId": "6"
+        },
+        {
+            "id": "33",
+            "description": "Menentukan Kalimat yang mengandung kata bermakna X",
+            "ChapterId": "6"
+        },
+        {
+            "id": "34",
+            "description": "Menentukan kalimat yang jenis frasanya sama",
+            "ChapterId": "7"
+        },
+        {
+            "id": "35",
+            "description": "Menentukan kalimat yang pola kalimatnya mengandung unsur X",
+            "ChapterId": "7"
+        },
+        {
+            "id": "36",
+            "description": "Menentukan kalimat yang pola kalimatnya sama",
+            "ChapterId": "7"
+        },
+        {
+            "id": "37",
+            "description": "Menentukan kalimat yang predikatnya bukan kata kerja",
+            "ChapterId": "7"
+        },
+        {
+            "id": "38",
+            "description": "Menentukan kalimat yang termasuk ke kalimat pasif",
+            "ChapterId": "7"
+        },
+        {
+            "id": "39",
+            "description": "Menentukan kalimat yang bisa diubah ke kalimat pasif",
+            "ChapterId": "7"
+        },
+        {
+            "id": "40",
+            "description": "Menentukan kalimat yang merupakan kalimat inversi",
+            "ChapterId": "7"
+        },
+        {
+            "id": "41",
+            "description": "Menentukan kalimat yang merupakan kalimat majemuk",
+            "ChapterId": "7"
+        },
+        {
+            "id": "42",
+            "description": "Menentukan kalimat yang bukan kalimat efektif",
+            "ChapterId": "7"
+        },
+        {
+            "id": "43",
+            "description": "Menentukan kalimat Kalimat yang tidak hemat",
+            "ChapterId": "7"
+        },
+        {
+            "id": "44",
+            "description": "Menentukan kalimat Kalimat yang perlu ditambah suatu kata agar jadi logis",
+            "ChapterId": "7"
+        },
+        {
+            "id": "45",
+            "description": "Menentukan kalimat Kata untuk mengisi bagian yang rumpang",
+            "ChapterId": "7"
+        },
+        {
+            "id": "46",
+            "description": "Menentukan kalimat yang jadi kalimat pertama jika dijadikan 2 paragraf",
+            "ChapterId": "8"
+        },
+        {
+            "id": "47",
+            "description": "Menentukan kalimat yang bisa dihilangkan",
+            "ChapterId": "8"
+        },
+        {
+            "id": "48",
+            "description": "Menentukan kalimat yang paling tepat ditambahkan setelah kalimat X?",
+            "ChapterId": "8"
+        },
+        {
+            "id": "49",
+            "description": "Menentukan kalimat yang menyebabkan ketidakpaduan ide",
+            "ChapterId": "8"
+        },
+        {
+            "id": "50",
+            "description": "Menentukan urutan kalimat yang paling tepat",
+            "ChapterId": "8"
+        },
+        {
+            "id": "51",
+            "description": "Menentukan kalimat untuk mengisi bagian yang rumpang",
+            "ChapterId": "8"
+        },
+        {
+            "id": "52",
+            "description": "Menentukan ilustrasi yang paling tepat untuk suatu bacaan",
+            "ChapterId": "9"
+        },
+        {
+            "id": "53",
+            "description": "Menentukan judul yang tepat atau topik utama",
+            "ChapterId": "9"
+        },
+        {
+            "id": "54",
+            "description": "Menentukan kesimpulan bacaan",
+            "ChapterId": "9"
+        },
+        {
+            "id": "55",
+            "description": "Menentukan tujuan kalimat/paragraf/bacaan",
+            "ChapterId": "9"
+        },
+        {
+            "id": "56",
+            "description": "Menentukan kalimat pernyataan yang merangkum isi teks",
+            "ChapterId": "9"
+        },
+        {
+            "description": "Bahasa Panda",
+            "ChapterId": "12"
+        },
+        {
+            "id": "58",
+            "description": "Menentukan informasi yang tepat berdasarkan suatu tabel",
+            "ChapterId": "12"
+        },
+        {
+            "id": "59",
+            "description": "Menentukan informasi yang tepat berdasarkan suatu grafik",
+            "ChapterId": "12"
+        },
+        {
+            "id": "60",
+            "description": "Menentukan kesimpulan",
+            "ChapterId": "10"
+        },
+        {
+            "id": "61",
+            "description": "Menentukan premis yang harus benar agar kesimpulan valid",
+            "ChapterId": "10"
+        },
+        {
+            "id": "62",
+            "description": "Menentukan pernyataan yang PASTI BENAR",
+            "ChapterId": "10"
+        },
+        {
+            "id": "63",
+            "description": "Menentukan pernyataan yang TIDAK MUNGKIN BENAR",
+            "ChapterId": "10"
+        },
+        {
+            "id": "64",
+            "description": "Menentukan pernyaaan yang PALING MUNGKIN BENAR",
+            "ChapterId": "10"
+        },
+        {
+            "id": "65",
+            "description": "Menentukan kalimat yang menguatkan argumen",
+            "ChapterId": "11"
+        },
+        {
+            "id": "66",
+            "description": "Menentukan kalimat yang melemahkan argumen",
+            "ChapterId": "11"
+        },
+        {
+            "id": "67",
+            "description": "Menentukan pernyataan yang jawabannya mendukung klaim penulis",
+            "ChapterId": "11"
+        },
+        {
+            "id": "68",
+            "description": "Menentukan pernyataan yang paling sesuai dengan pendapat penulis",
+            "ChapterId": "11"
+        },
+        {
+            "id": "69",
+            "description": "Eksponen dan Bentuk Akar",
+            "ChapterId": "13"
+        },
+        {
+            "id": "70",
+            "description": "Logaritma",
+            "ChapterId": "13"
+        },
+        {
+            "id": "71",
+            "description": "Persamaan Kuadrat",
+            "ChapterId": "13"
+        },
+        {
+            "id": "72",
+            "description": "Fungsi Kuadrat",
+            "ChapterId": "13"
+        },
+        {
+            "id": "73",
+            "description": "Pertidaksamaan",
+            "ChapterId": "13"
+        },
+        {
+            "id": "74",
+            "description": "Sistem Persamaan Linear dan Kuadrat",
+            "ChapterId": "14"
+        },
+        {
+            "id": "75",
+            "description": "Program Linear",
+            "ChapterId": "14"
+        },
+        {
+            "id": "76",
+            "description": "Logika",
+            "ChapterId": "14"
+        },
+        {
+            "id": "77",
+            "description": "Komposisi dan Fungsi Invers",
+            "ChapterId": "14"
+        },
+        {
+            "id": "78",
+            "description": "Limit",
+            "ChapterId": "15"
+        },
+        {
+            "id": "79",
+            "description": "Turunan",
+            "ChapterId": "15"
+        },
+        {
+            "id": "80",
+            "description": "Persamaan Garis Singgung",
+            "ChapterId": "15"
+        },
+        {
+            "id": "81",
+            "description": "Integral",
+            "ChapterId": "15"
+        },
+        {
+            "id": "82",
+            "description": "Matriks",
+            "ChapterId": "16"
+        },
+        {
+            "id": "83",
+            "description": "Vektor",
+            "ChapterId": "16"
+        },
+        {
+            "id": "84",
+            "description": "Irisan Kerucut",
+            "ChapterId": "16"
+        },
+        {
+            "id": "85",
+            "description": "Suku Banyak",
+            "ChapterId": "16"
+        },
+        {
+            "id": "86",
+            "description": "Trigonometri",
+            "ChapterId": "16"
+        },
+        {
+            "id": "87",
+            "description": "Barisan dan Deret",
+            "ChapterId": "17"
+        },
+        {
+            "id": "88",
+            "description": "Bidang Datar",
+            "ChapterId": "17"
+        },
+        {
+            "id": "89",
+            "description": "Dimensi Tiga",
+            "ChapterId": "17"
+        },
+        {
+            "id": "90",
+            "description": "Kaidah Pencacahan dan Peluang",
+            "ChapterId": "18"
+        },
+        {
+            "id": "91",
+            "description": "Statistika",
+            "ChapterId": "18"
+        },
+        {
+            "id": "92",
+            "description": "Transformasi",
+            "ChapterId": "18"
+        }
+    ]
+}
