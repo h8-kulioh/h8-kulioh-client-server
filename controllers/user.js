@@ -263,39 +263,41 @@ class userController {
       let PBM = 0;
       let PBMbenar = 0;
       for(let element of useranswers){
-        const question = await Question.findByPk(element.QuestionId);
-        const answer = await QuestionKey.findByPk(+element.userAnswer);
-        switch (question.subject) {
-          case "PU":
-            PU+=1;
-            if (answer.correct === true) {
-              jumlahBenar+=1;
-              PUbenar+=1;
+        if(element.userAnswer!==''){
+          const question = await Question.findByPk(element.QuestionId);
+          const answer = await QuestionKey.findByPk(+element.userAnswer);
+          switch (question.subject) {
+            case "PU":
+              PU+=1;
+              if (answer.correct === true) {
+                jumlahBenar+=1;
+                PUbenar+=1;
+              }
+              break;
+            case "PPU":
+              PPU+=1;
+              if (answer.correct === true) {
+                jumlahBenar+=1;
+                PPUbenar+=1;
+              }
+              break;
+            case "PK":
+              PK+=1;
+              if (answer.correct === true) {
+                jumlahBenar+=1;
+                PKbenar+=1;
+              }
+              break;
+            case "PBM":
+              PBM+=1;
+              if (answer.correct === true) {
+                jumlahBenar+=1;
+                PBMbenar+=1;
+              }
+              break;
             }
-            break;
-          case "PPU":
-            PPU+=1;
-            if (answer.correct === true) {
-              jumlahBenar+=1;
-              PPUbenar+=1;
-            }
-            break;
-          case "PK":
-            PK+=1;
-            if (answer.correct === true) {
-              jumlahBenar+=1;
-              PKbenar+=1;
-            }
-            break;
-          case "PBM":
-            PBM+=1;
-            if (answer.correct === true) {
-              jumlahBenar+=1;
-              PBMbenar+=1;
-            }
-            break;
-          }
-        };
+          };
+        }
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
