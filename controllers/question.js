@@ -51,6 +51,7 @@ class questionController {
       });
 
       function changeDate(dateInput) {
+        dateInput.setHours(dateInput.getHours() + 7)
         return new Date(dateInput)
           .toISOString()
           .split("T")[0]

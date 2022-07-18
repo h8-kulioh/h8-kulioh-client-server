@@ -106,13 +106,11 @@ class userController {
 
       const token = createToken(payload);
 
-      res
-        .status(200)
-        .json({
-          access_token: token,
-          majors: findUser.Majors,
-          name: findUser.name,
-        });
+      res.status(200).json({
+        access_token: token,
+        majors: findUser.Majors,
+        name: findUser.name,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -122,7 +120,12 @@ class userController {
     try {
       const { id } = req.user;
       const allUser = await User.findByPk(id, {
-        include: [{ model: UserMajor, include: [{model: Major, include: [University]}] }],
+        include: [
+          {
+            model: UserMajor,
+            include: [{ model: Major, include: [University] }],
+          },
+        ],
       });
       res.status(200).json(allUser);
     } catch (error) {
@@ -262,42 +265,42 @@ class userController {
       let PKbenar = 0;
       let PBM = 0;
       let PBMbenar = 0;
-      for(let element of useranswers){
-        if(element.userAnswer!==''){
+      for (let element of useranswers) {
+        if (element.userAnswer !== "") {
           const question = await Question.findByPk(element.QuestionId);
           const answer = await QuestionKey.findByPk(+element.userAnswer);
           switch (question.subject) {
             case "PU":
-              PU+=1;
+              PU += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PUbenar+=1;
+                jumlahBenar += 1;
+                PUbenar += 1;
               }
               break;
             case "PPU":
-              PPU+=1;
+              PPU += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PPUbenar+=1;
+                jumlahBenar += 1;
+                PPUbenar += 1;
               }
               break;
             case "PK":
-              PK+=1;
+              PK += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PKbenar+=1;
+                jumlahBenar += 1;
+                PKbenar += 1;
               }
               break;
             case "PBM":
-              PBM+=1;
+              PBM += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PBMbenar+=1;
+                jumlahBenar += 1;
+                PBMbenar += 1;
               }
               break;
-            }
-          };
+          }
         }
+      }
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
@@ -312,28 +315,33 @@ class userController {
     }
   }
 
-  static async updateUser(req, res, next){
-    const t = await sequelize.transaction()
-    try{
-      await User.update({name: req.body.name},{
-        where: {
-          id: req.user.id
-        }
-      })
-      for(let data of req.body.major){
-        await UserMajor.update({
-          MajorId: data.MajorId
-        },
+  static async updateUser(req, res, next) {
+    const t = await sequelize.transaction();
+    try {
+      await User.update(
+        { name: req.body.name },
         {
           where: {
-            id: data.UserMajorId
+            id: req.user.id,
+          },
+        }
+      );
+      for (let data of req.body.major) {
+        await UserMajor.update(
+          {
+            MajorId: data.MajorId,
+          },
+          {
+            where: {
+              id: data.UserMajorId,
+            },
           }
-        })
+        );
       }
-      t.commit()
-    }catch(err){
-      t.rollback()
-      next(err)
+      t.commit();
+    } catch (err) {
+      t.rollback();
+      next(err);
     }
   }
 

@@ -40,20 +40,51 @@ describe("User Routes Test", () => {
 
     test("400 Failed register - should return error if email is null", (done) => {
       request(app)
-        .post("/users-register")
+        .post("/users/register")
         .send({
           password: "usertest",
-          name: "User Test",
-          major: ["1", "2"],
         })
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
 
           expect(status).toBe(400);
-          expect(body).toHaveProperty("message", "Email is required");
+          expect(body).toHaveProperty("name", "Email is required");
           return done();
         });
     });
+
+    test("400 Failed register - should return error if password is null", (done) => {
+      request(app)
+        .post("/users/register")
+        .send({
+          email: "yuhuhuhu",
+        })
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(400);
+          expect(body).toHaveProperty("name", "Password is required");
+          return done();
+        });
+    });
+
+    test("400 Failed register - should return error if name is null", (done) => {
+        request(app)
+          .post("/users/register")
+          .send({
+            email: "yuhuhuhu",
+            password: "apa yaa"
+          })
+          .end((err, res) => {
+            if (err) return done(err);
+            const { body, status } = res;
+  
+            expect(status).toBe(400);
+            expect(body).toHaveProperty("name", "Name is required");
+            return done();
+          });
+      });
   });
 });
