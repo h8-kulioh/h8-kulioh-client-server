@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Todo,{
         foreignKey: "UserId"
       })
+
+      User.hasMany(models.UserMajor, {
+        foreignKey: 'UserId'
+      })
     }
   }
   User.init(

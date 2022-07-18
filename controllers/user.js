@@ -122,7 +122,7 @@ class userController {
     try {
       const { id } = req.user;
       const allUser = await User.findByPk(id, {
-        include: [Major],
+        include: [UserMajor],
       });
       res.status(200).json(allUser);
     } catch (error) {
@@ -309,6 +309,31 @@ class userController {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async updateUser(req, res, next){
+    const t = await sequelize.transaction()
+    try{
+      await User.update({name: req.body.name},{
+        where: {
+          id: req.user.id
+        }
+      })
+      for(let data of req.body.major){
+        await UserMajor.update({
+          MajorId: data.MajorId
+        },
+        {
+          where: {
+            id: data.UserMajorId
+          }
+        })
+      }
+      t.commit()
+    }catch(err){
+      t.rollback()
+      next(err)
     }
   }
 
