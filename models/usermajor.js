@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      UserMajor.belongsTo(models.Major, {foreignKey: 'MajorId'})
     }
   }
   UserMajor.init({
