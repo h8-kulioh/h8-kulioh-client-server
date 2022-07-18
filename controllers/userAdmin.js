@@ -14,6 +14,8 @@ const {
   Major,
   Task,
   Todo,
+  QuestionWeeklyTest,
+  QuestionKeyWeeklyTest,
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -126,6 +128,79 @@ class UserAdminController {
 
       const newDailyQuestionKey = await QuestionKey.bulkCreate(dataAnswer);
       t.commit();
+      res.status(200).json({ name: "Succes create question and answer key" });
+    } catch (error) {
+      t.rollback();
+
+      console.log(error);
+    }
+  }
+
+  static async createWeeklyQuestions(req, res, next) {
+    const t = await sequelize.transaction();
+    try {
+      const { Sheet1 } = req.body;
+      if (!Sheet1) {
+        throw { name: "Subject is required" };
+      }
+
+      for (let el of Sheet1) {
+        let addQweekly = await QuestionWeeklyTest.create(
+          {
+            subject: el.subject,
+            question: el.question,
+            releaseDate: el.releaseDate,
+          },
+          { transaction: t }
+        );
+
+        let addKey1 = await QuestionKeyWeeklyTest.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            answer: el.trueAnswer,
+            correct: true,
+          },
+          { transaction: t }
+        );
+
+        let addKey2 = await QuestionKeyWeeklyTest.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            answer: el.option1,
+            correct: false,
+          },
+          { transaction: t }
+        );
+
+        let addKey3 = await QuestionKeyWeeklyTest.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            answer: el.option2,
+            correct: false,
+          },
+          { transaction: t }
+        );
+
+        let addKey4 = await QuestionKeyWeeklyTest.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            answer: el.option3,
+            correct: false,
+          },
+          { transaction: t }
+        );
+
+        let addKey5 = await QuestionKeyWeeklyTest.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            answer: el.option4,
+            correct: false,
+          },
+          { transaction: t }
+        );
+      }
+
+      await t.commit();
       res.status(200).json({ name: "Succes create question and answer key" });
     } catch (error) {
       t.rollback();
@@ -402,7 +477,6 @@ class UserAdminController {
           id,
         },
       });
-
 
       if (deleteUniv !== 1) {
         throw { name: "University not found" };

@@ -22,6 +22,9 @@ router.post("/university-major", authors, UserAdminController.createUniversity);
 router.put("/university-major/:id", authors, UserAdminController.updateUniversity);
 router.delete("/university-major/:id", authors, UserAdminController.deleteUniversity);
 
+router.post("/weekly-questions", authors, UserAdminController.createWeeklyQuestions);
+
+
 
 
 
