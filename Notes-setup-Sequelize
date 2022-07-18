@@ -101,7 +101,7 @@ SETUP  :
     seeding
 
     jalankan!
-    npx sequelize seed:generate --name Chapters
+    npx sequelize seed:generate --name User
     npx sequelize seed:generate --name Genre
     npx sequelize seed:generate --name Movie
     npx sequelize seed:generate --name seedCahpters
@@ -136,7 +136,7 @@ SETUP  :
     npx sequelize db:seed --seed 20220628080509-User.js
     npx sequelize db:seed --seed 20220628081056-Genre.js
     npx sequelize db:seed --seed 20220717043935-seedTasks.js
-    npx sequelize db:seed --seed 20220717043357-seedCahpters.js
+    npx sequelize db:seed --seed 20220718085823-User.js
 
 
     
