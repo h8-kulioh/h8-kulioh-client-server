@@ -409,6 +409,20 @@ class userController {
         next(err)
       }
   }
+
+  static async getUserAnswerHistory(req, res, next){
+    try{
+      const useranswers = await Answer.findAll({
+        where: {
+          UserId: req.user.id
+        },
+        include: [{model: Question, include: [{model: QuestionKey, where: {correct: true}}]}, QuestionKey]
+      })
+      res.status(200).json(useranswers)
+    }catch(err){
+      next(err)
+    }
+  }
 }
 
 module.exports = {

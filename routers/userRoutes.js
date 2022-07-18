@@ -15,6 +15,7 @@ router.put("/profile", userController.updateUser)
 
 router.get("/stat", userController.getstat)
 router.get("/taskStat", userController.getTaskStat)
+router.get("/allAnswer", userController.getUserAnswerHistory)
 
 router.post("/handlepayment", userController.handlepayment)
 router.patch("/premium", userController.changeRole)
