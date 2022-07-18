@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const {userController} = require("../controllers/user")
 const { authentif } = require("../middleware/authentif")
+const errorHandler = require("../middleware/errorHandler")
 
 
 router.post("/register", userController.register)
@@ -19,7 +20,7 @@ router.post("/handlepayment", userController.handlepayment)
 router.patch("/premium", userController.changeRole)
 
 
-
+router.use(errorHandler)
 
 
 

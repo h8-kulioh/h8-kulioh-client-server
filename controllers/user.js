@@ -67,7 +67,7 @@ class userController {
       res.status(201).json(result);
     } catch (error) {
       t.rollback();
-      console.log(error);
+      next(error);
     }
   }
 
@@ -115,7 +115,7 @@ class userController {
           name: findUser.name,
         });
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
