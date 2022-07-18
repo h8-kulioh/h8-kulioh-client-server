@@ -9,7 +9,7 @@ class TaskController {
 
       res.status(200).json(getTasks);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 }

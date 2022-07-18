@@ -22,7 +22,7 @@ class UniversityController {
 
       res.status(200).json(getUniversity);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -38,7 +38,7 @@ class UniversityController {
 
       res.status(200).json(getUniversityById);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 }

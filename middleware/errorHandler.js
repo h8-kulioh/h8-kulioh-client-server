@@ -8,6 +8,16 @@ const errorHandler = (err, req, res, next)=>{
         message = err.name
     }
 
+    if(err.name==='Email is required'||err.name==='Password is required'||err.name==='Name is required'){
+        code = 400
+        message = err.name
+    }
+
+    if(err.name==='JsonWebTokenError'){
+        code = 401
+        message = 'Invalid Token'
+    }
+
     res.status(code).json({message})
 }
 

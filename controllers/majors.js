@@ -24,7 +24,7 @@ class MajorController {
 
       res.status(200).json(getMajor);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 }
