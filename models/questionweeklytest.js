@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       QuestionWeeklyTest.hasMany(models.QuestionKeyWeeklyTest,{
         foreignKey: "QuestionWeeklyTestId"
       })
+
+      QuestionWeeklyTest.hasMany(models.AnswerWeeklyTest,{
+        foreignKey: "QuestionWeeklyTestId"
+      })
     }
   }
   QuestionWeeklyTest.init({
