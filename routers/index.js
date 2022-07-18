@@ -3,6 +3,7 @@ const router = express.Router();
 
 const users = require("./userRoutes");
 const questions = require("./questionRoutes");
+const questionsWeekly = require("./questionWeeklyRoute");
 const majors = require("./majorRoutes");
 const universities = require("./universityRoutes");
 const chapters = require("./chapterRoute");
@@ -18,5 +19,8 @@ router.use("/todoroute", todos);
 router.use("/chaptersroute", chapters);
 router.use("/tasksroute", tasks);
 router.use("/questions", questions);
+router.use("/questions-weekly", questionsWeekly);
+
+
 
 module.exports = router;
