@@ -30,9 +30,8 @@ class questionController {
         };
       });
 
-      const result = await Answer.bulkCreate(insertData)
+      const result = await Answer.bulkCreate(insertData);
       res.status(200).json(result);
-
     } catch (err) {
       console.log(err);
       next(err);
@@ -41,7 +40,6 @@ class questionController {
 
   static async getAnswersDailyByDate(req, res, next) {
     try {
-      const { YYYYMMDD } = req.params;
       const UserId = req.user.id;
       let anwersDate = await Answer.findAll({
         include: [User, Question],
@@ -59,7 +57,7 @@ class questionController {
       }
 
       let findByDate = anwersDate.filter(
-        (el) => changeDate(el.createdAt) === YYYYMMDD
+        (el) => changeDate(el.createdAt) === changeDate(new Date())
       );
 
       if (findByDate.length === 0) {
@@ -68,11 +66,13 @@ class questionController {
       res.status(200).json(findByDate);
     } catch (error) {
       res.status(404).json({
-        statusCode: 404
-      })
+        statusCode: 404,
+      });
       console.log(error);
     }
   }
+
+  
 }
 
 module.exports = {
