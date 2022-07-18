@@ -122,7 +122,7 @@ class userController {
     try {
       const { id } = req.user;
       const allUser = await User.findByPk(id, {
-        include: [UserMajor],
+        include: [{model: UserMajor, include: [University]}],
       });
       res.status(200).json(allUser);
     } catch (error) {
