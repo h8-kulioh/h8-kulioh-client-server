@@ -13,7 +13,7 @@ const {
   University,
   Answer,
   Question,
-  QuestionKey
+  QuestionKey,
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -85,7 +85,7 @@ class userController {
         where: {
           email,
         },
-        include: [{model: Major, include: [University]}]
+        include: [{ model: Major, include: [University] }],
       });
 
       if (!findUser) {
@@ -106,7 +106,13 @@ class userController {
 
       const token = createToken(payload);
 
-      res.status(200).json({ access_token: token, majors: findUser.Majors, name: findUser.name });
+      res
+        .status(200)
+        .json({
+          access_token: token,
+          majors: findUser.Majors,
+          name: findUser.name,
+        });
     } catch (error) {
       console.log(error);
     }
@@ -240,74 +246,71 @@ class userController {
     }
   }
 
-  static async getstat(req, res, next){
-    try{
+  static async getstat(req, res, next) {
+    try {
       const useranswers = await Answer.findAll({
         where: {
-          UserId: req.user.id
-        }
-      })
-      console.log(useranswers)
-      let jumlahBenar = 0
-      let PU = 0
-      let PUbenar = 0
-      let PPU = 0
-      let PPUbenar = 0
-      let PK = 0
-      let PKbenar = 0
-      let PBM = 0
-      let PBMbenar = 0
-      useranswers.forEach(async (element) => {
-        const question = await Question.findByPk(element.QuestionId)
-        const answer = await QuestionKey.findByPk(+element.userAnswer)
-        switch(question.subject){
+          UserId: req.user.id,
+        },
+      });
+      let jumlahBenar = 0;
+      let PU = 0;
+      let PUbenar = 0;
+      let PPU = 0;
+      let PPUbenar = 0;
+      let PK = 0;
+      let PKbenar = 0;
+      let PBM = 0;
+      let PBMbenar = 0;
+      for(let element of useranswers){
+        const question = await Question.findByPk(element.QuestionId);
+        const answer = await QuestionKey.findByPk(+element.userAnswer);
+        switch (question.subject) {
           case "PU":
-            PU++
-            if(answer.correct===true){
-              jumlahBenar++
-              PUbenar++
+            PU+=1;
+            if (answer.correct === true) {
+              jumlahBenar+=1;
+              PUbenar+=1;
             }
             break;
           case "PPU":
-            PPU++
-            if(answer.correct===true){
-              jumlahBenar++
-              PPUbenar++
+            PPU+=1;
+            if (answer.correct === true) {
+              jumlahBenar+=1;
+              PPUbenar+=1;
             }
-            break
+            break;
           case "PK":
-            PK++
-            if(answer.correct===true){
-              jumlahBenar++
-              PKbenar++
+            PK+=1;
+            if (answer.correct === true) {
+              jumlahBenar+=1;
+              PKbenar+=1;
             }
-            break
+            break;
           case "PBM":
-            PBM++
-            if(answer.correct===true){
-              jumlahBenar++
-              PBMbenar++
+            PBM+=1;
+            if (answer.correct === true) {
+              jumlahBenar+=1;
+              PBMbenar+=1;
             }
-            break
-        }
-      });
+            break;
+          }
+        };
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
-        perPU: PUbenar/PU*100,
-        perPPU: PPUbenar/PPU*100,
-        perPK: PKbenar/PK*100,
-        perPBM: PBMbenar/PBM*100,
-        perAll: jumlahBenar/useranswers.length*100
-      })
-    }catch(err){
-      next(err)
+        perPU: (PUbenar / PU) * 100,
+        perPPU: (PPUbenar / PPU) * 100,
+        perPK: (PKbenar / PK) * 100,
+        perPBM: (PBMbenar / PBM) * 100,
+        perAll: (jumlahBenar / useranswers.length) * 100,
+      });
+    } catch (err) {
+      next(err);
     }
   }
-  
-  static async getTaskStat(req, res, next){
 
-  }
+  static async getTaskStat(req, res, next) {}
 }
 
 module.exports = {
