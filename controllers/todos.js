@@ -21,7 +21,7 @@ class TodoController {
 
       res.status(200).json(getTodos);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -50,7 +50,7 @@ class TodoController {
         throw { name: "Task not found" };
       }
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 }

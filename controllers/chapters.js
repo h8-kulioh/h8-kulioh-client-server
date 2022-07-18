@@ -7,7 +7,7 @@ class ChapterController {
 
       res.status(200).json(getChapters);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 }
