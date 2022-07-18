@@ -14,7 +14,6 @@ const {
   Answer,
   Question,
   QuestionKey,
-  Chapter
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -46,7 +45,7 @@ class userController {
           MajorId,
         };
       });
-      await UserMajor.bulkCreate(usermajor, {transaction: t});
+      await UserMajor.bulkCreate(usermajor);
 
       const getTask = await Task.findAll();
       const postTodos = getTask.map((el) => {
@@ -56,7 +55,7 @@ class userController {
           status: "False",
         };
       });
-      await Todo.bulkCreate(postTodos, {transaction: t});
+      await Todo.bulkCreate(postTodos);
 
       const result = {
         id: newUser.id,
@@ -107,13 +106,11 @@ class userController {
 
       const token = createToken(payload);
 
-      res
-        .status(200)
-        .json({
-          access_token: token,
-          majors: findUser.Majors,
-          name: findUser.name,
-        });
+      res.status(200).json({
+        access_token: token,
+        majors: findUser.Majors,
+        name: findUser.name,
+      });
     } catch (error) {
       next(error);
     }
@@ -123,7 +120,12 @@ class userController {
     try {
       const { id } = req.user;
       const allUser = await User.findByPk(id, {
-        include: [{ model: UserMajor, include: [{model: Major, include: [University]}] }],
+        include: [
+          {
+            model: UserMajor,
+            include: [{ model: Major, include: [University] }],
+          },
+        ],
       });
       res.status(200).json(allUser);
     } catch (error) {
@@ -263,42 +265,42 @@ class userController {
       let PKbenar = 0;
       let PBM = 0;
       let PBMbenar = 0;
-      for(let element of useranswers){
-        if(element.userAnswer!==''){
+      for (let element of useranswers) {
+        if (element.userAnswer !== "") {
           const question = await Question.findByPk(element.QuestionId);
           const answer = await QuestionKey.findByPk(+element.userAnswer);
           switch (question.subject) {
             case "PU":
-              PU+=1;
+              PU += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PUbenar+=1;
+                jumlahBenar += 1;
+                PUbenar += 1;
               }
               break;
             case "PPU":
-              PPU+=1;
+              PPU += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PPUbenar+=1;
+                jumlahBenar += 1;
+                PPUbenar += 1;
               }
               break;
             case "PK":
-              PK+=1;
+              PK += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PKbenar+=1;
+                jumlahBenar += 1;
+                PKbenar += 1;
               }
               break;
             case "PBM":
-              PBM+=1;
+              PBM += 1;
               if (answer.correct === true) {
-                jumlahBenar+=1;
-                PBMbenar+=1;
+                jumlahBenar += 1;
+                PBMbenar += 1;
               }
               break;
-            }
-          };
+          }
         }
+      }
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
@@ -313,25 +315,28 @@ class userController {
     }
   }
 
-  static async updateUser(req, res, next){
-    const t = await sequelize.transaction()
-    try{
-      await User.update({name: req.body.name},{
-        where: {
-          id: req.user.id
-        },
-        transaction: t
-      })
-      for(let data of req.body.major){
-        await UserMajor.update({
-          MajorId: data.MajorId
-        },
+  static async updateUser(req, res, next) {
+    const t = await sequelize.transaction();
+    try {
+      await User.update(
+        { name: req.body.name },
         {
           where: {
-            id: data.UserMajorId
+            id: req.user.id,
           },
-          transaction: t
-        })
+        }
+      );
+      for (let data of req.body.major) {
+        await UserMajor.update(
+          {
+            MajorId: data.MajorId,
+          },
+          {
+            where: {
+              id: data.UserMajorId,
+            },
+          }
+        );
       }
       t.commit()
       res.status(200).json({message: 'Success'})
@@ -341,71 +346,7 @@ class userController {
     }
   }
 
-  static async getTaskStat(req, res, next) {
-    try{
-      const todos = await Todo.findAll({
-        where: {
-          UserId: req.user.id
-        },
-        include: [{model: Task, include: [Chapter]}]
-      })
-      let jumlahDone = 0
-      let jumlahtodos = todos.length
-      let PU = 0
-      let PUdone = 0
-      let PPU = 0
-      let PPUdone = 0
-      let PK = 0
-      let PKdone = 0
-      let PBM = 0
-      let PBMdone = 0
-      for (let data of todos){
-        switch (data.Task.Chapter.subject) {
-          case "PU":
-            PU+=1;
-            if (data.status === true) {
-              jumlahDone+=1;
-              PUdone+=1;
-            }
-            break;
-          case "PPU":
-            PPU+=1;
-            if (data.status === true) {
-              jumlahDone+=1;
-              PPUdone+=1;
-            }
-            break;
-          case "PK":
-            PK+=1;
-            if (data.status === true) {
-              jumlahDone+=1;
-              PKdone+=1;
-            }
-            break;
-          case "PBM":
-            PBM+=1;
-            if (data.status === true) {
-              jumlahDone+=1;
-              PBMdone+=1;
-            }
-            break;
-          }
-        };
-        res.status(200).json({
-          jumlahtodos,
-          jumlahDone,
-          perPU: (PUdone / PU) * 100,
-          perPPU: (PPUdone / PPU) * 100,
-          perPK: (PKdone / PK) * 100,
-          perPBM: (PBMdone / PBM) * 100,
-          perAll: (jumlahDone / jumlahtodos) * 100,
-        })
-      }catch(err){
-        next(err)
-      }
-      
-    
-  }
+  static async getTaskStat(req, res, next) {}
 }
 
 module.exports = {
