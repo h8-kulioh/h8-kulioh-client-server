@@ -49,7 +49,7 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(400);
-          expect(body).toHaveProperty("name", "Email is required");
+          expect(body).toHaveProperty("message", "Email is required");
           return done();
         });
     });
@@ -65,7 +65,7 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(400);
-          expect(body).toHaveProperty("name", "Password is required");
+          expect(body).toHaveProperty("message", "Password is required");
           return done();
         });
     });
@@ -82,7 +82,7 @@ describe("User Routes Test", () => {
             const { body, status } = res;
   
             expect(status).toBe(400);
-            expect(body).toHaveProperty("name", "Name is required");
+            expect(body).toHaveProperty("message", "Name is required");
             return done();
           });
       });
