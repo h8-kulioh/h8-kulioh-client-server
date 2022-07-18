@@ -4,6 +4,9 @@ const { User } = require("../models/index.js");
 const authentif = async (req, res, next) => {
   try {
     const { access_token } = req.headers;
+    if(!access_token){
+      throw { name: "JsonWebTokenError" }
+    }
 
     const payload = verifiedToken(access_token);
 
@@ -27,7 +30,7 @@ const authentif = async (req, res, next) => {
     };
     next();
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 };
 

@@ -46,7 +46,7 @@ class UserAdminController {
       };
       res.status(201).json(result);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -87,7 +87,7 @@ class UserAdminController {
 
       res.status(200).json({ access_token: token });
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -130,7 +130,7 @@ class UserAdminController {
     } catch (error) {
       t.rollback();
 
-      console.log(error);
+      next(error);
     }
   }
 
@@ -162,6 +162,7 @@ class UserAdminController {
         where: {
           id,
         },
+        transaction: t
       });
 
       const editAnswer = await answer.map((el, i) => {
@@ -176,14 +177,15 @@ class UserAdminController {
         where: {
           QuestionId: id,
         },
+        transaction: t
       });
 
-      const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer);
+      const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer, {transaction: t});
       t.commit();
       res.status(200).json({ name: "Succes update question and answer key" });
     } catch (error) {
       t.rollback();
-      console.log(error);
+      next(error);
     }
   }
 
@@ -196,18 +198,20 @@ class UserAdminController {
         where: {
           id,
         },
+        transaction: t
       });
 
       const deleteQustionsKey = await QuestionKey.destroy({
         where: {
           QuestionId: id,
         },
+        transaction: t
       });
       t.commit();
       res.status(200).json({ name: "Succes delete question and answer key" });
     } catch (error) {
       t.rollback();
-      console.log(error);
+      next(error);
     }
   }
 
@@ -236,14 +240,14 @@ class UserAdminController {
         ChapterId: newCahpter.id,
       };
 
-      const newTask = await Task.create(insertDataTask);
+      const newTask = await Task.create(insertDataTask, {transaction: t});
       t.commit();
 
       res.status(200).json({ name: "Success create new Chapter and Task" });
     } catch (error) {
       t.rollback();
 
-      console.log(error);
+      next(error);
     }
   }
 
@@ -270,6 +274,7 @@ class UserAdminController {
         where: {
           id,
         },
+        transaction: t
       });
 
       const updateTask = await Task.update(
@@ -278,6 +283,7 @@ class UserAdminController {
           where: {
             ChapterId: id,
           },
+          transaction: t
         }
       );
       t.commit();
@@ -285,7 +291,7 @@ class UserAdminController {
       res.status(200).json({ name: "Success edit Chapter and Task" });
     } catch (error) {
       t.rollback();
-      console.log(error);
+      next(error);
     }
   }
 
@@ -299,6 +305,7 @@ class UserAdminController {
         where: {
           id,
         },
+        transaction: t
       });
 
       if (deleteChapter !== 1) {
@@ -309,13 +316,14 @@ class UserAdminController {
         where: {
           ChapterId: id,
         },
+        transaction: t
       });
       t.commit();
 
       res.status(200).json({ name: "Success delete Chapter and Task" });
     } catch (error) {
       t.rollback();
-      console.log(error);
+      next(error);
     }
   }
 
@@ -331,20 +339,20 @@ class UserAdminController {
         throw { name: "University major name is required" };
       }
 
-      const newUniveristy = await University.create({ name });
+      const newUniveristy = await University.create({ name }, {transaction: t});
 
       const insertDataMajor = {
         name: majorsName,
         UniversityId: newUniveristy.id,
       };
 
-      const newMajor = await Major.create(insertDataMajor);
+      const newMajor = await Major.create(insertDataMajor, {transaction: t});
       t.commit();
       res.status(200).json({ name: "Success create new University and Major" });
     } catch (error) {
       t.rollback();
 
-      console.log(error);
+      next(error);
     }
   }
 
@@ -367,6 +375,7 @@ class UserAdminController {
           where: {
             id,
           },
+          transaction: t
         }
       );
 
@@ -380,6 +389,7 @@ class UserAdminController {
           where: {
             UniversityId: id,
           },
+          transaction: t
         }
       );
       t.commit();
@@ -387,7 +397,7 @@ class UserAdminController {
     } catch (error) {
       t.rollback();
 
-      console.log(error);
+      next(error);
     }
   }
 
@@ -401,6 +411,7 @@ class UserAdminController {
         where: {
           id,
         },
+        transaction: t
       });
 
 
@@ -412,13 +423,14 @@ class UserAdminController {
         where: {
           UniversityId: id,
         },
+        transaction: t
       });
       t.commit();
       res.status(200).json({ name: "Success delete University and Major" });
     } catch (error) {
       t.rollback();
 
-      console.log(error);
+      next(error);
     }
   }
 }
