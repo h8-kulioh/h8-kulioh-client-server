@@ -9,6 +9,7 @@ const chapters = require("./chapterRoute");
 const tasks = require("./tasksRoute");
 const todos = require("./todoRouter");
 const userAdmin = require("./userAdminRoute");
+const errorHandler = require("../middleware/errorHandler");
 
 router.use("/majorsroute", majors);
 router.use("/universityroute", universities);
@@ -18,5 +19,7 @@ router.use("/todoroute", todos);
 router.use("/chaptersroute", chapters);
 router.use("/tasksroute", tasks);
 router.use("/questions", questions);
+
+router.use(errorHandler)
 
 module.exports = router;

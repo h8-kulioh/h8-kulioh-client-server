@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const { UserAdminController } = require("../controllers/userAdmin");
 const { authentif } = require("../middleware/authentif");
-const { authors } = require("../middleware/authorization")
+const { authors } = require("../middleware/authorization");
+const errorHandler = require("../middleware/errorHandler");
 
 
 router.post("/register", UserAdminController.register);
@@ -25,7 +26,7 @@ router.delete("/university-major/:id", authors, UserAdminController.deleteUniver
 
 
 
-
+router.use(errorHandler)
 
 
 
