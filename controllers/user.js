@@ -14,6 +14,7 @@ const {
   Answer,
   Question,
   QuestionKey,
+  Chapter
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
