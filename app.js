@@ -11,7 +11,9 @@ app.use(express.json())
 
 app.use('/', router)
 
-
-app.listen(port, () => {
-    console.log(`This program is running`, port);
-}) 
+module.exports ={
+    app
+}
+// app.listen(port, () => {
+//     console.log(`This program is running`, port);
+// }) 
