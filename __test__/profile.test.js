@@ -59,4 +59,24 @@ describe("Profile Routes Test", () => {
         });
     });
   });
+
+  describe("PUT /users/profile", () => {
+    test("201 Success Edit Profile", (done) => {
+      request(app)
+        .put("/users/profile")
+        .send({
+          name: "siapa aku",
+          major: [1, 3]
+        })
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(200);
+          expect(body.message).toEqual(expect.any(String));
+          return done();
+        });
+    });
+  });
 });
