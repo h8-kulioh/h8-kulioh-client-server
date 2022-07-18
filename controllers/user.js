@@ -127,7 +127,7 @@ class userController {
       });
       res.status(200).json(allUser);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -159,7 +159,7 @@ class userController {
 
       res.status(200).json(editProfile);
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -219,7 +219,7 @@ class userController {
 
       res.status(200).json({ TokenPayment: transaction.token });
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -243,7 +243,7 @@ class userController {
         throw { name: "Error patch role" };
       }
     } catch (error) {
-      console.log(error);
+      next(error);
     }
   }
 
@@ -334,6 +334,7 @@ class userController {
         })
       }
       t.commit()
+      res.status(200).json({message: 'Success'})
     }catch(err){
       t.rollback()
       next(err)
