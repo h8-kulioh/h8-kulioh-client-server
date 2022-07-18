@@ -187,6 +187,14 @@ SETUP  :
     app.use(express.json())
 
 
+    npx sequelize db:migrate:undo:all --env test
+    npx sequelize db:migrate --env test
+    npx sequelize db:seed --seed 20220716110552-seedUniversity.js --env test
+    npx sequelize db:seed --seed 20220716110839-seedMajor.js --env test
+
+
+
+
 
     
     
