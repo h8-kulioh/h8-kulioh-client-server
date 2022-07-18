@@ -46,7 +46,7 @@ class userController {
           MajorId,
         };
       });
-      await UserMajor.bulkCreate(usermajor);
+      await UserMajor.bulkCreate(usermajor, {transaction: t});
 
       const getTask = await Task.findAll();
       const postTodos = getTask.map((el) => {
@@ -56,7 +56,7 @@ class userController {
           status: "False",
         };
       });
-      await Todo.bulkCreate(postTodos);
+      await Todo.bulkCreate(postTodos, {transaction: t});
 
       const result = {
         id: newUser.id,
@@ -319,7 +319,8 @@ class userController {
       await User.update({name: req.body.name},{
         where: {
           id: req.user.id
-        }
+        },
+        transaction: t
       })
       for(let data of req.body.major){
         await UserMajor.update({
@@ -328,7 +329,8 @@ class userController {
         {
           where: {
             id: data.UserMajorId
-          }
+          },
+          transaction: t
         })
       }
       t.commit()
