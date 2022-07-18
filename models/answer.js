@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "QuestionId"
       })
 
+      Answer.belongsTo(models.QuestionKey, {foreignKey: 'userAnswer'})
     }
   }
   Answer.init({
