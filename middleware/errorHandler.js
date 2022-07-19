@@ -18,7 +18,7 @@ const errorHandler = (err, req, res, next)=>{
         message = 'Invalid Token'
     }
 
-    res.status(code).json({message})
+    res.status(code).json({statusCode: code, message})
 }
 
 module.exports = errorHandler
