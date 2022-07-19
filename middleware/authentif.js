@@ -16,11 +16,7 @@ const authentif = async (req, res, next) => {
         email: payload.email,
       },
     });
-
-    if (!userLogged) {
-      throw { name: "JsonWebTokenError" };
-    }
-
+    
     req.user = {
       id: userLogged.id,
       email: userLogged.email,
