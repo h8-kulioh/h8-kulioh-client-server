@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">86.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>13/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">86.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>13/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,50 +86,50 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const errorHandler = <span class="fstat-no" title="function not covered" >(e</span>rr, req, res, next)=&gt;{
-<span class="cstat-no" title="statement not covered" >    console.log(err, 'tes')</span>
-    let code = <span class="cstat-no" title="statement not covered" >500</span>
-    let message = <span class="cstat-no" title="statement not covered" >'Internal Server Error'</span>
+<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">const errorHandler = (err, req, res, next)=&gt;{
+    console.log(err, 'tes')
+    let code = 500
+    let message = 'Internal Server Error'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if(err.name==='Invalid email/password'){</span>
-<span class="cstat-no" title="statement not covered" >        code = 401</span>
-<span class="cstat-no" title="statement not covered" >        message = err.name</span>
+    if(err.name==='Invalid email/password'){
+        code = 401
+        message = err.name
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if(err.name==='Email is required'||err.name==='Password is required'||err.name==='Name is required'){</span>
-<span class="cstat-no" title="statement not covered" >        code = 400</span>
-<span class="cstat-no" title="statement not covered" >        message = err.name</span>
+    if(err.name==='Email is required'||err.name==='Password is required'||err.name==='Name is required'){
+        code = 400
+        message = err.name
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if(err.name==='JsonWebTokenError'){</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(err.name==='JsonWebTokenError'){
 <span class="cstat-no" title="statement not covered" >        code = 401</span>
 <span class="cstat-no" title="statement not covered" >        message = 'Invalid Token'</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    res.status(code).json({message})</span>
+    res.status(code).json({message})
 }
 &nbsp;
 module.exports = errorHandler</pre></td></tr></table></pre>
@@ -139,7 +139,7 @@ module.exports = errorHandler</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-07-19T04:08:17.031Z
+                at 2022-07-19T04:16:30.500Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
