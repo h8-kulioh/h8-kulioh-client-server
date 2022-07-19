@@ -160,34 +160,6 @@ beforeAll((done) => {
 afterAll((done) => {
   User.destroy({ truncate: true, cascade: true, restartIdentity: true })
     .then((_) => {
-      return Question.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return QuestionKey.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return Chapter.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return Task.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
       done();
     })
     .catch((err) => {
