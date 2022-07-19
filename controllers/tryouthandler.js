@@ -18,6 +18,9 @@ class TryOutController{
 
     static async startTryOut(req, res, next){
         try{
+            if(!req.body.tryoutstart){
+                throw {name: "tryoutstart is required"}
+            }
             const tryout = await TryOutHandler.create({
                 tryoutdate: req.params.YYYYMMDD,
                 UserId: req.user.id,
