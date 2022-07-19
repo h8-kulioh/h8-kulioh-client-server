@@ -61,6 +61,11 @@ const errorHandler = (err, req, res, next) => {
     message = err.name;
   }
 
+  if (err.name === "Premium member only") {
+    code = 401;
+    message = err.name;
+  }
+
   res.status(code).json({ statusCode: code, message });
 };
 
