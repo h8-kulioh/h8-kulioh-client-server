@@ -2,11 +2,13 @@ const { Question, QuestionKey, Answer, User } = require("../models");
 
 class questionController {
   static async getQuestionDaily(req, res, next) {
+    let registeredDate = new Date(req.user.createdAt)
+    registeredDate.setHours(0,0,0,0)
     try {
       const questions = await Question.findAll({
         where: {
           releaseDay: Math.ceil(
-            (new Date().getTime() - new Date(req.user.createdAt).getTime()) /
+            (new Date().getTime() - registeredDate.getTime()) /
               (1000 * 3600 * 24)
           ),
         },
