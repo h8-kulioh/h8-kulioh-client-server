@@ -108,28 +108,29 @@ const Tasks = [
 ];
 
 const weeklyQuestion = {
-  Sheet1: [
-    {
-      subject: "ipa",
-      releaseDate: "2022-07-15",
-      question: "pertanyaan ipa",
-      trueAnswer: "jawaban benar ipa",
-      option1: "jawaban1",
-      option2: "jawaban2",
-      option3: "jawaban3",
-      option4: "jawaban4",
-    },
-    {
-      subject: "ips",
-      releaseDate: "2022-07-16",
-      question: "pertanyaan ips",
-      trueAnswer: "jawaban benar ips",
-      option1: "jawaban1",
-      option2: "jawaban2",
-      option3: "jawaban3",
-      option4: "jawaban4",
-    },
-  ],
+  data: {
+    Sheet1: [
+      {
+        subject: "ipa",
+        question: "pertanyaan ipa",
+        trueAnswer: "jawaban benar ipa",
+        option1: "jawaban1",
+        option2: "jawaban2",
+        option3: "jawaban3",
+        option4: "jawaban4",
+      },
+      {
+        subject: "ips",
+        question: "pertanyaan ips",
+        trueAnswer: "jawaban benar ips",
+        option1: "jawaban1",
+        option2: "jawaban2",
+        option3: "jawaban3",
+        option4: "jawaban4",
+      },
+    ],
+  },
+  date: "20220719"
 };
 
 beforeAll((done) => {
@@ -235,7 +236,7 @@ describe("Question weekly new", () => {
         if (err) return done(err);
         const { body, status } = res;
 
-        console.log(body)
+        console.log(body);
 
         expect(status).toBe(403);
         expect(body).toEqual(expect.any(Object));
@@ -247,13 +248,13 @@ describe("Question weekly new", () => {
   test("400 Subject is required", (done) => {
     request(app)
       .post("/users-admin/weekly-questions")
-      .send("weeklyQuestion")
+      .send({})
       .set("access_token", access_token)
       .end((err, res) => {
         if (err) return done(err);
         const { body, status } = res;
 
-        console.log(body)
+        console.log(body);
 
         expect(status).toBe(400);
         expect(body).toEqual(expect.any(Object));
