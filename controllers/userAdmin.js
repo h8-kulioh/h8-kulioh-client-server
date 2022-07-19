@@ -147,7 +147,7 @@ class UserAdminController {
       res.status(200).json({ name: "Succes create question and answer key" });
     } catch (error) {
       t.rollback();
-
+      next(error)
       console.log(error);
     }
   }
