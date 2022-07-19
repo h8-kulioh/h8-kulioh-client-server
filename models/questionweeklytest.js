@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   QuestionWeeklyTest.init({
     subject: DataTypes.STRING,
     question: DataTypes.TEXT,
-    releaseDate: DataTypes.DATE
+    releaseDate: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'QuestionWeeklyTest',

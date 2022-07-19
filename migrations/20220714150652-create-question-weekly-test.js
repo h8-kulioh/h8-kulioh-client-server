@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       releaseDate: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
