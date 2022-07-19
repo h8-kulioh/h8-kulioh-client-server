@@ -229,7 +229,7 @@ describe("Todo Routes Test", () => {
       });
   });
 
-  test.only("404 Failed Patch Todos", (done) => {
+  test("404 Failed Patch Todos", (done) => {
     request(app)
       .patch("/todoroute/todos/50000")
       .set("access_token", access_token)
