@@ -71,6 +71,19 @@ const errorHandler = (err, req, res, next) => {
     message = err.name;
   }
 
+  if (err.name === "You are not auhorized") {
+    code = 403;
+    message = err.name;
+  }
+
+  if (err.name === "Subject is required") {
+    code = 400;
+    message = err.name;
+  }
+
+  
+  
+
   res.status(code).json({ statusCode: code, message });
 };
 
