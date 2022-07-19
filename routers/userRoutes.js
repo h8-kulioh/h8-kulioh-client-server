@@ -14,8 +14,10 @@ router.get("/profile", userController.getProfile)
 router.put("/profile", userController.updateUser)
 
 router.get("/stat", userController.getstat)
+router.get("/tryOutStat", userController.getTryOutStat)
 router.get("/taskStat", userController.getTaskStat)
 router.get("/allAnswer", userController.getUserAnswerHistory)
+router.get("/tryOutAllAnswer", userController.getUserTryOutAnswerHistory)
 
 router.post("/handlepayment", userController.handlepayment)
 router.patch("/premium", userController.changeRole)

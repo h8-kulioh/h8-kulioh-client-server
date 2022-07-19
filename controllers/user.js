@@ -428,9 +428,9 @@ class userController {
     }
   }
 
-  static async getTryOutStat(req, res, next){
+  static async getTryOutStat(req, res, next) {
     try {
-      const useranswers = await Answer.findAll({
+      const useranswers = await AnswerWeeklyTest.findAll({
         where: {
           UserId: req.user.id,
         },
@@ -446,8 +446,8 @@ class userController {
       let PBMbenar = 0;
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
-          const question = await Question.findByPk(element.QuestionId);
-          const answer = await QuestionKey.findByPk(+element.userAnswer);
+          const question = await QuestionWeeklyTest.findByPk(element.QuestionId);
+          const answer = await QuestionKeyWeeklyTest.findByPk(+element.userAnswer);
           switch (question.subject) {
             case "PU":
               PU += 1;
@@ -491,6 +491,20 @@ class userController {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async getUserTryOutAnswerHistory(req, res, next) {
+    try {
+      const useranswers = await AnswerWeeklyTest.findAll({
+        where: {
+          UserId: req.user.id
+        },
+        include: [{ model: QuestionWeeklyTest, include: [{ model: QuestionKeyWeeklyTest }] }, QuestionKey]
+      })
+      res.status(200).json(useranswers)
+    } catch (err) {
+      next(err)
     }
   }
 }
