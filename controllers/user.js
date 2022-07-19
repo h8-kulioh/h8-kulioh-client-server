@@ -17,7 +17,7 @@ const {
   Chapter,
   AnswerWeeklyTest,
   QuestionWeeklyTest,
-  QuestionKeyWeeklyTest
+  QuestionKeyWeeklyTest,
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -137,10 +137,10 @@ class userController {
     }
   }
 
-
   static async handlepayment(req, res, next) {
     try {
       const { role } = req.user;
+
       if (role === "Premium") {
         throw { name: "You are already premium" };
       }
@@ -156,14 +156,6 @@ class userController {
 
       if (name !== nameUser) {
         throw { name: "Your name can't be different" };
-      }
-
-      if (!name) {
-        throw { name: "Name is required" };
-      }
-
-      if (!email) {
-        throw { name: "Email is required" };
       }
 
       let snap = new midtransClient.Snap({
@@ -311,93 +303,96 @@ class userController {
           }
         );
       }
-      t.commit()
-      res.status(200).json({message: 'Success'})
-    }catch(err){
-      t.rollback()
-      next(err)
+      t.commit();
+      res.status(200).json({ message: "Success" });
+    } catch (err) {
+      t.rollback();
+      next(err);
     }
   }
 
   static async getTaskStat(req, res, next) {
-    try{
+    try {
       const todos = await Todo.findAll({
         where: {
-          UserId: req.user.id
+          UserId: req.user.id,
         },
-        include: [{model: Task, include: [Chapter]}]
-      })
-      let jumlahDone = 0
-      let jumlahtodos = todos.length
-      let PU = 0
-      let PUdone = 0
-      let PPU = 0
-      let PPUdone = 0
-      let PK = 0
-      let PKdone = 0
-      let PBM = 0
-      let PBMdone = 0
-      for (let data of todos){
+        include: [{ model: Task, include: [Chapter] }],
+      });
+      let jumlahDone = 0;
+      let jumlahtodos = todos.length;
+      let PU = 0;
+      let PUdone = 0;
+      let PPU = 0;
+      let PPUdone = 0;
+      let PK = 0;
+      let PKdone = 0;
+      let PBM = 0;
+      let PBMdone = 0;
+      for (let data of todos) {
         switch (data.Task.Chapter.subject) {
           case "PU":
-            PU+=1;
+            PU += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PUdone+=1;
+              jumlahDone += 1;
+              PUdone += 1;
             }
             break;
           case "PPU":
-            PPU+=1;
+            PPU += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PPUdone+=1;
+              jumlahDone += 1;
+              PPUdone += 1;
             }
             break;
           case "PK":
-            PK+=1;
+            PK += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PKdone+=1;
+              jumlahDone += 1;
+              PKdone += 1;
             }
             break;
           case "PBM":
-            PBM+=1;
+            PBM += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PBMdone+=1;
+              jumlahDone += 1;
+              PBMdone += 1;
             }
             break;
-          }
-        };
-        res.status(200).json({
-          jumlahtodos,
-          jumlahDone,
-          perPU: (PUdone / PU) * 100,
-          perPPU: (PPUdone / PPU) * 100,
-          perPK: (PKdone / PK) * 100,
-          perPBM: (PBMdone / PBM) * 100,
-          perAll: (jumlahDone / jumlahtodos) * 100,
-        })
-      }catch(err){
-        next(err)
+        }
       }
-  }
-
-  static async getUserAnswerHistory(req, res, next){
-    try{
-      const useranswers = await Answer.findAll({
-        where: {
-          UserId: req.user.id
-        },
-        include: [{model: Question, include: [{model: QuestionKey}]}, QuestionKey]
-      })
-      res.status(200).json(useranswers)
-    }catch(err){
-      next(err)
+      res.status(200).json({
+        jumlahtodos,
+        jumlahDone,
+        perPU: (PUdone / PU) * 100,
+        perPPU: (PPUdone / PPU) * 100,
+        perPK: (PKdone / PK) * 100,
+        perPBM: (PBMdone / PBM) * 100,
+        perAll: (jumlahDone / jumlahtodos) * 100,
+      });
+    } catch (err) {
+      next(err);
     }
   }
 
-  static async getTryOutStat(req, res, next){
+  static async getUserAnswerHistory(req, res, next) {
+    try {
+      const useranswers = await Answer.findAll({
+        where: {
+          UserId: req.user.id,
+        },
+        include: [
+          { model: Question, include: [{ model: QuestionKey }] },
+          QuestionKey,
+        ],
+      });
+      res.status(200).json(useranswers);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  static async getTryOutStat(req, res, next) {
     try {
       const useranswers = await AnswerWeeklyTest.findAll({
         where: {
@@ -415,8 +410,12 @@ class userController {
       let PBMbenar = 0;
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
-          const question = await QuestionWeeklyTest.findByPk(+element.QuestionWeeklyTestId);
-          const answer = await QuestionKeyWeeklyTest.findByPk(+element.userAnswer);
+          const question = await QuestionWeeklyTest.findByPk(
+            +element.QuestionWeeklyTestId
+          );
+          const answer = await QuestionKeyWeeklyTest.findByPk(
+            +element.userAnswer
+          );
           switch (question.subject) {
             case "PU":
               PU += 1;
@@ -463,17 +462,23 @@ class userController {
     }
   }
 
-  static async getUserTryOutAnswerHistory(req, res, next){
-    try{
+  static async getUserTryOutAnswerHistory(req, res, next) {
+    try {
       const useranswers = await AnswerWeeklyTest.findAll({
         where: {
-          UserId: req.user.id
+          UserId: req.user.id,
         },
-        include: [{model: QuestionWeeklyTest, include: [{model: QuestionKeyWeeklyTest}]}, QuestionKeyWeeklyTest]
-      })
-      res.status(200).json(useranswers)
-    }catch(err){
-      next(err)
+        include: [
+          {
+            model: QuestionWeeklyTest,
+            include: [{ model: QuestionKeyWeeklyTest }],
+          },
+          QuestionKeyWeeklyTest,
+        ],
+      });
+      res.status(200).json(useranswers);
+    } catch (err) {
+      next(err);
     }
   }
 }

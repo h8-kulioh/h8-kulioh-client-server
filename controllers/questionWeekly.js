@@ -37,7 +37,6 @@ class QuestionWeeklyController {
       const result = await AnswerWeeklyTest.bulkCreate(insertData);
       res.status(200).json(result);
     } catch (err) {
-      console.log(err);
       next(err);
     }
   }
@@ -56,7 +55,6 @@ class QuestionWeeklyController {
       );
       res.status(200).json(getAnswersWeekly);
     } catch (err) {
-      console.log(err);
       next(err);
     }
   }

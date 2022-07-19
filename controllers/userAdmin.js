@@ -149,7 +149,6 @@ class UserAdminController {
     } catch (error) {
       t.rollback();
       next(error);
-      console.log(error);
     }
   }
 }

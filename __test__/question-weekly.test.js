@@ -150,6 +150,8 @@ const answerData = [
   },
 ];
 
+let falseToken = "amxkamxkamxkamakmka";
+
 beforeAll((done) => {
   User.create(userTest1)
     .then((registeredUser) => {
@@ -257,6 +259,20 @@ describe("Question Weekly Routes Test", () => {
         expect(status).toBe(200);
         expect(body).toEqual(expect.any(Array));
 
+        return done();
+      });
+  });
+
+  test("401 Failed Get User Answer Weekly Question Test", (done) => {
+    request(app)
+      .get("/questions-weekly/user-answer")
+      .set("access_token", falseToken)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(401);
+        expect(body).toEqual(expect.any(Object));
 
         return done();
       });
