@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       AnswerWeeklyTest.belongsTo(models.QuestionWeeklyTest,{
         foreignKey: "QuestionWeeklyTestId"
       })
+
+      AnswerWeeklyTest.belongsTo(models.QuestionKeyWeeklyTest, {foreignKey: 'userAnswer'})
     }
   }
   AnswerWeeklyTest.init({
