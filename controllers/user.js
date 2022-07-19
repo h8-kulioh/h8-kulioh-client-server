@@ -92,13 +92,7 @@ class userController {
         include: [{ model: Major, include: [University] }],
       });
 
-      if (!findUser) {
-        throw { name: "Invalid email/password" };
-      }
-
-      const checkPass = verifiedPass(password, findUser.password);
-
-      if (!checkPass) {
+      if (!findUser||!verifiedPass(password, findUser.password)) {
         throw { name: "Invalid email/password" };
       }
 
@@ -222,57 +216,36 @@ class userController {
         },
       });
       let jumlahBenar = 0;
-      let PU = 0;
-      let PUbenar = 0;
-      let PPU = 0;
-      let PPUbenar = 0;
-      let PK = 0;
-      let PKbenar = 0;
-      let PBM = 0;
-      let PBMbenar = 0;
+      let jumlah = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
+      let benar = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
           const question = await Question.findByPk(element.QuestionId);
           const answer = await QuestionKey.findByPk(+element.userAnswer);
-          switch (question.subject) {
-            case "PU":
-              PU += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PUbenar += 1;
-              }
-              break;
-            case "PPU":
-              PPU += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PPUbenar += 1;
-              }
-              break;
-            case "PK":
-              PK += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PKbenar += 1;
-              }
-              break;
-            case "PBM":
-              PBM += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PBMbenar += 1;
-              }
-              break;
+          jumlah[question.subject]++
+          if(answer.correct===true){
+            jumlahBenar++
+            benar[question.subject]++
           }
         }
       }
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
-        perPU: (PUbenar / PU) * 100,
-        perPPU: (PPUbenar / PPU) * 100,
-        perPK: (PKbenar / PK) * 100,
-        perPBM: (PBMbenar / PBM) * 100,
+        perPU: (benar["PU"] / jumlah["PU"]) * 100,
+        perPPU: (benar["PPU"] / jumlah["PPU"]) * 100,
+        perPK: (benar["PK"] / jumlah["PK"]) * 100,
+        perPBM: (benar["PBM"] / jumlah["PBM"]) * 100,
         perAll: (jumlahBenar / useranswers.length) * 100,
       });
     } catch (err) {
@@ -324,53 +297,33 @@ class userController {
       });
       let jumlahDone = 0;
       let jumlahtodos = todos.length;
-      let PU = 0;
-      let PUdone = 0;
-      let PPU = 0;
-      let PPUdone = 0;
-      let PK = 0;
-      let PKdone = 0;
-      let PBM = 0;
-      let PBMdone = 0;
+      let jumlah = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
+      let done = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
       for (let data of todos) {
-        switch (data.Task.Chapter.subject) {
-          case "PU":
-            PU += 1;
-            if (data.status === true) {
-              jumlahDone += 1;
-              PUdone += 1;
-            }
-            break;
-          case "PPU":
-            PPU += 1;
-            if (data.status === true) {
-              jumlahDone += 1;
-              PPUdone += 1;
-            }
-            break;
-          case "PK":
-            PK += 1;
-            if (data.status === true) {
-              jumlahDone += 1;
-              PKdone += 1;
-            }
-            break;
-          case "PBM":
-            PBM += 1;
-            if (data.status === true) {
-              jumlahDone += 1;
-              PBMdone += 1;
-            }
-            break;
+        jumlah[data.Task.Chapter.subject]++
+        if (data.status === true) {
+          jumlahDone++;
+          done[data.Task.Chapter.subject]++;
         }
+        
       }
       res.status(200).json({
         jumlahtodos,
         jumlahDone,
-        perPU: (PUdone / PU) * 100,
-        perPPU: (PPUdone / PPU) * 100,
-        perPK: (PKdone / PK) * 100,
-        perPBM: (PBMdone / PBM) * 100,
+        perPU: (done["PU"] / jumlah["PU"]) * 100,
+        perPPU: (done["PPU"] / jumlah["PPU"]) * 100,
+        perPK: (done["PK"] / jumlah["PK"]) * 100,
+        perPBM: (done["PBM"] / jumlah["PBM"]) * 100,
         perAll: (jumlahDone / jumlahtodos) * 100,
       });
     } catch (err) {
@@ -403,14 +356,18 @@ class userController {
         },
       });
       let jumlahBenar = 0;
-      let PU = 0;
-      let PUbenar = 0;
-      let PPU = 0;
-      let PPUbenar = 0;
-      let PK = 0;
-      let PKbenar = 0;
-      let PBM = 0;
-      let PBMbenar = 0;
+      let jumlah = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
+      let benar = {
+        PU: 0,
+        PPU: 0,
+        PK: 0,
+        PBM: 0
+      }
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
           const question = await QuestionWeeklyTest.findByPk(
@@ -419,45 +376,20 @@ class userController {
           const answer = await QuestionKeyWeeklyTest.findByPk(
             +element.userAnswer
           );
-          switch (question.subject) {
-            case "PU":
-              PU += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PUbenar += 1;
-              }
-              break;
-            case "PPU":
-              PPU += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PPUbenar += 1;
-              }
-              break;
-            case "PK":
-              PK += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PKbenar += 1;
-              }
-              break;
-            case "PBM":
-              PBM += 1;
-              if (answer.correct === true) {
-                jumlahBenar += 1;
-                PBMbenar += 1;
-              }
-              break;
+          jumlah[question.subject]++
+          if (answer.correct === true) {
+            jumlahBenar++;
+            benar[question.subject]++;
           }
         }
       }
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
-        perPU: (PUbenar / PU) * 100,
-        perPPU: (PPUbenar / PPU) * 100,
-        perPK: (PKbenar / PK) * 100,
-        perPBM: (PBMbenar / PBM) * 100,
+        perPU: (benar["PU"] / jumlah["PU"]) * 100,
+        perPPU: (benar["PPU"] / jumlah["PPU"]) * 100,
+        perPK: (benar["PK"] / jumlah["PK"]) * 100,
+        perPBM: (benar["PBM"] / jumlah["PBM"]) * 100,
         perAll: (jumlahBenar / useranswers.length) * 100,
       });
     } catch (err) {

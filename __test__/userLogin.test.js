@@ -107,7 +107,7 @@ describe("User Routes Test", () => {
       request(app)
         .post("/users/login")
         .send({
-          name: "syalala",
+          email: "syalala",
         })
         .end((err, res) => {
           if (err) return done(err);
