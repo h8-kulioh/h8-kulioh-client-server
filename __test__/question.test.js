@@ -68,5 +68,22 @@ describe("Question Routes Test", () => {
             return done();
           });
       });
+
+
+      test("401 Invalid Access Token", (done) => {
+        request(app)
+          .get("/questions/daily")
+          .set("access_token", "This is not a valid access_token")
+          .end((err, res) => {
+            if (err) return done(err);
+            const { body, status } = res;
+  
+            expect(status).toBe(401);
+            expect(body.message).toEqual(expect.any(String));
+            return done();
+          });
+      });
   });
+
+  
 });
