@@ -137,37 +137,6 @@ class userController {
     }
   }
 
-  static async editProfile(req, res, next) {
-    try {
-      const { id } = req.user;
-      let { email, password, name } = req.body;
-
-      if (!email) {
-        throw { name: "Email is required" };
-      }
-
-      if (!password) {
-        throw { name: "Password is required" };
-      }
-
-      if (!name) {
-        throw { name: "Name is required" };
-      }
-
-      password = hashPass(password);
-      const insertData = { email, password, name };
-
-      const editProfile = await User.update(insertData, {
-        where: {
-          id,
-        },
-      });
-
-      res.status(200).json(editProfile);
-    } catch (error) {
-      next(error);
-    }
-  }
 
   static async handlepayment(req, res, next) {
     try {
@@ -446,7 +415,7 @@ class userController {
       let PBMbenar = 0;
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
-          const question = await QuestionWeeklyTest.findByPk(element.QuestionWeeklyTestId);
+          const question = await QuestionWeeklyTest.findByPk(+element.QuestionWeeklyTestId);
           const answer = await QuestionKeyWeeklyTest.findByPk(+element.userAnswer);
           switch (question.subject) {
             case "PU":
