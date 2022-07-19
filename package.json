@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest --forceExit --verbose --runInBand",
+    "test": "jest --forceExit --verbose --runInBand --coverage",
     "start" : "nodemon bin/www.js"
   },
   "repository": {
