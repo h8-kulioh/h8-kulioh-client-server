@@ -53,7 +53,6 @@ class questionController {
           UserId,
         },
       });
-      console.log(anwersDate)
 
       function changeDate(dateInput) {
         dateInput.setHours(dateInput.getHours() + 7)
