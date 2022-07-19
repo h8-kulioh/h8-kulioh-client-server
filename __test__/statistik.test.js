@@ -1,14 +1,55 @@
 const { app } = require("../app");
 const request = require("supertest");
-const { User } = require("../models/index");
-const { createToken } = require("../helpers/jwt&bcrypt");
-
+const {
+  User,
+  Question,
+  Answer,
+  QuestionKey,
+  sequelize,
+} = require("../models/index");
+const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
+const { queryInterface } = sequelize;
 const userTest1 = {
   email: "user1@mail.com",
   password: "usertest1",
   name: "User Test 1",
-  major: ["1", "2"],
+  major: [1, 2],
 };
+
+const questionData = {
+  subject: "PK",
+  question:
+    "Pada pukul 12.00 setiap harinya, Umar mengukur temperatur di kamarnya. Setelah dilakukan pengukuran dari hari Senin hingga Jumat, rata-rata temperatur di kamarnya adalah 22\\(^{o}\\)C. Temperatur terendah yang didapatkan Umar adalah 20\\(^{o}\\)C.~Berapakah temperatur tertinggi yang mungkin didapatkan Umar?",
+  releaseDay: "1",
+};
+
+const keyData = [
+  {
+    QuestionId: 1,
+    answer: "23",
+    correct: "FALSE",
+  },
+  {
+    QuestionId: 1,
+    answer: "24",
+    correct: "FALSE",
+  },
+  {
+    QuestionId: 1,
+    answer: "25",
+    correct: "FALSE",
+  },
+  {
+    QuestionId: 1,
+    answer: "26",
+    correct: "FALSE",
+  },
+  {
+    QuestionId: 1,
+    answer: "30",
+    correct: "TRUE",
+  },
+];
 
 let access_token = "";
 
@@ -21,6 +62,17 @@ beforeAll((done) => {
         role: registeredUser.role,
         email: registeredUser.email,
       });
+      return Question.create(questionData);
+    })
+    .then(() => {
+      return QuestionKey.bulkCreate(keyData);
+    })
+    .then(() => {
+      return Answer.create({
+        QuestionId: 1,
+        UserId: verifiedToken(access_token).id,
+        userAnswer: "1",
+      });
     })
     .then(() => {
       done();
@@ -32,6 +84,20 @@ beforeAll((done) => {
 
 afterAll((done) => {
   User.destroy({ truncate: true, cascade: true, restartIdentity: true })
+    .then((_) => {
+      return Question.destroy({
+        truncate: true,
+        cascade: true,
+        restartIdentity: true,
+      });
+    })
+    .then((_) => {
+      return QuestionKey.destroy({
+        truncate: true,
+        cascade: true,
+        restartIdentity: true,
+      });
+    })
     .then((_) => {
       done();
     })
@@ -51,14 +117,7 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
-          expect(body.jumlahBenar).toEqual(expect.any(Number));
-          expect(body.jumlahSoal).toEqual(expect.any(Number));
-          expect(body.perPU).toEqual(expect.any(Object));
-          expect(body.perPPU).toEqual(expect.any(Object));
-          expect(body.perPK).toEqual(expect.any(Object));
-          expect(body.perPBM).toEqual(expect.any(Object));
-          expect(body.perAll).toEqual(expect.any(Object));
-
+          expect(body).toEqual(expect.any(Object));
 
           return done();
         });
@@ -75,18 +134,27 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
-          expect(body.jumlahtodos).toEqual(expect.any(Number));
-          expect(body.jumlahDone).toEqual(expect.any(Number));
-          expect(body.perPU).toEqual(expect.any(Object));
-          expect(body.perPPU).toEqual(expect.any(Object));
-          expect(body.perPK).toEqual(expect.any(Object));
-          expect(body.perPBM).toEqual(expect.any(Object));
-          expect(body.perAll).toEqual(expect.any(Object));
-
+          expect(body).toEqual(expect.any(Object));
+          
           return done();
         });
     });
   });
 
-  
+  describe("GET /users/allAnswer - get user Answer", () => {
+    test("201 Success Get User Answer", (done) => {
+      request(app)
+        .get("/users/allAnswer")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(201);
+          expect(body).toEqual(expect.any(Array));
+
+          return done();
+        });
+    });
+  });
 });

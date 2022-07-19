@@ -419,7 +419,7 @@ class userController {
         },
         include: [{model: Question, include: [{model: QuestionKey, where: {correct: true}}]}, QuestionKey]
       })
-      res.status(200).json(useranswers)
+      res.status(201).json(useranswers)
     }catch(err){
       next(err)
     }
