@@ -43,13 +43,12 @@ const errorHandler = (err, req, res, next) => {
         message = err.name
     }
 
-
     if (err.name === 'Transaction failed') {
         code = 401
         message = err.name
     }
 
-    res.status(code).json({ message })
+    res.status(code).json({ statusCode: code, message })
 }
 
 module.exports = errorHandler
