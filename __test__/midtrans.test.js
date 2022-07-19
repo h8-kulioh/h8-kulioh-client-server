@@ -10,6 +10,8 @@ const userTest1 = {
   major: ["1", "2"],
 };
 
+let testing
+
 let access_token = "";
 
 beforeAll((done) => {
