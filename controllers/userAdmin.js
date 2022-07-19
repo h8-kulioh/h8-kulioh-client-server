@@ -82,17 +82,18 @@ class UserAdminController {
   static async createWeeklyQuestions(req, res, next) {
     const t = await sequelize.transaction();
     try {
-      const { Sheet1 } = req.body;
-      if (!Sheet1) {
+      if (!req.body.data) {
         throw { name: "Subject is required" };
       }
+      const { Sheet1 } = req.body.data;
+      const { date } = req.body;
 
       for (let el of Sheet1) {
         let addQweekly = await QuestionWeeklyTest.create(
           {
             subject: el.subject,
             question: el.question,
-            releaseDate: el.releaseDate,
+            releaseDate: date,
           },
           { transaction: t }
         );
@@ -147,7 +148,7 @@ class UserAdminController {
       res.status(200).json({ name: "Succes create question and answer key" });
     } catch (error) {
       t.rollback();
-      next(error)
+      next(error);
       console.log(error);
     }
   }
