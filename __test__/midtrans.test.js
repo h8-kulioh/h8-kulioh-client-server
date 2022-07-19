@@ -14,6 +14,25 @@ const userTest1 = {
   password: "usertest1",
   name: "User Test 1",
   major: [1, 2],
+  role: "Regular",
+};
+
+const userTest2 = {
+  email: "user2@mail.com",
+  password: "usertest2",
+  name: "User Test 2",
+  major: [5, 6],
+  role: "Premium",
+};
+
+const userLogged1 = {
+  email: "user1@mail.com",
+  name: "User Test 1",
+};
+
+const userLogged2 = {
+  email: "user2@mail.com",
+  password: "usertest2",
 };
 
 const questionData = {
@@ -52,6 +71,7 @@ const keyData = [
 ];
 
 let access_token = "";
+let access_token2 = "";
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -62,6 +82,17 @@ beforeAll((done) => {
         role: registeredUser.role,
         email: registeredUser.email,
       });
+      return User.create(userTest2);
+    })
+    .then((registerUser2) => {
+      access_token2 = createToken({
+        id: registerUser2.id,
+        name: registerUser2.name,
+        role: registerUser2.role,
+        email: registerUser2.email,
+      });
+    })
+    .then(() => {
       return Question.create(questionData);
     })
     .then(() => {
@@ -107,51 +138,86 @@ afterAll((done) => {
 });
 
 describe("User Routes Test", () => {
-  describe("GET /users/stat - get statistik", () => {
-    test("201 Success Get Statistik", (done) => {
+  describe("Handle Payment", () => {
+    test("200 Success Get Token Payment", (done) => {
       request(app)
-        .get("/users/stat")
+        .post("/users/handlepayment")
         .set("access_token", access_token)
+        .send(userLogged1)
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
 
           expect(status).toBe(200);
-          expect(body).toEqual(expect.any(Object));
+          expect(body).toHaveProperty("TokenPayment", expect.any(String));
 
           return done();
         });
     });
-  });
 
-  describe("GET /users/taskStat - get task statistik", () => {
-    test("201 Success Get Task Statistik", (done) => {
+    test("403 User already Premium", (done) => {
       request(app)
-        .get("/users/taskStat")
-        .set("access_token", access_token)
+        .post("/users/handlepayment")
+        .set("access_token", access_token2)
+        .send(userLogged2)
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
 
-          expect(status).toBe(200);
-          expect(body).toEqual(expect.any(Object));
-          
+          expect(status).toBe(403);
+          expect(body).toHaveProperty("message", expect.any(String));
+
           return done();
         });
     });
-  });
 
-  describe("GET /users/allAnswer - get user Answer", () => {
-    test("201 Success Get User Answer", (done) => {
+    test("400 Name or Email is different", (done) => {
       request(app)
-        .get("/users/allAnswer")
+        .post("/users/handlepayment")
         .set("access_token", access_token)
+        .send(userLogged2)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(400);
+          expect(body).toHaveProperty("message", expect.any(String));
+
+          return done();
+        });
+    });
+
+    test("200 Change to Premium", (done) => {
+      request(app)
+        .patch("/users/premium")
+        .set("access_token", access_token)
+        .send({
+          role: "Premium"
+        })
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
 
           expect(status).toBe(200);
-          expect(body).toEqual(expect.any(Array));
+          expect(body).toHaveProperty("message", expect.any(String));
+
+          return done();
+        });
+    });
+
+    test("400 Error Change to Premium", (done) => {
+      request(app)
+        .patch("/users/premium")
+        .set("access_token", access_token2)
+        .send({
+          status: "Premium"
+        })
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(400);
+          expect(body).toHaveProperty("message", expect.any(String));
 
           return done();
         });

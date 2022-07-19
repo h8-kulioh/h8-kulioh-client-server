@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userAnswer: {
-        type: Sequelize.TEXT
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

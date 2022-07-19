@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   AnswerWeeklyTest.init({
     QuestionWeeklyTestId: DataTypes.INTEGER,
     UserId: DataTypes.INTEGER,
-    userAnswer: DataTypes.TEXT
+    userAnswer: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'AnswerWeeklyTest',
