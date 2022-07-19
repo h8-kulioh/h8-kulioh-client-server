@@ -248,6 +248,24 @@ describe("Question Weekly Routes Test", () => {
       });
   });
 
+  test("500 Error Post User Answer Weekly Question Test", (done) => {
+    request(app)
+      .post("/questions-weekly/user-answer")
+      .set("access_token", access_token)
+      .send({})
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
+        expect(body).toEqual(expect.any(Object));
+
+        console.log(body);
+
+        return done();
+      });
+  });
+
   test("200 Success Get User Answer Weekly Question Test", (done) => {
     request(app)
       .get("/questions-weekly/user-answer")

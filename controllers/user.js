@@ -289,6 +289,7 @@ class userController {
           where: {
             id: req.user.id,
           },
+          transaction: t
         }
       );
       for (let data of req.body.major) {
@@ -300,7 +301,9 @@ class userController {
             where: {
               id: data.UserMajorId,
             },
-          }
+            transaction: t
+          },
+        
         );
       }
       t.commit();

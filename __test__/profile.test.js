@@ -66,7 +66,7 @@ describe("Profile Routes Test", () => {
         .put("/users/profile")
         .send({
           name: "siapa aku",
-          major: [1, 3]
+          major: [1, 3],
         })
         .set("access_token", access_token)
         .end((err, res) => {
@@ -74,6 +74,21 @@ describe("Profile Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
+          expect(body.message).toEqual(expect.any(String));
+          return done();
+        });
+    });
+
+    test("500 ISE Edit Profile", (done) => {
+      request(app)
+        .put("/users/profile")
+        .send({})
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
           expect(body.message).toEqual(expect.any(String));
           return done();
         });

@@ -6,6 +6,9 @@ const {
   Answer,
   QuestionKey,
   sequelize,
+  AnswerWeeklyTest,
+  QuestionWeeklyTest,
+  QuestionKeyWeeklyTest
 } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const { queryInterface } = sequelize;
@@ -51,6 +54,41 @@ const keyData = [
   },
 ];
 
+const questionWeeklyData = {
+  subject: "PK",
+  question:
+    "Pada pukul 12.00 setiap harinya, Umar mengukur temperatur di kamarnya. Setelah dilakukan pengukuran dari hari Senin hingga Jumat, rata-rata temperatur di kamarnya adalah 22\\(^{o}\\)C. Temperatur terendah yang didapatkan Umar adalah 20\\(^{o}\\)C.~Berapakah temperatur tertinggi yang mungkin didapatkan Umar?",
+  releaseDate: "1",
+};
+
+const keyWeeklyData = [
+  {
+    QuestionWeeklyId: 1,
+    answer: "23",
+    correct: "FALSE",
+  },
+  {
+    QuestionWeeklyId: 1,
+    answer: "24",
+    correct: "FALSE",
+  },
+  {
+    QuestionWeeklyId: 1,
+    answer: "25",
+    correct: "FALSE",
+  },
+  {
+    QuestionWeeklyId: 1,
+    answer: "26",
+    correct: "FALSE",
+  },
+  {
+    QuestionWeeklyId: 1,
+    answer: "30",
+    correct: "TRUE",
+  },
+];
+
 let access_token = "";
 let falseAcess_token = "kmsxkamsxkamskxamsxk"
 
@@ -66,11 +104,24 @@ beforeAll((done) => {
       return Question.create(questionData);
     })
     .then(() => {
+      return QuestionWeeklyTest.create(questionWeeklyData);
+    })
+    .then(() => {
       return QuestionKey.bulkCreate(keyData);
+    })
+    .then(() => {
+      return QuestionKeyWeeklyTest.bulkCreate(keyWeeklyData);
     })
     .then(() => {
       return Answer.create({
         QuestionId: 1,
+        UserId: verifiedToken(access_token).id,
+        userAnswer: "1",
+      });
+    })
+    .then(() => {
+      return AnswerWeeklyTest.create({
+        QuestionWeeklyTestId: 1,
         UserId: verifiedToken(access_token).id,
         userAnswer: "1",
       });
@@ -98,6 +149,21 @@ describe("User Routes Test", () => {
     test("201 Success Get Statistik", (done) => {
       request(app)
         .get("/users/stat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(200);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
+    test("201 Success Get Try out stat", (done) => {
+      request(app)
+        .get("/users/tryOutStat")
         .set("access_token", access_token)
         .end((err, res) => {
           if (err) return done(err);
@@ -174,6 +240,21 @@ describe("User Routes Test", () => {
         });
     });
 
+    test("200 Success Get User Try out Answer", (done) => {
+      request(app)
+        .get("/users/tryOutAllAnswer")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(200);
+          expect(body).toEqual(expect.any(Array));
+
+          return done();
+        });
+    });
+
     test("401 Failed Get User Answer", (done) => {
       request(app)
         .get("/users/allAnswer")
@@ -188,5 +269,7 @@ describe("User Routes Test", () => {
           return done();
         });
     });
+
+    
   });
 });
