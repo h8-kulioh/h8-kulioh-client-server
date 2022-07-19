@@ -14,11 +14,25 @@ const userTest1 = {
   password: "usertest1",
   name: "User Test 1",
   major: [1, 2],
+  role: "Regular",
+};
+
+const userTest2 = {
+  email: "user2@mail.com",
+  password: "usertest2",
+  name: "User Test 2",
+  major: [5, 6],
+  role: "Premium",
 };
 
 const userLogged1 = {
   email: "user1@mail.com",
-  password: "usertest1",
+  name: "User Test 1",
+};
+
+const userLogged2 = {
+  email: "user2@mail.com",
+  password: "usertest2",
 };
 
 const questionData = {
@@ -57,6 +71,7 @@ const keyData = [
 ];
 
 let access_token = "";
+let access_token2 = "";
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -67,6 +82,17 @@ beforeAll((done) => {
         role: registeredUser.role,
         email: registeredUser.email,
       });
+      return User.create(userTest2);
+    })
+    .then((registerUser2) => {
+      access_token2 = createToken({
+        id: registerUser2.id,
+        name: registerUser2.name,
+        role: registerUser2.role,
+        email: registerUser2.email,
+      });
+    })
+    .then(() => {
       return Question.create(questionData);
     })
     .then(() => {
@@ -113,24 +139,36 @@ afterAll((done) => {
 
 describe("User Routes Test", () => {
   describe("Handle Payment", () => {
-    test("201 Success Get Token Payment", (done) => {
+    test("200 Success Get Token Payment", (done) => {
       request(app)
-        .get("/users/handlepayment")
+        .post("/users/handlepayment")
         .set("access_token", access_token)
         .send(userLogged1)
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
 
-          // expect(status).toBe(200);
-          // expect(body).toEqual(expect.any(Object));
+          expect(status).toBe(200);
+          expect(body).toHaveProperty("TokenPayment", expect.any(String));
 
-          console.log(body)
+          return done();
+        });
+    });
+
+    test("403 User already Premium", (done) => {
+      request(app)
+        .post("/users/handlepayment")
+        .set("access_token", access_token2)
+        .send(userLogged2)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(403);
+          expect(body).toHaveProperty("message", expect.any(String));
 
           return done();
         });
     });
   });
-
-  
 });
