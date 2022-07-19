@@ -81,7 +81,10 @@ const errorHandler = (err, req, res, next) => {
     message = err.name;
   }
 
-  
+  if (err.name === "tryoutstart is required"){
+    code = 400
+    message = err.name
+  }
   
 
   res.status(code).json({ statusCode: code, message });
