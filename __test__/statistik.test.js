@@ -52,6 +52,7 @@ const keyData = [
 ];
 
 let access_token = "";
+let falseAcess_token = "kmsxkamsxkamskxamsxk"
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -122,6 +123,21 @@ describe("User Routes Test", () => {
           return done();
         });
     });
+
+    test("401 Error Get Statistik", (done) => {
+      request(app)
+        .get("/users/stat")
+        .set("access_token", falseAcess_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(401);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
   });
 
   describe("GET /users/taskStat - get task statistik", () => {
@@ -134,6 +150,21 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
+          expect(body).toEqual(expect.any(Object));
+          
+          return done();
+        });
+    });
+
+    test("401 Failed Get Task Statistik", (done) => {
+      request(app)
+        .get("/users/taskStat")
+        .set("access_token", falseAcess_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(401);
           expect(body).toEqual(expect.any(Object));
           
           return done();
@@ -152,6 +183,21 @@ describe("User Routes Test", () => {
 
           expect(status).toBe(200);
           expect(body).toEqual(expect.any(Array));
+
+          return done();
+        });
+    });
+
+    test("401 Failed Get User Answer", (done) => {
+      request(app)
+        .get("/users/allAnswer")
+        .set("access_token", falseAcess_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(401);
+          expect(body).toEqual(expect.any(Object));
 
           return done();
         });
