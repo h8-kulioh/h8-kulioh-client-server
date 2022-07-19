@@ -14,17 +14,7 @@ class QuestionWeeklyController {
         include: [QuestionKeyWeeklyTest],
       });
 
-      function changeDate(dateInput) {
-        return new Date(dateInput)
-          .toISOString()
-          .split("T")[0]
-          .split("-")
-          .join("");
-      }
-
-      let findByDate = questions.filter(
-        (el) => changeDate(el.releaseDate) === YYYYMMDD
-      );
+      let findByDate = questions.filter((el) => el.releaseDate === YYYYMMDD);
 
       res.status(200).json(findByDate);
     } catch (err) {
