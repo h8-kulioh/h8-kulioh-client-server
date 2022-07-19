@@ -446,7 +446,7 @@ class userController {
       let PBMbenar = 0;
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
-          const question = await QuestionWeeklyTest.findByPk(element.QuestionId);
+          const question = await QuestionWeeklyTest.findByPk(element.QuestionWeeklyTestId);
           const answer = await QuestionKeyWeeklyTest.findByPk(+element.userAnswer);
           switch (question.subject) {
             case "PU":
@@ -500,7 +500,7 @@ class userController {
         where: {
           UserId: req.user.id
         },
-        include: [{model: QuestionWeeklyTest, include: [{model: QuestionKeyWeeklyTest}]}, QuestionKey]
+        include: [{model: QuestionWeeklyTest, include: [{model: QuestionKeyWeeklyTest}]}, QuestionKeyWeeklyTest]
       })
       res.status(200).json(useranswers)
     }catch(err){
