@@ -202,41 +202,6 @@ beforeAll((done) => {
 afterAll((done) => {
   User.destroy({ truncate: true, cascade: true, restartIdentity: true })
     .then((_) => {
-      return QuestionWeeklyTest.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return QuestionKeyWeeklyTest.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return AnswerWeeklyTest.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return Chapter.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
-      return Task.destroy({
-        truncate: true,
-        cascade: true,
-        restartIdentity: true,
-      });
-    })
-    .then((_) => {
       done();
     })
     .catch((err) => {
