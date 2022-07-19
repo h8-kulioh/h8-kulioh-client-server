@@ -33,6 +33,11 @@ const errorHandler = (err, req, res, next)=>{
         message = 'Invalid Token'
     }
 
+    if(err.name==='Error patch role'){
+        code = 400
+        message = err.name
+    }
+
     if(err.name==='Transaction failed'){
         code = 401
         message = err.name
