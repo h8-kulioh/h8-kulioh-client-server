@@ -13,7 +13,7 @@ class QuestionWeeklyController {
       const questions = await QuestionWeeklyTest.findAll({
         include: [QuestionKeyWeeklyTest],
       });
-
+      console.log(YYYYMMDD);
       function changeDate(dateInput) {
         return new Date(dateInput)
           .toISOString()
@@ -22,10 +22,10 @@ class QuestionWeeklyController {
           .join("");
       }
 
-      // let findByDate = questions.filter(
-      //   (el) => changeDate(el.releaseDate) === YYYYMMDD
-      // );
-
+      let findByDate = questions.filter(
+        (el) => changeDate(el.releaseDate) === YYYYMMDD
+      );
+      // console.log(findByDate);
       res.status(200).json(questions);
     } catch (err) {
       next(err);

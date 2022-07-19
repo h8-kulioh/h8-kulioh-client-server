@@ -14,7 +14,10 @@ const {
   Answer,
   Question,
   QuestionKey,
-  Chapter
+  Chapter,
+  AnswerWeeklyTest,
+  QuestionWeeklyTest,
+  QuestionKeyWeeklyTest
 } = require("../models/index");
 const midtransClient = require("midtrans-client");
 const { SERVERKEY, CLIENTKEY } = process.env;
@@ -422,6 +425,72 @@ class userController {
       res.status(200).json(useranswers)
     } catch (err) {
       next(err)
+    }
+  }
+
+  static async getTryOutStat(req, res, next){
+    try {
+      const useranswers = await Answer.findAll({
+        where: {
+          UserId: req.user.id,
+        },
+      });
+      let jumlahBenar = 0;
+      let PU = 0;
+      let PUbenar = 0;
+      let PPU = 0;
+      let PPUbenar = 0;
+      let PK = 0;
+      let PKbenar = 0;
+      let PBM = 0;
+      let PBMbenar = 0;
+      for (let element of useranswers) {
+        if (element.userAnswer !== "") {
+          const question = await Question.findByPk(element.QuestionId);
+          const answer = await QuestionKey.findByPk(+element.userAnswer);
+          switch (question.subject) {
+            case "PU":
+              PU += 1;
+              if (answer.correct === true) {
+                jumlahBenar += 1;
+                PUbenar += 1;
+              }
+              break;
+            case "PPU":
+              PPU += 1;
+              if (answer.correct === true) {
+                jumlahBenar += 1;
+                PPUbenar += 1;
+              }
+              break;
+            case "PK":
+              PK += 1;
+              if (answer.correct === true) {
+                jumlahBenar += 1;
+                PKbenar += 1;
+              }
+              break;
+            case "PBM":
+              PBM += 1;
+              if (answer.correct === true) {
+                jumlahBenar += 1;
+                PBMbenar += 1;
+              }
+              break;
+          }
+        }
+      }
+      res.status(200).json({
+        jumlahBenar,
+        jumlahSoal: useranswers.length,
+        perPU: (PUbenar / PU) * 100,
+        perPPU: (PPUbenar / PPU) * 100,
+        perPK: (PKbenar / PK) * 100,
+        perPBM: (PBMbenar / PBM) * 100,
+        perAll: (jumlahBenar / useranswers.length) * 100,
+      });
+    } catch (err) {
+      next(err);
     }
   }
 }
