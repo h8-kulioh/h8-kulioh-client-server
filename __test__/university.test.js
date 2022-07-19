@@ -137,90 +137,60 @@ afterAll((done) => {
     });
 });
 
-describe("User Routes Test", () => {
-  describe("Handle Payment", () => {
-    test("200 Success Get Token Payment", (done) => {
-      request(app)
-        .post("/users/handlepayment")
-        .set("access_token", access_token)
-        .send(userLogged1)
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
+describe("University Routes Test", () => {
+  test("200 Success Get University", (done) => {
+    request(app)
+      .get("/universityroute/university")
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
 
-          expect(status).toBe(200);
-          expect(body).toHaveProperty("TokenPayment", expect.any(String));
+        expect(status).toBe(200);
+        expect(body).toEqual(expect.any(Array));
 
-          return done();
-        });
-    });
+        return done();
+      });
+  });
 
-    test("403 User already Premium", (done) => {
-      request(app)
-        .post("/users/handlepayment")
-        .set("access_token", access_token2)
-        .send(userLogged2)
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
+  test("200 Success Get University by Id", (done) => {
+    request(app)
+      .get("/universityroute/university/1")
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
 
-          expect(status).toBe(403);
-          expect(body).toHaveProperty("message", expect.any(String));
+        expect(status).toBe(200);
+        expect(body).toEqual(expect.any(Object));
 
-          return done();
-        });
-    });
+        return done();
+      });
+  });
 
-    test("400 Name or Email is different", (done) => {
-      request(app)
-        .post("/users/handlepayment")
-        .set("access_token", access_token)
-        .send(userLogged2)
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
+  test("404 Failed University not found", (done) => {
+    request(app)
+      .get("/universityroute/university/1000")
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
 
-          expect(status).toBe(400);
-          expect(body).toHaveProperty("message", expect.any(String));
+        expect(status).toBe(404);
+        expect(body.message).toEqual(expect.any(String));
 
-          return done();
-        });
-    });
+        return done();
+      });
+  });
 
-    test("200 Change to Premium", (done) => {
-      request(app)
-        .patch("/users/premium")
-        .set("access_token", access_token)
-        .send({
-          role: "Premium"
-        })
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
+  test("404 Failed University not found", (done) => {
+    request(app)
+      .get("/universityroute/university?name=universitas hantu")
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
 
-          expect(status).toBe(200);
-          expect(body).toHaveProperty("message", expect.any(String));
+        expect(status).toBe(404);
+        expect(body.message).toEqual(expect.any(String));
 
-          return done();
-        });
-    });
-
-    test("400 Error Change to Premium", (done) => {
-      request(app)
-        .patch("/users/premium")
-        .set("access_token", access_token2)
-        .send({
-          status: "Premium"
-        })
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
-
-          expect(status).toBe(400);
-          expect(body).toHaveProperty("message", expect.any(String));
-
-          return done();
-        });
-    });
+        return done();
+      });
   });
 });

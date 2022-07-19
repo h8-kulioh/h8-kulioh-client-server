@@ -17,7 +17,7 @@ class UniversityController {
       const getUniversity = await University.findAll(options);
 
       if(getUniversity.length === 0){
-        throw({name: "Sorry, we couldn't find any search you want"})
+        throw({name: "University not found"})
       }
 
       res.status(200).json(getUniversity);
