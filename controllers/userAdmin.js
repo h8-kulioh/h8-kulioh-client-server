@@ -139,7 +139,8 @@ class UserAdminController {
   static async createWeeklyQuestions(req, res, next) {
     const t = await sequelize.transaction();
     try {
-      const { Sheet1 } = req.body;
+      const { Sheet1 } = req.body.data;
+
       if (!Sheet1) {
         throw { name: "Subject is required" };
       }
@@ -255,7 +256,7 @@ class UserAdminController {
         transaction: t
       });
 
-      const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer, {transaction: t});
+      const newDailyQuestionKey = await QuestionKey.bulkCreate(editAnswer, { transaction: t });
       t.commit();
       res.status(200).json({ name: "Succes update question and answer key" });
     } catch (error) {
@@ -315,7 +316,7 @@ class UserAdminController {
         ChapterId: newCahpter.id,
       };
 
-      const newTask = await Task.create(insertDataTask, {transaction: t});
+      const newTask = await Task.create(insertDataTask, { transaction: t });
       t.commit();
 
       res.status(200).json({ name: "Success create new Chapter and Task" });
@@ -414,14 +415,14 @@ class UserAdminController {
         throw { name: "University major name is required" };
       }
 
-      const newUniveristy = await University.create({ name }, {transaction: t});
+      const newUniveristy = await University.create({ name }, { transaction: t });
 
       const insertDataMajor = {
         name: majorsName,
         UniversityId: newUniveristy.id,
       };
 
-      const newMajor = await Major.create(insertDataMajor, {transaction: t});
+      const newMajor = await Major.create(insertDataMajor, { transaction: t });
       t.commit();
       res.status(200).json({ name: "Success create new University and Major" });
     } catch (error) {

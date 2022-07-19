@@ -22,11 +22,11 @@ class QuestionWeeklyController {
           .join("");
       }
 
-      let findByDate = questions.filter(
-        (el) => changeDate(el.releaseDate) === YYYYMMDD
-      );
+      // let findByDate = questions.filter(
+      //   (el) => changeDate(el.releaseDate) === YYYYMMDD
+      // );
 
-      res.status(200).json(findByDate);
+      res.status(200).json(questions);
     } catch (err) {
       next(err);
     }

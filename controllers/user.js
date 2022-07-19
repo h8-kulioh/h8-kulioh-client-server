@@ -340,20 +340,20 @@ class userController {
         );
       }
       t.commit()
-      res.status(200).json({message: 'Success'})
-    }catch(err){
+      res.status(200).json({ message: 'Success' })
+    } catch (err) {
       t.rollback()
       next(err)
     }
   }
 
   static async getTaskStat(req, res, next) {
-    try{
+    try {
       const todos = await Todo.findAll({
         where: {
           UserId: req.user.id
         },
-        include: [{model: Task, include: [Chapter]}]
+        include: [{ model: Task, include: [Chapter] }]
       })
       let jumlahDone = 0
       let jumlahtodos = todos.length
@@ -365,62 +365,62 @@ class userController {
       let PKdone = 0
       let PBM = 0
       let PBMdone = 0
-      for (let data of todos){
+      for (let data of todos) {
         switch (data.Task.Chapter.subject) {
           case "PU":
-            PU+=1;
+            PU += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PUdone+=1;
+              jumlahDone += 1;
+              PUdone += 1;
             }
             break;
           case "PPU":
-            PPU+=1;
+            PPU += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PPUdone+=1;
+              jumlahDone += 1;
+              PPUdone += 1;
             }
             break;
           case "PK":
-            PK+=1;
+            PK += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PKdone+=1;
+              jumlahDone += 1;
+              PKdone += 1;
             }
             break;
           case "PBM":
-            PBM+=1;
+            PBM += 1;
             if (data.status === true) {
-              jumlahDone+=1;
-              PBMdone+=1;
+              jumlahDone += 1;
+              PBMdone += 1;
             }
             break;
-          }
-        };
-        res.status(200).json({
-          jumlahtodos,
-          jumlahDone,
-          perPU: (PUdone / PU) * 100,
-          perPPU: (PPUdone / PPU) * 100,
-          perPK: (PKdone / PK) * 100,
-          perPBM: (PBMdone / PBM) * 100,
-          perAll: (jumlahDone / jumlahtodos) * 100,
-        })
-      }catch(err){
-        next(err)
-      }
+        }
+      };
+      res.status(200).json({
+        jumlahtodos,
+        jumlahDone,
+        perPU: (PUdone / PU) * 100,
+        perPPU: (PPUdone / PPU) * 100,
+        perPK: (PKdone / PK) * 100,
+        perPBM: (PBMdone / PBM) * 100,
+        perAll: (jumlahDone / jumlahtodos) * 100,
+      })
+    } catch (err) {
+      next(err)
+    }
   }
 
-  static async getUserAnswerHistory(req, res, next){
-    try{
+  static async getUserAnswerHistory(req, res, next) {
+    try {
       const useranswers = await Answer.findAll({
         where: {
           UserId: req.user.id
         },
-        include: [{model: Question, include: [{model: QuestionKey, where: {correct: true}}]}, QuestionKey]
+        include: [{ model: Question, include: [{ model: QuestionKey }] }, QuestionKey]
       })
       res.status(200).json(useranswers)
-    }catch(err){
+    } catch (err) {
       next(err)
     }
   }
