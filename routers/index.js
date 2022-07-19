@@ -10,6 +10,7 @@ const chapters = require("./chapterRoute");
 const tasks = require("./tasksRoute");
 const todos = require("./todoRouter");
 const userAdmin = require("./userAdminRoute");
+const video = require("./videoRoute")
 const errorHandler = require("../middleware/errorHandler");
 
 router.use("/majorsroute", majors);
@@ -21,6 +22,8 @@ router.use("/chaptersroute", chapters);
 router.use("/tasksroute", tasks);
 router.use("/questions", questions);
 router.use("/questions-weekly", questionsWeekly);
+router.use("/videos", video);
+
 
 
 

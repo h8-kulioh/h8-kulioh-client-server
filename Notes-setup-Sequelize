@@ -105,7 +105,7 @@ SETUP  :
     npx sequelize seed:generate --name Genre
     npx sequelize seed:generate --name Movie
     npx sequelize seed:generate --name seedCahpters
-    npx sequelize seed:generate --name seedTasks
+    npx sequelize seed:generate --name video
 
 
 
@@ -136,7 +136,7 @@ SETUP  :
     npx sequelize db:seed --seed 20220628080509-User.js
     npx sequelize db:seed --seed 20220628081056-Genre.js
     npx sequelize db:seed --seed 20220717043935-seedTasks.js
-    npx sequelize db:seed --seed 20220718085823-User.js
+    npx sequelize db:seed --seed 20220719113621-video.js
 
 
     
@@ -189,6 +189,8 @@ SETUP  :
 
     npx sequelize db:migrate:undo:all --env test
     npx sequelize db:migrate --env test
+    npx sequelize db:seed:all --env test
+
     npx sequelize db:seed --seed 20220716110552-seedUniversity.js --env test
     npx sequelize db:seed --seed 20220716110839-seedMajor.js --env test
 
