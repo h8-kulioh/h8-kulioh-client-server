@@ -56,6 +56,11 @@ const errorHandler = (err, req, res, next) => {
     message = err.name;
   }
 
+  if (err.name === "TryOut Registry Not Found") {
+    code = 404;
+    message = err.name;
+  }
+
   if (err.name === "Transaction failed") {
     code = 401;
     message = err.name;
