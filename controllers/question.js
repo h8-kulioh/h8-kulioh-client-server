@@ -23,6 +23,9 @@ class questionController {
   static async postAnswersDaily(req, res, next) {
     try {
       const { userAnswer, QuestionId } = req.body;
+      if(!userAnswer||!QuestionId){
+        throw {name: 'Invalid Answer'}
+      }
 
       let insertData = userAnswer.map((el, i) => {
         return {
@@ -36,7 +39,6 @@ class questionController {
       res.status(200).json(result);
 
     } catch (err) {
-      console.log(err);
       next(err);
     }
   }
@@ -51,6 +53,7 @@ class questionController {
           UserId,
         },
       });
+      console.log(anwersDate)
 
       function changeDate(dateInput) {
         dateInput.setHours(dateInput.getHours() + 7)

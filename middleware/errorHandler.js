@@ -20,7 +20,8 @@ const errorHandler = (err, req, res, next) => {
 
   if (
     err.name === "Your name can't be different" ||
-    err.name === "Your email can't be different"
+    err.name === "Your email can't be different" ||
+    err.name === "Invalid Answer"
   ) {
     code = 400;
     message = err.name;
