@@ -239,14 +239,19 @@ class userController {
           }
         }
       }
+      const perPU = (benar["PU"] / jumlah["PU"]) * 100
+      const perPPU= (benar["PPU"] / jumlah["PPU"]) * 100
+      const perPK= (benar["PK"] / jumlah["PK"]) * 100
+      const perPBM= (benar["PBM"] / jumlah["PBM"]) * 100
+      const perAll= (jumlahBenar / useranswers.length) * 100
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
-        perPU: (benar["PU"] / jumlah["PU"]) * 100,
-        perPPU: (benar["PPU"] / jumlah["PPU"]) * 100,
-        perPK: (benar["PK"] / jumlah["PK"]) * 100,
-        perPBM: (benar["PBM"] / jumlah["PBM"]) * 100,
-        perAll: (jumlahBenar / useranswers.length) * 100,
+        perPU: perPU ? perPU : 0,
+        perPPU: perPPU ? perPPU : 0,
+        perPK: perPK ? perPK : 0,
+        perPBM: perPBM ? perPBM : 0,
+        perAll: perAll ? perAll : 0,
       });
     } catch (err) {
       next(err);
@@ -317,14 +322,19 @@ class userController {
         }
         
       }
+      const perPU = (done["PU"] / jumlah["PU"]) * 100
+      const perPPU= (done["PPU"] / jumlah["PPU"]) * 100
+      const perPK= (done["PK"] / jumlah["PK"]) * 100
+      const perPBM= (done["PBM"] / jumlah["PBM"]) * 100
+      const perAll= (jumlahDone / jumlahtodos) * 100
       res.status(200).json({
         jumlahtodos,
         jumlahDone,
-        perPU: (done["PU"] / jumlah["PU"]) * 100,
-        perPPU: (done["PPU"] / jumlah["PPU"]) * 100,
-        perPK: (done["PK"] / jumlah["PK"]) * 100,
-        perPBM: (done["PBM"] / jumlah["PBM"]) * 100,
-        perAll: (jumlahDone / jumlahtodos) * 100,
+        perPU: perPU ? perPU : 0,
+        perPPU: perPPU ? perPPU : 0,
+        perPK: perPK ? perPK : 0,
+        perPBM: perPBM ? perPBM : 0,
+        perAll: perAll ? perAll : 0,
       });
     } catch (err) {
       next(err);
@@ -383,14 +393,19 @@ class userController {
           }
         }
       }
+      const perPU = (benar["PU"] / jumlah["PU"]) * 100
+      const perPPU= (benar["PPU"] / jumlah["PPU"]) * 100
+      const perPK= (benar["PK"] / jumlah["PK"]) * 100
+      const perPBM= (benar["PBM"] / jumlah["PBM"]) * 100
+      const perAll= (jumlahBenar / useranswers.length) * 100
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
-        perPU: (benar["PU"] / jumlah["PU"]) * 100,
-        perPPU: (benar["PPU"] / jumlah["PPU"]) * 100,
-        perPK: (benar["PK"] / jumlah["PK"]) * 100,
-        perPBM: (benar["PBM"] / jumlah["PBM"]) * 100,
-        perAll: (jumlahBenar / useranswers.length) * 100,
+        perPU: perPU ? perPU : 0,
+        perPPU: perPPU ? perPPU : 0,
+        perPK: perPK ? perPK : 0,
+        perPBM: perPBM ? perPBM : 0,
+        perAll: perAll ? perAll : 0,
       });
     } catch (err) {
       next(err);
