@@ -92,7 +92,7 @@ class userController {
         include: [{ model: Major, include: [University] }],
       });
 
-      if (!findUser||!verifiedPass(password, findUser.password)) {
+      if (!findUser || !verifiedPass(password, findUser.password)) {
         throw { name: "Invalid email/password" };
       }
 
@@ -139,18 +139,8 @@ class userController {
         throw { name: "You are already premium" };
       }
 
-      const { email, name } = req.body;
-
       const emailUser = req.user.email;
       const nameUser = req.user.name;
-
-      if (email !== emailUser) {
-        throw { name: "Your email can't be different" };
-      }
-
-      if (name !== nameUser) {
-        throw { name: "Your name can't be different" };
-      }
 
       let snap = new midtransClient.Snap({
         isProduction: false,
@@ -162,10 +152,10 @@ class userController {
 
       let parameter = {
         transaction_details: {
-          order_id: `${email} - ${name} - ${idPayment}`,
+          order_id: `${emailUser} - ${nameUser} - ${idPayment}`,
           gross_amount: 50000,
-          name: name,
-          email_user: email,
+          name: nameUser,
+          email_user: emailUser,
         },
         credit_card: {
           secure: true,
@@ -173,10 +163,6 @@ class userController {
       };
 
       const transaction = await snap.createTransaction(parameter);
-
-      if (!transaction) {
-        throw { name: "Transaction failed" };
-      }
 
       res.status(200).json({ TokenPayment: transaction.token });
     } catch (error) {
@@ -220,30 +206,30 @@ class userController {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       let benar = {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
           const question = await Question.findByPk(element.QuestionId);
           const answer = await QuestionKey.findByPk(+element.userAnswer);
-          jumlah[question.subject]++
-          if(answer.correct===true){
-            jumlahBenar++
-            benar[question.subject]++
+          jumlah[question.subject]++;
+          if (answer.correct === true) {
+            jumlahBenar++;
+            benar[question.subject]++;
           }
         }
       }
-      const perPU = (benar["PU"] / jumlah["PU"]) * 100
-      const perPPU= (benar["PPU"] / jumlah["PPU"]) * 100
-      const perPK= (benar["PK"] / jumlah["PK"]) * 100
-      const perPBM= (benar["PBM"] / jumlah["PBM"]) * 100
-      const perAll= (jumlahBenar / useranswers.length) * 100
+      const perPU = (benar["PU"] / jumlah["PU"]) * 100;
+      const perPPU = (benar["PPU"] / jumlah["PPU"]) * 100;
+      const perPK = (benar["PK"] / jumlah["PK"]) * 100;
+      const perPBM = (benar["PBM"] / jumlah["PBM"]) * 100;
+      const perAll = (jumlahBenar / useranswers.length) * 100;
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,
@@ -267,7 +253,7 @@ class userController {
           where: {
             id: req.user.id,
           },
-          transaction: t
+          transaction: t,
         }
       );
       for (let data of req.body.major) {
@@ -279,9 +265,8 @@ class userController {
             where: {
               id: data.UserMajorId,
             },
-            transaction: t
-          },
-        
+            transaction: t,
+          }
         );
       }
       t.commit();
@@ -306,27 +291,26 @@ class userController {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       let done = {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       for (let data of todos) {
-        jumlah[data.Task.Chapter.subject]++
+        jumlah[data.Task.Chapter.subject]++;
         if (data.status === true) {
           jumlahDone++;
           done[data.Task.Chapter.subject]++;
         }
-        
       }
-      const perPU = (done["PU"] / jumlah["PU"]) * 100
-      const perPPU= (done["PPU"] / jumlah["PPU"]) * 100
-      const perPK= (done["PK"] / jumlah["PK"]) * 100
-      const perPBM= (done["PBM"] / jumlah["PBM"]) * 100
-      const perAll= (jumlahDone / jumlahtodos) * 100
+      const perPU = (done["PU"] / jumlah["PU"]) * 100;
+      const perPPU = (done["PPU"] / jumlah["PPU"]) * 100;
+      const perPK = (done["PK"] / jumlah["PK"]) * 100;
+      const perPBM = (done["PBM"] / jumlah["PBM"]) * 100;
+      const perAll = (jumlahDone / jumlahtodos) * 100;
       res.status(200).json({
         jumlahtodos,
         jumlahDone,
@@ -370,14 +354,14 @@ class userController {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       let benar = {
         PU: 0,
         PPU: 0,
         PK: 0,
-        PBM: 0
-      }
+        PBM: 0,
+      };
       for (let element of useranswers) {
         if (element.userAnswer !== "") {
           const question = await QuestionWeeklyTest.findByPk(
@@ -386,18 +370,18 @@ class userController {
           const answer = await QuestionKeyWeeklyTest.findByPk(
             +element.userAnswer
           );
-          jumlah[question.subject]++
+          jumlah[question.subject]++;
           if (answer.correct === true) {
             jumlahBenar++;
             benar[question.subject]++;
           }
         }
       }
-      const perPU = (benar["PU"] / jumlah["PU"]) * 100
-      const perPPU= (benar["PPU"] / jumlah["PPU"]) * 100
-      const perPK= (benar["PK"] / jumlah["PK"]) * 100
-      const perPBM= (benar["PBM"] / jumlah["PBM"]) * 100
-      const perAll= (jumlahBenar / useranswers.length) * 100
+      const perPU = (benar["PU"] / jumlah["PU"]) * 100;
+      const perPPU = (benar["PPU"] / jumlah["PPU"]) * 100;
+      const perPK = (benar["PK"] / jumlah["PK"]) * 100;
+      const perPBM = (benar["PBM"] / jumlah["PBM"]) * 100;
+      const perAll = (jumlahBenar / useranswers.length) * 100;
       res.status(200).json({
         jumlahBenar,
         jumlahSoal: useranswers.length,

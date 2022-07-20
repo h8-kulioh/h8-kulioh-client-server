@@ -56,13 +56,7 @@ class UserAdminController {
         },
       });
 
-      if (!findUser) {
-        throw { name: "Invalid email/password" };
-      }
-
-      const checkPass = verifiedPass(password, findUser.password);
-
-      if (!checkPass) {
+      if (!findUser || !verifiedPass(password, findUser.password)) {
         throw { name: "Invalid email/password" };
       }
 

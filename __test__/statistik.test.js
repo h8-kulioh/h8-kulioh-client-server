@@ -8,7 +8,7 @@ const {
   sequelize,
   AnswerWeeklyTest,
   QuestionWeeklyTest,
-  QuestionKeyWeeklyTest
+  QuestionKeyWeeklyTest,
 } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const { queryInterface } = sequelize;
@@ -90,7 +90,7 @@ const keyWeeklyData = [
 ];
 
 let access_token = "";
-let falseAcess_token = "kmsxkamsxkamskxamsxk"
+let falseAcess_token = "kmsxkamsxkamskxamsxk";
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -203,7 +203,7 @@ describe("User Routes Test", () => {
 
           expect(status).toBe(200);
           expect(body).toEqual(expect.any(Object));
-          
+
           return done();
         });
     });
@@ -218,7 +218,7 @@ describe("User Routes Test", () => {
 
           expect(status).toBe(401);
           expect(body).toEqual(expect.any(Object));
-          
+
           return done();
         });
     });
@@ -240,6 +240,22 @@ describe("User Routes Test", () => {
         });
     });
 
+    test("500 Failed Get User Answer", (done) => {
+      jest.spyOn(Answer, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/allAnswer")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
     test("200 Success Get User Try out Answer", (done) => {
       request(app)
         .get("/users/tryOutAllAnswer")
@@ -250,6 +266,22 @@ describe("User Routes Test", () => {
 
           expect(status).toBe(200);
           expect(body).toEqual(expect.any(Array));
+
+          return done();
+        });
+    });
+
+    test("500 Failed Get User Try out Answer", (done) => {
+      jest.spyOn(AnswerWeeklyTest, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/tryOutAllAnswer")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
 
           return done();
         });
@@ -269,7 +301,5 @@ describe("User Routes Test", () => {
           return done();
         });
     });
-
-    
   });
 });

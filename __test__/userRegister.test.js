@@ -75,7 +75,8 @@ describe("User Routes Test", () => {
           .post("/users/register")
           .send({
             email: "yuhuhuhu",
-            password: "apa yaa"
+            password: "apa yaa",
+            role: "Admin"
           })
           .end((err, res) => {
             if (err) return done(err);

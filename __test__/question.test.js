@@ -1,6 +1,6 @@
 const { app } = require("../app");
 const request = require("supertest");
-const { User } = require("../models/index");
+const { User, Question } = require("../models/index");
 const { createToken } = require("../helpers/jwt&bcrypt");
 
 
@@ -71,6 +71,21 @@ describe("Question Routes Test", () => {
 
           expect(status).toBe(200);
           expect(body).toEqual(expect.any(Array));
+          return done();
+        });
+    });
+
+    test("500 Failed Get Daily Question", (done) => {
+      jest.spyOn(Question, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/questions/daily")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
           return done();
         });
     });

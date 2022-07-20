@@ -227,6 +227,22 @@ describe("Question Weekly Routes Test", () => {
       });
   });
 
+  test("500 Failed Get Weekly Question Test", (done) => {
+    jest.spyOn(QuestionWeeklyTest, "findAll").mockRejectedValue("Error");
+    request(app)
+      .get("/questions-weekly/weekly/20220719")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
+        expect(body).toEqual(expect.any(Object));
+
+        return done();
+      });
+  });
+
   test("200 Success Post User Answer Weekly Question Test", (done) => {
     request(app)
       .post("/questions-weekly/user-answer")
@@ -276,6 +292,22 @@ describe("Question Weekly Routes Test", () => {
 
         expect(status).toBe(200);
         expect(body).toEqual(expect.any(Array));
+
+        return done();
+      });
+  });
+
+  test("500 Failed Get User Answer Weekly Question Test", (done) => {
+    jest.spyOn(AnswerWeeklyTest, "findAll").mockRejectedValue("Error");
+    request(app)
+      .get("/questions-weekly/user-answer")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
+        expect(body).toEqual(expect.any(Object));
 
         return done();
       });

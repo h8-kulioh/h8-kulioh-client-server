@@ -98,6 +98,22 @@ describe("Todo Routes Test", () => {
       });
   });
 
+  test("500 Failed Get Todos", (done) => {
+    jest.spyOn(Todo, "findAll").mockRejectedValue("Error");
+    request(app)
+      .get("/todoroute/todos")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
+        expect(body).toEqual(expect.any(Object));
+
+        return done();
+      });
+  });
+
   test("200 Success Patch Todos", (done) => {
     request(app)
       .patch("/todoroute/todos/1")

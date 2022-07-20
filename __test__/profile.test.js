@@ -11,6 +11,7 @@ const userTest1 = {
 };
 
 let access_token = "";
+let falseToken = "ksmxksmxkm";
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -55,6 +56,21 @@ describe("Profile Routes Test", () => {
           expect(body.password).toEqual(expect.any(String));
           expect(body.name).toEqual(expect.any(String));
           expect(body.UserMajors).toEqual(expect.any(Array));
+          return done();
+        });
+    });
+
+    test("401 Failed Get Profile", (done) => {
+      jest.spyOn(User, "findByPk").mockRejectedValue("Error");
+      request(app)
+        .get("/users/profile")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
           return done();
         });
     });

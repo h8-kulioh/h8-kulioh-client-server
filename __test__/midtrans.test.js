@@ -81,7 +81,6 @@ describe("User Routes Test", () => {
       request(app)
         .post("/users/handlepayment")
         .set("access_token", access_token)
-        .send(userLogged1)
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
@@ -97,7 +96,6 @@ describe("User Routes Test", () => {
       request(app)
         .post("/users/handlepayment")
         .set("access_token", access_token2)
-        .send(userLogged2)
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
@@ -109,21 +107,7 @@ describe("User Routes Test", () => {
         });
     });
 
-    test("400 Name or Email is different", (done) => {
-      request(app)
-        .post("/users/handlepayment")
-        .set("access_token", access_token)
-        .send(userLogged2)
-        .end((err, res) => {
-          if (err) return done(err);
-          const { body, status } = res;
-
-          expect(status).toBe(400);
-          expect(body).toHaveProperty("message", expect.any(String));
-
-          return done();
-        });
-    });
+    
 
     test("200 Change to Premium", (done) => {
       request(app)

@@ -1,6 +1,6 @@
 const { app } = require("../app");
 const request = require("supertest");
-const { User, Answer, Todo } = require("../models/index");
+const { User, Answer, Todo, Task } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const userTest1 = {
   email: "user1@mail.com",
@@ -93,6 +93,22 @@ describe("Task Routes Test", () => {
 
         expect(status).toBe(200);
         expect(body).toEqual(expect.any(Array));
+
+        return done();
+      });
+  });
+
+  test("500 Failed Get Task", (done) => {
+    jest.spyOn(Task, "findAll").mockRejectedValue("Error");
+    request(app)
+      .get("/tasksroute/tasks")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
+        expect(body).toEqual(expect.any(Object));
 
         return done();
       });

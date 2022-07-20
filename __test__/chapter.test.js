@@ -1,6 +1,6 @@
 const { app } = require("../app");
 const request = require("supertest");
-const { User, Answer, Todo } = require("../models/index");
+const { User, Answer, Todo, Chapter } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const userTest1 = {
   email: "user1@mail.com",
@@ -98,6 +98,7 @@ describe("Chapter Routes Test", () => {
         return done();
       });
   });
+
   test("401 Failed Get Chapter", (done) => {
     request(app)
       .get("/chaptersroute/chapters")
@@ -107,6 +108,22 @@ describe("Chapter Routes Test", () => {
         const { body, status } = res;
 
         expect(status).toBe(401);
+        expect(body).toEqual(expect.any(Object));
+
+        return done();
+      });
+  });
+
+  test("500 Failed Get Chapter", (done) => {
+    jest.spyOn(Chapter, "findAll").mockRejectedValue("Error");
+    request(app)
+      .get("/chaptersroute/chapters")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(500);
         expect(body).toEqual(expect.any(Object));
 
         return done();

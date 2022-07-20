@@ -73,7 +73,7 @@ describe("User Routes Test", () => {
 
     test("400 Failed register - should return error if name is null", (done) => {
       request(app)
-        .post("/users/register")
+        .post("/users-admin/register")
         .send({
           email: "yuhuhuhu",
           password: "apa yaa",
@@ -82,8 +82,6 @@ describe("User Routes Test", () => {
         .end((err, res) => {
           if (err) return done(err);
           const { body, status } = res;
-
-          console.log(body);
 
           expect(status).toBe(400);
           expect(body).toHaveProperty("message", "Name is required");
