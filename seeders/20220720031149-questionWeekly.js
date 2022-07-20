@@ -1,7 +1,5 @@
 'use strict';
 
-const { hashPass } = require('../helpers/jwt&bcrypt');
-
 module.exports = {
   async up (queryInterface, Sequelize) {
     /**
@@ -13,13 +11,14 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    //  const User = require('../data/user.json')
-    //  User.forEach(data=>{
-    //    data.createdAt = new Date()
-    //    data.updatedAt = new Date()
-    //    data.password = hashPass(data.password)
-    //  })
-    //  await queryInterface.bulkInsert('Users', User)
+
+     const questionWeekly = require('../data/questionWeekly.json').Sheet1
+     questionWeekly.forEach((data)=>{
+       data.createdAt = new Date()
+       data.updatedAt = new Date()
+       delete data.id
+     })
+     await queryInterface.bulkInsert('QuestionWeeklyTests', questionWeekly, {})
   },
 
   async down (queryInterface, Sequelize) {
@@ -29,7 +28,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    //  await queryInterface.bulkDelete('Users', {})
+     await queryInterface.bulkDelete('QuestionWeeklyTests', null, {})
 
   }
 };

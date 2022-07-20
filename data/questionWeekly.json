@@ -1,0 +1,364 @@
+{
+    "Sheet1": [
+        {
+            "subject": "PK",
+            "question": "Pada pukul 12.00 setiap harinya, Umar mengukur temperatur di kamarnya. Setelah dilakukan pengukuran dari hari Senin hingga Jumat, rata-rata temperatur di kamarnya adalah 22\\(^{o}\\)C. Temperatur terendah yang didapatkan Umar adalah 20\\(^{o}\\)C.~Berapakah temperatur tertinggi yang mungkin didapatkan Umar?",
+            "releaseDate": "1",
+            "id": "1"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika nilai penjumlahan dari 5 bilangan berturut-turut adalah A,~berapakah nilai penjumlahan dari 5 bilangan berikutnya?",
+            "releaseDate": "2",
+            "id": "2"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika suatu bilangan ratusan dipilih secara acak,~Berapa peluang akan terambil bilangan yang setidaknya mengandung satu angka 7?",
+            "releaseDate": "3",
+            "id": "3"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(z\\) tidak sama dengan 0, dan \\(z=\\sqrt{6zs-9s^{2}}\\), maka berapakah nilai \\(z?\\)",
+            "releaseDate": "4",
+            "id": "4"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika kita memilih orang secara acak, berapa sesedikitnya orang yang perlu kita kumpulkan agar terdapat peluang lebih dari 50% ada setidaknya 1 orang yang lahir di tahun kabisat?",
+            "releaseDate": "5",
+            "id": "5"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu sekolah, terdapat 800 siswa dan 70% diantaranya adalah laki-laki. Terdapat setidaknya 10% perempuan yang mengikuti ekstrakurikuler olahraga. Selain itu, kurang dari 30% laki-laki tidak mengikuti ekstrakurikuler olahraga.~Berapakah jumlah maksimum siswa yang tidak mengikuti ekstrakurikuler olahraga?",
+            "releaseDate": "6",
+            "id": "6"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu restoran, 60% pengunjung memesan makanan dan minuman. Sementara itu, dari semua pengunjung yang memesan makanan, 20% diantaranya tidak memesan minuman.~Jika ada seorang pengunjung yang makan di restoran tersebut, berapa peluang dia tidak akan memesan makanan?",
+            "releaseDate": "7",
+            "id": "7"
+        },
+        {
+            "subject": "PK",
+            "question": "Terdapat suatu himpunan bilangan yang terdiri atas 5 bilangan: 4, 1, 0, 6, dan 9. Jika dua bilangan dari kelima bilangan tersebut diganti dengan dua bilangan asli yang berbeda, nilai rata-rata kelima bilangan tersebut bisa mengalami penurunan.~Berapakah penurunan terbesar yang mungkin?",
+            "releaseDate": "8",
+            "id": "8"
+        },
+        {
+            "subject": "PK",
+            "question": "Terdapat suatu himpunan bilangan yang terdiri atas 4 bilangan: 2, 8, 10, dan 12. Jika bilangan N dan K ditambahkan ke himpunan tersebut, rata-rata dari himpunan bilangan tersebut akan meningkat sebesar 25%.~Berapakah nilai dari \\(N^2+2NK+K^2\\) ?",
+            "releaseDate": "9",
+            "id": "9"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(x>0\\), berapakah nilai terkecil dari \\(x+\\frac{1}{x}\\) ?",
+            "releaseDate": "10",
+            "id": "10"
+        },
+        {
+            "subject": "PK",
+            "question": "Penjumlahan dua bilangan positif \\(x\\) dan \\(y\\) adalah 77.~Berapakah nilai dari \\(xy\\)?~1) \\(x=y+1\\)~2) \\(x\\) dan \\(y\\) punya bilangan puluhan yang sama",
+            "releaseDate": "11",
+            "id": "11"
+        },
+        {
+            "subject": "PK",
+            "question": "Apakah \\(x>y\\)?~1) \\(x^{2}>y\\)~2) \\(\\sqrt{x}\\)\\(<\\)\\(y\\)",
+            "releaseDate": "12",
+            "id": "12"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu sekolah internasional, banyak siswa yang fasih berbahasa Jerman maupun berbahasa Prancis. Diantara semua siswa yang fasih berbahasa Prancis, jumlah siswa yang juga fasih berbahasa Jerman empat kali lipat lebih banyak dibandingkan yang tidak fasih berbahasa Jerman. Selain itu, dari semua siswa yang tidak fasih berbahasa Jerman, \\(1/6\\) diantaranya fasih berbahasa Prancis. Berapa persen siswa yang fasih berbahasa Jerman?~1) Terdapat 60 siswa yang fasih berbahasa Jerman dan juga fasih berbahasa Prancis.~2) Terdapat 75 siswa yang tidak fasih berbahasa Jerman dan juga tidakfasih berbahasa Prancis.",
+            "releaseDate": "13",
+            "id": "13"
+        },
+        {
+            "subject": "PK",
+            "question": "Di suatu universitas, terdapat mata kuliah bahasa Jepang dan bahasa Prancis. Setidaknya terdapat 100 mahasiswa yang mengambil mata kuliah bahasa Jepang. Selain itu, dari semua siswa yang mengambil mata kuliah bahasa Prancis, 4% diantaranya mengambil mata kuliah bahasa Jepang. Apakah lebih banyak mahasiswa yang mengambil mata kuliah bahasa Prancis dibanding mata kuliah bahasa Jepang?~1) 16 mahasiswa mengambil mata kuliah bahasa Prancis dan juga bahasa Jepang.~2) Diantara semua siswa yang mengambil mata kuliah bahasa Jepang, 10% diantaranya mengambil mata kuliah bahasa Prancis.",
+            "releaseDate": "14",
+            "id": "14"
+        },
+        {
+            "subject": "PK",
+            "question": "Jika \\(y\\) lebih besar dari ((110%) \\((x)\\)), apakah \\(y\\) lebih dari 75?~1) \\(x>75\\)~2) \\(y-x=10\\)",
+            "releaseDate": "15",
+            "id": "15"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 1. Apa judul yang paling tepat untuk bacaan di atas?",
+            "releaseDate": "1",
+            "id": "16"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 2. Pada bacaan di atas, ada berapa banyak kalimat yang pola kalimatnya mengandung pelengkap?",
+            "releaseDate": "2",
+            "id": "17"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 3. Pada bacaan di atas, ada berapa banyak kalimat yang tergolong ke dalam kalimat majemuk bertingkat?",
+            "releaseDate": "3",
+            "id": "18"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 4. Pada bacaan di atas, ada berapa banyak kalimat yang tergolong ke dalam kalimat pasif?",
+            "releaseDate": "4",
+            "id": "19"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 5. Pada bacaan di atas, kalimat mana yang pola kalimatnya sama?",
+            "releaseDate": "5",
+            "id": "20"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 6. Pada bacaan di atas, kalimat manakah yang tergolong kalimat yang tidak hemat?",
+            "releaseDate": "6",
+            "id": "21"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Republik Indonesia Serikat (RIS) terbentuk setelah para pemimpin negara menyepakati hasil dari Konferensi Meja Bundar di Den Haag, Belanda, pada 2 November 1949. (2) Pemilihan kepala negara dilakukan oleh Dewan Pemilihan Presiden RIS pada 16 Desember 1949. (3) Soekarno yang sebelumnya menjalani pengasingan terpilih sebagai presiden RIS. (4) Sehari setelahnya atau pada 17 Desember 1949, bertempat di Bangsal Manguntur Tangkil, Kompleks Siti Hinggil, Keraton Yogyakarta, Soekarno dilantik sebagai presiden RIS. (5) Di hadapan para hadirin, Soekarno melakukan sumpah jabatan. (6) Sumpah jabatan dipandu oleh Ketua Mahkamah Agung (MA), Kusumah Atmaja. (7) Setelah Indonesia mendapat pengakuan kedaulatan dari Belanda pada 27 Desember 1949, ibu kota negara yang sebelumnya berada di Yogyakarta dikembalikan lagi ke Jakarta. ~ 7. Makna imbuhan -nya yang ada pada kata sebelumnya (kalimat 3) mempunyai makna yang sama dengan imbuhan ¬-nya pada kalimat …",
+            "releaseDate": "7",
+            "id": "22"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 8. Apa judul yang paling tepat untuk bacaan di atas?",
+            "releaseDate": "8",
+            "id": "23"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 9. Pada paragraf pertama, ada berapa banyak kalimat yang mengandung kesalahan penggunaan kata?",
+            "releaseDate": "9",
+            "id": "24"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 10. Pada paragraf pertama, kalimat mana yang perlu ditambah suatu kata agar bisa menjadi kalimat yang logis?",
+            "releaseDate": "10",
+            "id": "25"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 11. Makna imbuhan -nya yang ada pada kata tumbuhnya (kalimat 4) mempunyai makna yang sama dengan imbuhan ¬-nya pada kalimat …",
+            "releaseDate": "11",
+            "id": "26"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 12. Pada paragraf kedua, ada berapa banyak kalimat yang mengandung kesalahan penggunaan tanda baca?",
+            "releaseDate": "12",
+            "id": "27"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 13. Pada paragraf kedua, kalimat manakah yang tergolong kalimat yang tidak hemat?",
+            "releaseDate": "13",
+            "id": "28"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 14. Pada paragraf ketiga, ada berapa banyak kalimat yang mengandung kesalahan penggunaan kata?",
+            "releaseDate": "14",
+            "id": "29"
+        },
+        {
+            "subject": "PBM",
+            "question": "(1) Kegiatan jual beli saham di pasar modal atau bursa efek sudah dilakukan di Indonesia sejak zaman Hindia Belanda. (2) Menurut buku Effectengids yang diterbitkan pada tahun 1939, transaksi efek di Hindia Belanda telah berlangsung sejak 1880, tetapi dilakukan tanpa organisasi resmi. (3) Keadaan itupun membuat catatan transaksi jual beli saham menjadi tidak lengkap. (4) Baru pada awal abad ke 20, dipicu tumbuhnya perkebunan secara besar-besaran di Indonesia, para pengusaha dari kalangan Belanda dan Eropa membutuhkan instansi yang bertugas untuk menghimpun dana. (5) Atas dasar itu lah pemerintahan kolonial mendirikan bursa efek yang ditugaskan pada Amsterdamse Effectenbueurs. (6) Kantor bursa efek yang berbasis di Amsterdam, Belanda, kemudian mendirikan cabang di Batavia (Jakarta) dengan nama Vereniging voor de Effectenhandel pada 14 Desember 1912. (7) Di tingkat Asia, Bursa Efek Batavia merupakan yang keempat tertua di Dunia setelah Bombay (1830), Hong Kong (1847), dan Tokyo (1878). (8) Efek yang diperdagangkan waktu itu adalah saham dan obligasi perusahaan milik perusahaan Belanda serta pemerintah Hindia Belanda. (9) Meski berdiri sejak Desember 1912, perkembangan dan pertumbuhan pasar modal tidak berjalan seperti yang diharapkan. (10) Beberapa kali kegiatan pasar modal di Batavia mengalami kevakuman, di antaranya karena Perang Dunia (PD) I dan II. (11) Menurut artikel Apakah Bursa Djakarta Mentjapai Tudjuannya? yang ada dalam majalah Star Weekly No. 388, bursa efek di Batavia yang berhenti akibat PD II sudah aktif kembali sejak 3 Juni 1952. (12) \"Peristiwa ini (genap setahun setelah dibuka kembali) tidak diperingati dengan pesta atau perayaan lainnya. Bursa tetap menjalankan tugasnya sebagai badan perantara antara pembeli dan penjual efek\" jelas laporan Star Weekly. (13) Akan tetapi, ketika pelaksanaan program nasionalisasi perusahaan Belanda, bursa efek kembali tidak aktif. (13) Bursa efek pun ditutup ketika Indonesia mengalami krisis ekonomi. (14) Kala perekonomian mulai membaik di Orde Baru, Presiden RI ke 2, Suharto, mengeluarkan Keputusan Presiden No. 52 Tahun 1976 tentang pendirian Pasar Modal, pembentukan Badan Pembina Pasar Modal, serta pembentukan Badan Pelaksana Pasar Modal (Bapepam). (15) Kini, kita mengenal pengawas pasar modal yakni OJK dan bursa efek Indonesia yang bernama Bursa Efek Indonesia (BEI). ~ 15. Pada paragraf ketiga, ada berapa banyak kalimat yang mengandung kesalahan penggunaan kata hubung?",
+            "releaseDate": "15",
+            "id": "30"
+        },
+        {
+            "subject": "PPU",
+            "question": "Although scientists observe that an organism’s behavior falls into rhythmic patterns, they disagree about how these patterns are affected when the organism is transported to a new environment.~One experimenter, Brown, brought oysters from Connecticut waters to Illinois waters. She noted that the oysters initially opened their shells widest when it was high tide in Connecticut, but that after fourteen days their rhythms had adapted to the tide schedule in Illinois. Although she could not posit an unequivocal causal relationship between behavior and environmental change, Brown concluded that a change in tide schedule is one of several possible exogenous influences (those outside the organism) on the oysters’ rhythms.~Another experimenter, Hamner, however, discovered that hamsters from California maintain their original rhythms even at the South Pole. He concluded that endogenous influences (those inside the organism) seem to affect an organism’s rhythmic behavior.~All of the following could be considered examples of exogenous influences on an organism EXCEPT the influence of the …",
+            "releaseDate": "1",
+            "id": "31"
+        },
+        {
+            "subject": "PPU",
+            "question": "Although scientists observe that an organism’s behavior falls into rhythmic patterns, they disagree about how these patterns are affected when the organism is transported to a new environment.~One experimenter, Brown, brought oysters from Connecticut waters to Illinois waters. She noted that the oysters initially opened their shells widest when it was high tide in Connecticut, but that after fourteen days their rhythms had adapted to the tide schedule in Illinois. Although she could not posit an unequivocal causal relationship between behavior and environmental change, Brown concluded that a change in tide schedule is one of several possible exogenous influences (those outside the organism) on the oysters’ rhythms.~Another experimenter, Hamner, however, discovered that hamsters from California maintain their original rhythms even at the South Pole. He concluded that endogenous influences (those inside the organism) seem to affect an organism’s rhythmic behavior.~Which of the following statements best describes the conclusion drawn by Brown?",
+            "releaseDate": "2",
+            "id": "32"
+        },
+        {
+            "subject": "PPU",
+            "question": "Although scientists observe that an organism’s behavior falls into rhythmic patterns, they disagree about how these patterns are affected when the organism is transported to a new environment.~One experimenter, Brown, brought oysters from Connecticut waters to Illinois waters. She noted that the oysters initially opened their shells widest when it was high tide in Connecticut, but that after fourteen days their rhythms had adapted to the tide schedule in Illinois. Although she could not posit an unequivocal causal relationship between behavior and environmental change, Brown concluded that a change in tide schedule is one of several possible exogenous influences (those outside the organism) on the oysters’ rhythms.~Another experimenter, Hamner, however, discovered that hamsters from California maintain their original rhythms even at the South Pole. He concluded that endogenous influences (those inside the organism) seem to affect an organism’s rhythmic behavior.~The passage suggests that Brown’s study was similar to Hamner’s in which of the following ways?~1) Both experimenters discovered that a new environment had a significant effect on an organism’s behavior rhythms.~2)",
+            "releaseDate": "3",
+            "id": "33"
+        },
+        {
+            "subject": "PPU",
+            "question": "Although scientists observe that an organism’s behavior falls into rhythmic patterns, they disagree about how these patterns are affected when the organism is transported to a new environment.~One experimenter, Brown, brought oysters from Connecticut waters to Illinois waters. She noted that the oysters initially opened their shells widest when it was high tide in Connecticut, but that after fourteen days their rhythms had adapted to the tide schedule in Illinois. Although she could not posit an unequivocal causal relationship between behavior and environmental change, Brown concluded that a change in tide schedule is one of several possible exogenous influences (those outside the organism) on the oysters’ rhythms.~Another experimenter, Hamner, however, discovered that hamsters from California maintain their original rhythms even at the South Pole. He concluded that endogenous influences (those inside the organism) seem to affect an organism’s rhythmic behavior.~4.",
+            "releaseDate": "4",
+            "id": "34"
+        },
+        {
+            "subject": "PPU",
+            "question": "It is a popular misconception that nuclear fusion power is free of radioactivity. In fact, the deuterium-tritium reaction that nuclear scientists are currently exploring with such zeal produces both alpha particles and neutrons. (The neutrons are used to produce tritium from a lithium blanket surrounding the reactor).~ Another common misconception is that nuclear fusion power is a virtually unlimited source of energy because of the enormous quantity of deuterium in the sea. Actually, its limits are set by the amount of available lithium, which is about as plentiful as uranium in the Earth’s crust.~Research should certainly continue on controlled nuclear fusion, but no energy program should be premised on its existence until it has proven practical. For the immediate future, we must continue to use hydroelectric power, nuclear fission, and fossil fuels to meet our energy needs. The energy sources already in major use are in major use for good reason.~ The primary purpose of the passage is to …",
+            "releaseDate": "5",
+            "id": "35"
+        },
+        {
+            "subject": "PPU",
+            "question": "It is a popular misconception that nuclear fusion power is free of radioactivity. In fact, the deuterium-tritium reaction that nuclear scientists are currently exploring with such zeal produces both alpha particles and neutrons. (The neutrons are used to produce tritium from a lithium blanket surrounding the reactor).~ Another common misconception is that nuclear fusion power is a virtually unlimited source of energy because of the enormous quantity of deuterium in the sea. Actually, its limits are set by the amount of available lithium, which is about as plentiful as uranium in the Earth’s crust.~Research should certainly continue on controlled nuclear fusion, but no energy program should be premised on its existence until it has proven practical. For the immediate future, we must continue to use hydroelectric power, nuclear fission, and fossil fuels to meet our energy needs. The energy sources already in major use are in major use for good reason.~it can be inferred from the passage that the author believes which of the following about the current state of public awareness concerning nuclear fusion power?",
+            "releaseDate": "6",
+            "id": "36"
+        },
+        {
+            "subject": "PPU",
+            "question": "It is a popular misconception that nuclear fusion power is free of radioactivity. In fact, the deuterium-tritium reaction that nuclear scientists are currently exploring with such zeal produces both alpha particles and neutrons. (The neutrons are used to produce tritium from a lithium blanket surrounding the reactor).~ Another common misconception is that nuclear fusion power is a virtually unlimited source of energy because of the enormous quantity of deuterium in the sea. Actually, its limits are set by the amount of available lithium, which is about as plentiful as uranium in the Earth’s crust.~Research should certainly continue on controlled nuclear fusion, but no energy program should be premised on its existence until it has proven practical. For the immediate future, we must continue to use hydroelectric power, nuclear fission, and fossil fuels to meet our energy needs. The energy sources already in major use are in major use for good reason.~The passage provides information that would answer which of the following questions?",
+            "releaseDate": "7",
+            "id": "37"
+        },
+        {
+            "subject": "PPU",
+            "question": "It is a popular misconception that nuclear fusion power is free of radioactivity. In fact, the deuterium-tritium reaction that nuclear scientists are currently exploring with such zeal produces both alpha particles and neutrons. (The neutrons are used to produce tritium from a lithium blanket surrounding the reactor).~ Another common misconception is that nuclear fusion power is a virtually unlimited source of energy because of the enormous quantity of deuterium in the sea. Actually, its limits are set by the amount of available lithium, which is about as plentiful as uranium in the Earth’s crust.~Research should certainly continue on controlled nuclear fusion, but no energy program should be premised on its existence until it has proven practical. For the immediate future, we must continue to use hydroelectric power, nuclear fission, and fossil fuels to meet our energy needs. The energy sources already in major use are in major use for good reason.~Which of the following statements concerning nuclear scientists is most directly suggested in the passage?",
+            "releaseDate": "8",
+            "id": "38"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~ Pertanyaan manakah yang jawabannya ada pada bacaan di atas?",
+            "releaseDate": "9",
+            "id": "39"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~ Apa tujuan utama dari bacaan di atas?",
+            "releaseDate": "10",
+            "id": "40"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~ Menurut bacaan, apa dampak yang akan ditimbulkan jika jumlah CO2 di atmosfer mengalami penurunan yang drastis?",
+            "releaseDate": "11",
+            "id": "41"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~Apa tujuan penulis membahas Venus pada bacaan di atas?",
+            "releaseDate": "12",
+            "id": "42"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~Manakah pernyataan yang kemungkinan akan disetujui oleh penulis?",
+            "releaseDate": "13",
+            "id": "43"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~Pernyataan manakah yang tepat?~1) Iklim bersifat tidak stabil. Adanya perubahan temperatur bumi merupakan hal yang umum terjadi.~2) Saat ini, perubahan temperatur bumi masih belum bisa diukur secara akurat di berbagai belahan bumi.~3)Faktor utama yang paling memengaruhi kondisi iklim adalah jumlah CO2 yang ada di atmosfer.",
+            "releaseDate": "14",
+            "id": "44"
+        },
+        {
+            "subject": "PPU",
+            "question": "Kondisi iklim di bumi sangat dipengaruhi oleh kondisi dari atmosfer bumi. Jika terdapat perubahan di atmosfer bumi, maka iklim bumi juga akan berubah. Misalnya, sedikit peningkatan jumlah uap air di atmosfer akan meningkatkan kemampuan atmosfer untuk menampung panas. Hal yang kemudian akan mengakibatkan temperatur di bumi meningkat.~Jumlah karbon dioksida, CO2, di atmosfer berperan besar dalam perubahan iklim yang terjadi di bumi. Ketika energi radiasi dari sinar matahari memasuki bumi, energi radiasi tersebut akan menembus CO2 yang ada di atmosfer. Kemudian, bumi akan memantulkan kembali energi radiasi tersebut. Pantulan energi itulah yang kemudian akan ditangkap oleh CO2 yang ada di atmosfer untuk kemudian dipantulkan kembali ke bumi.~Fenomena tersebut sering disebut sebagai fenomena efek rumah kaca. Fenomena tersebut dapat menyebabkan meningkatnya temperatur bumi. Contoh ekstrem dari efek rumah kaca dapat diamati di planet Venus. Planet Venus diselimuti oleh awan tebal yang mengandung banyak CO2. Hal tersebut menyebabkan temperatur di planet Venus dapat mencapai 430oC.~Jika jumlah CO2 di atmosfer menurun, maka temperatur bumi juga akan menurun. Menurut suatu teori, jika konsentrasi CO2 di atmosfer berkurang hingga setengahnya, temperatur di bumi akan sangat rendah sehingga bumi akan diselimuti oleh es. Namun, menurut teori lain yang lebih bisa dipercaya, pengurangan jumlah CO2 di atmosfer hingga setengahnya hanya akan menurunkan temperatur bumi sebanyak 3oC.~Jika jumlah CO2 di atmosfer meningkat, karena aktivitas vulkanik ataupun kebakaran hutan, maka iklim bumi akan menjadi lebih hangat. Suhu yang lebih hangat dan CO2 yang melimpah akan menyebabkan tanaman bisa menjadi tumbuh lebih cepat. Semakin banyak dan besar suatu tanaman, maka tanaman tersebut akan membutuhkan CO2 yang semakin banyak. Konsekuensinya, jumlah CO2 di atmosfer akan menurun dan temperatur bumi juga akan menurun. Menurunnya jumlah CO2 di atmosfer dan menurunnya temperatur bumi akan mengakibatkan banyak tanaman yang mati. Matinya banyak tanaman akan menyebaban CO2 kembali dilepas ke atmosfer dan temperatur bumi kembali meningkat. Siklus tersebut akan terus berulang sehingga temperatur bumi ataupun jumlah CO2 di atmosfer akan terus berfluktuasi.~Beberapa ahli klimatologi berpendapat bahwa penggunaan bahan bakar fosil (batu bara, minyak bumi, dan lain sebagainya) mengakibatkan jumlah CO2 di atmosfer bertambah banyak dan menyebabkan temperatur bumi meningkat setidaknya 1oC. Namun, klaim tersebut masih bisa diperdebatkan. Kemungkinan besar, peningkatan tersebut hanyalah bagian dari siklus yang sedang berlangsung di bumi. Selain itu, ada kemungkinan bahwa peningkatan tersebut hanya terjadi di belahan bumi bagian utara. Di belahan bumi bagian selatan, temperatur bumi masih sulit untuk diukur karena minimnya stasiun pemantau aktivitas meteorologi dan klimatologi.~Hal-hal berikut disebutkan oleh penulis pada bacaan, KECUALI:",
+            "releaseDate": "15",
+            "id": "45"
+        },
+        {
+            "subject": "PU",
+            "question": "B adalah sinonim dari ACI~DIDI bukan sinonim dari ACI~MAE adalah sinonim dari ACI~Manakah yang juga merupakan sinonim dari ACI?",
+            "releaseDate": "1",
+            "id": "46"
+        },
+        {
+            "subject": "PU",
+            "question": "BCD adalah sinonim dari JAN~SIN bukan sinonim dari JAN~EM adalah sinonim dari JAN~Manakah yang juga merupakan sinonim dari JAN?",
+            "releaseDate": "2",
+            "id": "47"
+        },
+        {
+            "subject": "PU",
+            "question": "Kinemon adalah detektif yang tidak kompeten. Persentase kasus yang bisa dia pecahkan lebih kecil dibandingkan semua detektif lainnya di Kota X. Dalam 3 tahun terakhir, dia hanya mampu menyelesaikan 1 kasus dari total 25 kasus yang ia tangani.~ Fakta manakah yang PALING MELEMAHKAN argumen yang ada pada bacaan di atas?",
+            "releaseDate": "3",
+            "id": "48"
+        },
+        {
+            "subject": "PU",
+            "question": "Orang yang mempunyai tekanan darah tinggi umumnya lebih mudah gugup dan cemas dibandingkan orang yang tidak mempunyai tekanan darah tinggi. Hal tersebut menunjukkan bahwa beberapa sifat kepribadian bawaan seperti mudah gugup dan mudah cemas bisa menyebabkan seseorang mempunyai tekanan darah tinggi.~Argumen pada bacaan di atas lemah karena …",
+            "releaseDate": "4",
+            "id": "49"
+        },
+        {
+            "subject": "PU",
+            "question": "Pada tahun 1892, Nefertari menulis suatu puisi. Puisi yang ia tulis mengandung suatu bait yang isinya sama dengan salah satu bait yang ada pada puisi buatan Wapol yang ditulis pada tahun 1885. Oleh karena itu, besar kemungkinan bahwa Nefertari sebelumnya pernah membaca puisi yang ditulis oleh Wapol.~Fakta manakah yang PALING MELEMAHKAN kesimpulan pada bacaan di atas?",
+            "releaseDate": "5",
+            "id": "50"
+        },
+        {
+            "subject": "PU",
+            "question": "Bulan lalu, sekelompok sales di sebuah perusahaan pengembang software menghadiri seminar tentang persuasive speaking. Beberapa minggu setelahnya, sales yang menghadiri seminar berhasil melakukan penjualan produk lebih banyak dibandingkan dengan sales yang tidak menghadiri seminar. Untuk meningkatkan penjualan produk, sales manager berencana untuk mewajibkan seluruh sales di perusahaaan tersebut untuk menghadiri seminar yang sama di bulan depan.~Manakah pernyataan dibawah ini yang MENGUATKAN prediksi bahwa akan terjadi peningkatan penjualan jika sales di perusahaan tersebut menghadiri seminar tentang persuasive speaking ?",
+            "releaseDate": "6",
+            "id": "51"
+        },
+        {
+            "subject": "PU",
+            "question": "Mayoritas siswa yang rajin adalah siswa yang bahagia. Mayoritas siswa yang rajin adalah siswa yang tidak gampang gelisah. Selain itu, semua siswa yang tidak gampang gelisah adalah siswa yang pekerja keras.~Berdasarkan bacaan di atas, kesimpulan manakah yang PASTI BENAR?",
+            "releaseDate": "7",
+            "id": "52"
+        },
+        {
+            "subject": "PU",
+            "question": "Perwakilan serikat buruh di perusahaan X: Suatu data menunjukkan bahwa mogok kerja yang dilakukan buruh umumnya dapat memaksa perusahaan untuk meningkatkan kesejahteraan para buruh. Peningkatan kesejahteraan biasanya terjadi 3 tahun setelah mogok kerja dilakukan.~Meskipun para buruh di perusahaan X mengetahui dan meyakini data tersebut, banyak dari mereka yang menolak untuk melakukan mogok kerja.~Fakta manakah yang PALING MUNGKIN menjadi alasan para buruh menolak melakukan mogok kerja?",
+            "releaseDate": "8",
+            "id": "53"
+        },
+        {
+            "subject": "PU",
+            "question": "Ahli kesehatan melaporkan bahwa pasien yang mengalami cedera otot dan diberikan terapi serta obat mempunyai masa pemulihan yang sama dengan pasien yang mengalami cedera otot dan hanya diberikan terapi tanpa disertai obat. Meskipun demikian, para ahli kesehatan juga memberikan pernyataan bahwa obat-obatan adalah faktor yang penting untuk memulihkan seseorang yang mengalami cedera otot~Fakta mana yang bisa menjelaskan paradoks pada bacaan di atas?",
+            "releaseDate": "9",
+            "id": "54"
+        },
+        {
+            "subject": "PU",
+            "question": "Hibito: Judul suatu buku seharusnya merangkum isi dari bukunya. Kemarin, saya selesai membaca buku berjudul Sifat Zat. Pemilihan judul buku tersebut kurang tepat karena hampir setengah dari isi buku tersebut membahas tentang energi.~Mutta: Saya pikir penulisnya tidak salah. Menurut Fisika Modern, zat dan energi adalah dua sisi dari suatu fenomena yang sama.~Berdasarkan bacaan di atas, kesimpulan manakah yang tepat?",
+            "releaseDate": "10",
+            "id": "55"
+        },
+        {
+            "subject": "PU",
+            "question": "2, 3, 7, 10, 18, 23, …",
+            "releaseDate": "11",
+            "id": "56"
+        },
+        {
+            "subject": "PU",
+            "question": "3, 5, 7, 14, 23, …",
+            "releaseDate": "12",
+            "id": "57"
+        },
+        {
+            "subject": "PU",
+            "question": "Kaktus sulit tumbuh di iklim yang lembap. Sementara itu, pohon jeruk sulit tumbuh di iklim yang dingin. Di sebagian besar wilayah negara X, salah satu dari kaktus atau pohon jeruk mudah untuk tumbuh.~Jika pernyataan di atas benar, pernyataan manakah yang PASTI SALAH?",
+            "releaseDate": "13",
+            "id": "58"
+        },
+        {
+            "subject": "PU",
+            "question": "Bayi yang baru lahir mempunyai kulit yang kekuning-kuningan karena tingginya pigmen bilirubin yang ada pada darah mereka. Terdapat sekelompok dokter yang menganggap bahwa adanya pigmen bilirubin yang ada bayi yang harus ditangani karena bayi tersebut bisa menderita tetanus jika bilirubin memasuki otak. Namun, sekelompok dokter yang lain berargumen bahwa pigmen bilirubin pada bayi harus tetap dibiarkan tinggi karena otak bayi sudah punya mekanisme natural yang bisa mencegah masuknya bilirubin ke otak.~Pernyataan manakah yang PALING MENGUATKAN argumen yang disampaikan dokter kelompok kedua?",
+            "releaseDate": "14",
+            "id": "59"
+        },
+        {
+            "subject": "PU",
+            "question": "Jumlah kasus kriminalitas di kota ini semakin mengkhawatirkan. Menurut data, jumlah laporan kriminalitas meningkat sebesar 17% dibandingkan tahun lalu. Hal tersebut menunjukkan bahwa kasus kriminalitas di kota ini mengalami peningkatan dibanding tahun sebelumnya.~Pernyataan manakah yang PALING MELEMAHKAN argumen pada bacaan di atas?",
+            "releaseDate": "15",
+            "id": "60"
+        }
+    ]
+}

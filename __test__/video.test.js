@@ -1,14 +1,6 @@
 const { app } = require("../app");
 const request = require("supertest");
-const {
-  User,
-  Question,
-  Answer,
-  QuestionKey,
-  Chapter,
-  Task,
-  Todo,
-} = require("../models/index");
+const { User, Answer, Todo } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const userTest1 = {
   email: "user1@mail.com",
@@ -36,74 +28,9 @@ const userLogged2 = {
   password: "usertest2",
 };
 
-const questionData = {
-  subject: "PK",
-  question:
-    "Pada pukul 12.00 setiap harinya, Umar mengukur temperatur di kamarnya. Setelah dilakukan pengukuran dari hari Senin hingga Jumat, rata-rata temperatur di kamarnya adalah 22\\(^{o}\\)C. Temperatur terendah yang didapatkan Umar adalah 20\\(^{o}\\)C.~Berapakah temperatur tertinggi yang mungkin didapatkan Umar?",
-  releaseDay: "1",
-};
-
-const keyData = [
-  {
-    QuestionId: 1,
-    answer: "23",
-    correct: "FALSE",
-  },
-  {
-    QuestionId: 1,
-    answer: "24",
-    correct: "FALSE",
-  },
-  {
-    QuestionId: 1,
-    answer: "25",
-    correct: "FALSE",
-  },
-  {
-    QuestionId: 1,
-    answer: "26",
-    correct: "FALSE",
-  },
-  {
-    QuestionId: 1,
-    answer: "30",
-    correct: "TRUE",
-  },
-];
-
 let access_token = "";
 let access_token2 = "";
-let falseAccessToken = "this is not a valid access_token"
-
-const Chapters = [
-  {
-    name: "Bacaan",
-    subject: "PPU",
-  },
-  {
-    name: "Info Spesifik",
-    subject: "PPU",
-  },
-  {
-    name: "Paragraf",
-    subject: "PPU",
-  },
-];
-
-const Tasks = [
-  {
-    description: "Menentukan judul",
-    ChapterId: 1,
-  },
-  {
-    description: "Menentukan tujuan utama atau tujuan paragraf",
-    ChapterId: 1,
-  },
-  {
-    description: "Menentukan topik utama bacaan atau topik paragraf",
-    ChapterId: 1,
-  },
-];
+let falseAccessToken = "this is not a valid access_token";
 
 beforeAll((done) => {
   User.create(userTest1)
@@ -123,18 +50,6 @@ beforeAll((done) => {
         role: registerUser2.role,
         email: registerUser2.email,
       });
-    })
-    .then(() => {
-      return Question.create(questionData);
-    })
-    .then(() => {
-      return QuestionKey.bulkCreate(keyData);
-    })
-    .then(() => {
-      return Chapter.bulkCreate(Chapters);
-    })
-    .then(() => {
-      return Task.bulkCreate(Tasks);
     })
     .then(() => {
       return Answer.create({
@@ -171,7 +86,7 @@ afterAll((done) => {
 describe("Videos Routes Test", () => {
   test("200 Success Get Videos", (done) => {
     request(app)
-      .get("/videos/all-videos")
+      .get("/videos/daily")
       .set("access_token", access_token2)
       .end((err, res) => {
         if (err) return done(err);
@@ -183,9 +98,42 @@ describe("Videos Routes Test", () => {
         return done();
       });
   });
+
+  test("200 Success Get Videos Weekly", (done) => {
+    request(app)
+      .get("/videos/weekly")
+      .set("access_token", access_token2)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(201);
+        expect(body).toEqual(expect.any(Array));
+
+        return done();
+      });
+  });
+
+
   test("401 Failed Get Videos", (done) => {
     request(app)
-      .get("/videos/all-videos")
+      .get("/videos/daily")
+      .set("access_token", access_token)
+      .end((err, res) => {
+        if (err) return done(err);
+        const { body, status } = res;
+
+        expect(status).toBe(401);
+        expect(body).toEqual(expect.any(Object));
+
+        return done();
+      });
+  });
+
+
+  test("401 Failed Get Videos Weekly", (done) => {
+    request(app)
+      .get("/videos/weekly")
       .set("access_token", access_token)
       .end((err, res) => {
         if (err) return done(err);
