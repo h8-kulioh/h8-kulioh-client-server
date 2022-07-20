@@ -117,14 +117,21 @@ beforeAll((done) => {
       return Answer.create({
         QuestionId: 1,
         UserId: verifiedToken(access_token).id,
-        userAnswer: "1",
+        userAnswer: "5",
       });
     })
     .then(() => {
       return AnswerWeeklyTest.create({
         QuestionWeeklyTestId: 1,
         UserId: verifiedToken(access_token).id,
-        userAnswer: "1",
+        userAnswer: "5",
+      });
+    })
+    .then(() => {
+      return Todo.create({
+        UserId: verifiedToken(access_token).id,
+        TaskId: 1,
+        status: true
       });
     })
     .then(() => {
