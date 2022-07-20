@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   TryOutHandler.init({
     UserId: DataTypes.INTEGER,
     tryoutdate: DataTypes.STRING,
-    tryoutstart: DataTypes.INTEGER
+    tryoutstart: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'TryOutHandler',
