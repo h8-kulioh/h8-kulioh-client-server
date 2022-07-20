@@ -5,7 +5,9 @@ const { authentif } = require("../middleware/authentif");
 const errorHandler = require("../middleware/errorHandler");
 
 router.use(authentif)
-router.get("/all-videos", VideoController.getVideo);
+router.get("/daily", VideoController.getVideo);
+router.get("/weekly", VideoController.getVideoWeekly);
+
 
 router.use(errorHandler)
 

@@ -105,7 +105,11 @@ SETUP  :
     npx sequelize seed:generate --name Genre
     npx sequelize seed:generate --name Movie
     npx sequelize seed:generate --name seedCahpters
-    npx sequelize seed:generate --name video
+    npx sequelize seed:generate --name questionWeekly
+    npx sequelize seed:generate --name questionKeyWeekly
+    npx sequelize seed:generate --name videoPremiumWeekly
+
+
 
 
 
@@ -137,6 +141,8 @@ SETUP  :
     npx sequelize db:seed --seed 20220628081056-Genre.js
     npx sequelize db:seed --seed 20220717043935-seedTasks.js
     npx sequelize db:seed --seed 20220719113621-video.js
+    npx sequelize db:seed --seed 20220719113621-video.js
+
 
 
     

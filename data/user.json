@@ -10,5 +10,11 @@
     "name": "admin1",
     "password": "12345",
     "role": "Admin"
+  },
+  {
+    "email": "user2@email.com",
+    "name": "user2",
+    "password": "12345",
+    "role": "Premium"
   }
 ]

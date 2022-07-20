@@ -4,6 +4,7 @@ const {
   sequelize,
   QuestionWeeklyTest,
   QuestionKeyWeeklyTest,
+  WeeklyPremiumVideo,
 } = require("../models/index");
 
 class UserAdminController {
@@ -94,6 +95,14 @@ class UserAdminController {
             subject: el.subject,
             question: el.question,
             releaseDate: date,
+          },
+          { transaction: t }
+        );
+
+        let newVideoWeekly = await WeeklyPremiumVideo.create(
+          {
+            QuestionWeeklyTestId: addQweekly.id,
+            videoLink: el.videoLink,
           },
           { transaction: t }
         );
