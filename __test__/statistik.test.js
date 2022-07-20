@@ -9,6 +9,7 @@ const {
   AnswerWeeklyTest,
   QuestionWeeklyTest,
   QuestionKeyWeeklyTest,
+  Todo
 } = require("../models/index");
 const { createToken, verifiedToken } = require("../helpers/jwt&bcrypt");
 const { queryInterface } = sequelize;
@@ -161,6 +162,38 @@ describe("User Routes Test", () => {
         });
     });
 
+    test("500 Failed Get Statistik", (done) => {
+      jest.spyOn(Question, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/stat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
+    test("500 Failed Get Statistik", (done) => {
+      jest.spyOn(QuestionKey, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/stat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
     test("201 Success Get Try out stat", (done) => {
       request(app)
         .get("/users/tryOutStat")
@@ -170,6 +203,38 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
+    test("500 Failed Get Try out stat", (done) => {
+      jest.spyOn(QuestionWeeklyTest, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/tryOutStat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
+    test("500 Failed Get Try out stat", (done) => {
+      jest.spyOn(QuestionKeyWeeklyTest, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/tryOutStat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
           expect(body).toEqual(expect.any(Object));
 
           return done();
@@ -202,6 +267,22 @@ describe("User Routes Test", () => {
           const { body, status } = res;
 
           expect(status).toBe(200);
+          expect(body).toEqual(expect.any(Object));
+
+          return done();
+        });
+    });
+
+    test("500 Failed Get Task Statistik", (done) => {
+      jest.spyOn(Todo, "findAll").mockRejectedValue("Error");
+      request(app)
+        .get("/users/taskStat")
+        .set("access_token", access_token)
+        .end((err, res) => {
+          if (err) return done(err);
+          const { body, status } = res;
+
+          expect(status).toBe(500);
           expect(body).toEqual(expect.any(Object));
 
           return done();
